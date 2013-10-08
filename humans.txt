@@ -1,9 +1,9 @@
-TEAM
+/* TEAM */
 
     Martin Martev -- Designer/developer
 
 
-SITE
+/* SITE */
 
     HTML
     CSS
