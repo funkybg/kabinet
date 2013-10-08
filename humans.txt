@@ -1,0 +1,10 @@
+TEAM
+
+    Martin Martev -- Designer/developer
+
+
+SITE
+
+    HTML
+    CSS
+    JS
