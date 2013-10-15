@@ -17,11 +17,16 @@
     <meta name="copyright" content="Дентален център КМ Дент" />
     
     <link type="text/plain" rel="author" href="humans.txt">
+    <style type="text/css">
+      html { height: 100% }
+      body { height: 100%; margin: 0; padding: 0 }
+      #map-canvas, #map-canvas2 {height:auto; width:100%; display:block;padding-bottom:30%;}
+    </style>
 </head>
 <body>
 <!--MAP OFF-CANVAS START-->
 <div class="container--full">
-    <div class="map">MAP</div>
+    <div id="map-canvas"></div>
     <div class="contact">
         <h3 class="color__text--green">Информация за контакт</h3>
         <p class="color__text--gray80">ж.к. Свобода, ул. Ген.Никола Жеков 22,<br>бл. Бриз Север 2, партер</p>
@@ -53,7 +58,7 @@
 
 <!--MAP CANVAS START-->
 <div class="container--full">
-        MAP
+    <div id="map-canvas2"></div>
 </div>
 <!--MAP CANVAS END-->
 
@@ -113,5 +118,9 @@
     </div>
 </div>
 <!--FOOTER END-->
+
+<!--SCRIPTS START-->
+<script src="assets/js/app.js"></script>
+<!--SCRIPTS START-->
 </body>
 </html>
