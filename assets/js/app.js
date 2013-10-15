@@ -1,5 +1,4 @@
 //================= GOOGLE MAPS SCRIPS ==================//
-
 function initialize() {
     var myLatlng = new google.maps.LatLng(42.7370990, 23.3019066);
 
