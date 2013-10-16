@@ -1,0 +1,21 @@
+/*------------------------------------*\
+    $FONT DEFINITIONS
+\*------------------------------------*/
+
+/*------------------------------------*\
+    $CONTENT
+\*------------------------------------*/
+
+h1,h2,h3,h4,h5,h6 {
+	font-weight: normal;
+}
+
+.text--italic {font-style: italic;}
+.text--slim {font-weight: 300;}
+
+body,
+.pure-g [class *= "pure-u"],
+.pure-g-r [class *= "pure-u"] {
+    /* Set you're content font stack here: */
+    font-family: $base-font;
+}
