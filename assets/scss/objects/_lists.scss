@@ -2,9 +2,11 @@
     $LIST DEFINITIONS
 \*------------------------------------*/
 
-.nav {
+ul {
 	list-style-type: none;
 }
-.nav > li {
-	display:inline;
+
+.nav {
+	margin: 0;
+	padding: 0;
 }
