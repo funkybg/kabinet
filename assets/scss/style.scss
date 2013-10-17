@@ -20,6 +20,9 @@
  * FOOTER..............Footer module styles
  * HR..................RULERS
  * NAV
+ * OFFCANVAS...........Styles related to the offcanvas contacts
+ * BULLET--------------The green bullets in the main page
+ * SLIDER--------------Main page slider styles
  *
  */
 
@@ -50,3 +53,4 @@
  @import "objects/nav";
  @import "objects/offcanvas";
  @import "objects/bullet";
+ @import "objects/slider";

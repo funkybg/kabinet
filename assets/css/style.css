@@ -18,6 +18,9 @@
  * FOOTER..............Footer module styles
  * HR..................RULERS
  * NAV
+ * OFFCANVAS...........Styles related to the offcanvas contacts
+ * BULLET--------------The green bullets in the main page
+ * SLIDER--------------Main page slider styles
  *
  */
 /*------------------------------------*\
@@ -1037,17 +1040,18 @@ this the same font stack that Normalize.css sets for the `body`.
  * FLOATS..............float left-right colors
  * OFFSETS.............Speciffic offsets
  * CONTAINERS..........non grid container
+ * POSITIONS...........Position helpers
  *
  */
 /*------------------------------------*\
     $FLOATS
 \*------------------------------------*/
-/* line 20, ../scss/generic/_helpers.scss */
+/* line 21, ../scss/generic/_helpers.scss */
 .left {
   float: left;
 }
 
-/* line 24, ../scss/generic/_helpers.scss */
+/* line 25, ../scss/generic/_helpers.scss */
 .right {
   float: right;
 }
@@ -1055,13 +1059,16 @@ this the same font stack that Normalize.css sets for the `body`.
 /*------------------------------------*\
     $OFFSETS
 \*------------------------------------*/
-/* line 32, ../scss/generic/_helpers.scss */
+/* line 33, ../scss/generic/_helpers.scss */
 .footer__map--offset {
   margin-top: -2.2em;
 }
 
 /*------------------------------------*\
     $CONTAINERS
+\*------------------------------------*/
+/*------------------------------------*\
+    $POSITION
 \*------------------------------------*/
 /*------------------------------------*\
     $COLOR DEFINITIONS
@@ -1172,9 +1179,11 @@ hr {
 /* line 5, ../scss/objects/_lists.scss */
 ul {
   list-style-type: none;
+  padding: 0;
+  margin: 0;
 }
 
-/* line 9, ../scss/objects/_lists.scss */
+/* line 11, ../scss/objects/_lists.scss */
 .nav {
   margin: 0;
   padding: 0;
@@ -1203,20 +1212,21 @@ ul {
 .nav a {
   padding: 0.5em;
   display: block;
+  font-size: 0.95em;
 }
 
-/* line 26, ../scss/objects/_nav.scss */
+/* line 27, ../scss/objects/_nav.scss */
 .nav__header li:hover, .button:hover {
   background-color: #70ae11;
 }
 
-/* line 30, ../scss/objects/_nav.scss */
+/* line 31, ../scss/objects/_nav.scss */
 .active {
   background-color: #70ae11;
   font-weight: bold;
 }
 
-/* line 35, ../scss/objects/_nav.scss */
+/* line 36, ../scss/objects/_nav.scss */
 .nav > li {
   display: inline-block;
   *display: inline;
@@ -1227,7 +1237,7 @@ ul {
 /*------------------------------------*\
     $BUTTONS
 \*------------------------------------*/
-/* line 46, ../scss/objects/_nav.scss */
+/* line 47, ../scss/objects/_nav.scss */
 .button {
   font-size: 0.8em;
   padding: 0.3em 0.5em;
@@ -1237,24 +1247,24 @@ ul {
 /*------------------------------------*\
     $LINKS
 \*------------------------------------*/
-/* line 56, ../scss/objects/_nav.scss */
+/* line 57, ../scss/objects/_nav.scss */
 a {
   text-decoration: none;
   color: #1a1a1a;
 }
 
-/* line 61, ../scss/objects/_nav.scss */
+/* line 62, ../scss/objects/_nav.scss */
 .nav__header a, .button {
   color: white;
 }
 
-/* line 65, ../scss/objects/_nav.scss */
+/* line 66, ../scss/objects/_nav.scss */
 .nav__footer {
   font-size: 0.7em;
   font-weight: bold;
 }
 
-/* line 69, ../scss/objects/_nav.scss */
+/* line 70, ../scss/objects/_nav.scss */
 .nav__footer a:hover {
   color: #70ae11;
 }
@@ -1265,28 +1275,52 @@ a {
 /*------------------------------------*\
     $CONTENTS
 \*------------------------------------*/
-/* line 12, ../scss/objects/_offcanvas.scss */
+/* line 9, ../scss/objects/_offcanvas.scss */
 .offcanvas {
   position: fixed;
   margin-top: -150%;
-  -webkit-transition: all 0.2s;
-  -moz-transition: all 0.2s;
-  -o-transition: all 0.2s;
-  -ms-transition: all 0.2s;
-  transition: all 0.2s;
+  -webkit-transition: all 0.4s;
+  -moz-transition: all 0.4s;
+  -o-transition: all 0.4s;
+  -ms-transition: all 0.4s;
+  transition: all 0.4s;
+  width: 100%;
+  top: 2em;
 }
 
-/* line 22, ../scss/objects/_offcanvas.scss */
+/* line 21, ../scss/objects/_offcanvas.scss */
 .offcanvas__top--open {
   margin-top: 0;
-  -webkit-transition: all 0.2s;
-  -moz-transition: all 0.2s;
-  -o-transition: all 0.2s;
-  -ms-transition: all 0.2s;
-  transition: all 0.2s;
+  -webkit-transition: all 0.4s;
+  -moz-transition: all 0.4s;
+  -o-transition: all 0.4s;
+  -ms-transition: all 0.4s;
+  transition: all 0.4s;
 }
 
-/* line 1, ../scss/objects/_bullet.scss */
+/* line 30, ../scss/objects/_offcanvas.scss */
+.contact {
+  position: relative;
+  background-color: white;
+  padding: 1em;
+  z-index: 10000;
+  float: right;
+}
+
+/* line 38, ../scss/objects/_offcanvas.scss */
+#map-canvas, #map-canvas2 {
+  height: 100%;
+  width: 100%;
+  display: block;
+  position: absolute;
+  z-index: 9999;
+  padding-bottom: 6.1em;
+}
+
+/*------------------------------------*\
+    $BULLET
+\*------------------------------------*/
+/* line 5, ../scss/objects/_bullet.scss */
 .bullet {
   background-color: #70ae11;
   color: #70ae11;
@@ -1294,4 +1328,137 @@ a {
   *display: inline;
   margin-right: 0.5em;
   margin-top: 0.15em;
+}
+
+/*------------------------------------*\
+    $SLIDER DEFINITIONS
+\*------------------------------------*/
+/*
+ * jQuery FlexSlider v2.2.0
+ * http://www.woothemes.com/flexslider/
+ *
+ * Copyright 2012 WooThemes
+ * Free to use under the GPLv2 license.
+ * http://www.gnu.org/licenses/gpl-2.0.html
+ *
+ * Contributing author: Tyler Smith (@mbmufffin)
+ */
+/*------------------------------------*\
+    $CAPTION DEFINITIONS
+\*------------------------------------*/
+/* line 21, ../scss/objects/_slider.scss */
+.caption {
+  display: block;
+  margin-top: -35%;
+  z-index: 1000;
+}
+
+/*------------------------------------*\
+    $SLIDER DEFINITIONS
+\*------------------------------------*/
+/* Browser Resets
+*********************************/
+/* line 37, ../scss/objects/_slider.scss */
+.flex-container a:active,
+.flexslider a:active,
+.flex-container a:focus,
+.flexslider a:focus {
+  outline: none;
+}
+
+/* line 40, ../scss/objects/_slider.scss */
+.slides,
+.flex-control-nav,
+.flex-direction-nav {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* Icon Fonts
+*********************************/
+/* Font-face Icons */
+/* FlexSlider Necessary Styles
+*********************************/
+/* line 49, ../scss/objects/_slider.scss */
+.flexslider {
+  margin: 0;
+  padding: 0;
+}
+
+/* line 50, ../scss/objects/_slider.scss */
+.flexslider .slides > li {
+  display: none;
+  -webkit-backface-visibility: hidden;
+}
+
+/* Hide the slides before the JS is loaded. Avoids image jumping */
+/* line 51, ../scss/objects/_slider.scss */
+.flexslider .slides img {
+  width: 100%;
+  display: block;
+}
+
+/* line 52, ../scss/objects/_slider.scss */
+.flex-pauseplay span {
+  text-transform: capitalize;
+}
+
+/* Clearfix for the .slides element */
+/* line 55, ../scss/objects/_slider.scss */
+.slides:after {
+  content: "\0020";
+  display: block;
+  clear: both;
+  visibility: hidden;
+  line-height: 0;
+  height: 0;
+}
+
+/* line 56, ../scss/objects/_slider.scss */
+html[xmlns] .slides {
+  display: block;
+}
+
+/* line 57, ../scss/objects/_slider.scss */
+* html .slides {
+  height: 1%;
+}
+
+/* No JavaScript Fallback */
+/* If you are not using another script, such as Modernizr, make sure you
+ * include js that eliminates this class on page load */
+/* line 62, ../scss/objects/_slider.scss */
+.no-js .slides > li:first-child {
+  display: block;
+}
+
+/* FlexSlider Default Theme
+*********************************/
+/* line 66, ../scss/objects/_slider.scss */
+.flexslider {
+  margin: 0;
+  background: #fff;
+  position: relative;
+  zoom: 1;
+  z-index: -1;
+}
+
+/* line 67, ../scss/objects/_slider.scss */
+.flex-viewport {
+  max-height: 2000px;
+  -webkit-transition: all 1s ease;
+  -moz-transition: all 1s ease;
+  -o-transition: all 1s ease;
+  transition: all 1s ease;
+}
+
+/* line 68, ../scss/objects/_slider.scss */
+.loading .flex-viewport {
+  max-height: 300px;
+}
+
+/* line 69, ../scss/objects/_slider.scss */
+.flexslider .slides {
+  zoom: 1;
 }
