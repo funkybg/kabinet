@@ -1,3 +1,18 @@
+//================= BUTTONS SCRIPTS ==================//
+
+// CONTACTS DROPDOWN CLOSE BUTTON
+$('#close__btn').click(function(){
+    $('#off__canvas__contacts').removeClass('offcanvas__top--open');
+    return false;
+});
+
+// CONTACTS MAIN NAV DROPDOWN TOGGLE BUTTON
+$('#toggle__btn').click(function(){
+    $('#off__canvas__contacts').toggleClass('offcanvas__top--open');
+    return false;
+});
+
+
 //================= GOOGLE MAPS SCRIPS ==================//
 function initialize() {
     var myLatlng = new google.maps.LatLng(42.7370990, 23.3019066);
