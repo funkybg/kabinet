@@ -21,16 +21,20 @@
 </head>
 <body>
 <!--MAP OFF-CANVAS START-->
-<div id="off__canvas__contacts" class="container--full offcanvas">
+<div id="off__canvas__contacts" class="offcanvas">
     <div id="map-canvas"></div>
-    <div class="contact">
-        <h3 class="color__text--green">Информация за контакт</h3>
-        <p>ж.к. Свобода, ул. Ген.Никола Жеков 22,<br>бл. Бриз Север 2, партер</p>
-        <p>д-р Елияна  Мартева <strong class="color__text--green">0888 54 56 81</strong><br>д-р Любен  Костов <strong class="color__text--green">0887 392 082</strong></p>
-        <p><i class="facebook">facebook</i></p>
-        <h3 class="color__text--green">Упътвания</h3>
-        <p>Спирка 24-ти ДКЦ ( код 0018 и 0019 ):<br>- автобус: 85 и 108<br>- трамвай: 6<br>- маршрутно такси: 8 и 31</p>
-        <a id="close__btn" class="button color__element--purple" href="contacts.html">затвори<i class="close"></i></a>
+    <div class="pure-g-r">
+        <div class="pure-u-1 l-box">
+            <div class="contact">
+                <h3 class="color__text--green">Информация за контакт</h3>
+                <p>ж.к. Свобода, ул. Ген.Никола Жеков 22,<br>бл. Бриз Север 2, партер</p>
+                <p>д-р Елияна  Мартева <strong class="color__text--green">0888 54 56 81</strong><br>д-р Любен  Костов <strong class="color__text--green">0887 392 082</strong></p>
+                <p><i class="facebook">facebook</i></p>
+                <h3 class="color__text--green">Упътвания</h3>
+                <p>Спирка 24-ти ДКЦ ( код 0018 и 0019 ):<br>- автобус: 85 и 108<br>- трамвай: 6<br>- маршрутно такси: 8 и 31</p>
+                <a id="close__btn" class="button color__element--purple" href="contacts.html">затвори<i class="close"></i></a>
+            </div>
+        </div>
     </div>
 </div>
 <!--MAP OFF-CANVAS END-->
@@ -53,15 +57,26 @@
 <!----------------->
 
 <!--SLIDER START-->
-<div class="container--full">
-    <ul class="slider slider__list">
-        <li class="slider__list__element">
-            <h1 class="giga color__text--white text--italic text--slim">КМ ДЕНТ</h1>
-            <h2 class="giga color__text--white text--italic text--slim">д-р Мартева<br>& д-р Костов</h2>
-            <h2 class="giga color__text--white text--italic text--slim">ОТПУСКАЩА АТМОСФЕРА</h2>
+<div class="flexslider">
+    <ul class="slides">
+        <li>
+            <img src="assets/images/Zen-Bamboo-Stones-mirror-x1.jpg">
+            <div class="pure-g-r">
+                <div class="pure-u-1 l-box">
+                    <div class="caption">
+                        <h1 class="giga color__text--white text--italic text--slim">КМ ДЕНТ</h1>
+                        <h2 class="giga color__text--white text--italic text--slim">д-р Мартева<br>& д-р Костов</h2>
+                        <h2 class="giga color__text--white text--italic text--slim">ОТПУСКАЩА АТМОСФЕРА</h2>
+                    </div>
+                </div>
+            </div>
         </li>
-        <li class="slider__list__element">SLIDE</li>
-        <li class="slider__list__element">SLIDE</li>
+        <li>
+            <img src="assets/images/slide5-01-x1.jpg">
+        </li>
+        <li>
+            <img src="assets/images/slide6-01-x1.jpg">
+        </li>
     </ul>
 </div>
 <!--SLIDE END-->
@@ -126,6 +141,7 @@
 <!-- SCRIPTS START -->
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 <script src="assets/js/app.js"></script>
+<script src="assets/js/jquery.flexslider-min.js"></script>
 <!-- SCRIPTS END -->
 <!--FOOTER END-->
 </body>
