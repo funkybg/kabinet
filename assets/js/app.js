@@ -1,3 +1,20 @@
+//================= ASYCH FONTS SCRIPTS ==================//
+
+$(window).load(function(){
+    WebFontConfig = {
+        google: { families: [ 'Open+Sans:300italic,400:cyrillic' ] }
+      };
+      (function() {
+        var wf = document.createElement('script');
+        wf.src = ('https:' == document.location.protocol ? 'https' : 'http')+
+          '://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
+        wf.type = 'text/javascript';
+        wf.async = 'true';
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(wf, s);
+      })();
+  });
+
 //================= GOOGLE MAPS SCRIPS ==================//
 function initialize() {
     var myLatlng = new google.maps.LatLng(42.7370990, 23.3019066);
@@ -10,19 +27,19 @@ function initialize() {
 
     var map = new google.maps.Map(document.getElementById("map-canvas"), mapOptions);
 
-    // var contentString = '<div id="content">' +
-    //     '<div id="siteNotice">' +
-    //     '</div>' +
-    //     '<h2 id="firstHeading" class="firstHeading">Дентален център - КМ Дент</h2>' +
-    //     '<div id="bodyContent">' +
-    //     '<p>д-р Елияна  Мартева <strong class="color__text--green">0888 54 56 81</strong><br>д-р Любен  Костов <strong class="color__text--green">0887 392 082</strong></p>' +
-    //     '<p>ж.к. Свобода, ул. Ген.Никола Жеков 22,<br>бл. Бриз Север 2, партер</p>' +
-    //     '</div>' +
-    //     '</div>';
+    var contentString = '<div id="content">'+
+        '<div id="siteNotice">'+
+        '</div>'+
+        '<h2 id="firstHeading" class="firstHeading">Дентален център - КМ Дент</h2>'+
+        '<div id="bodyContent">'+
+        '<p>д-р Елияна  Мартева <strong class="color__text--green">0888 54 56 81</strong><br>д-р Любен  Костов <strong class="color__text--green">0887 392 082</strong></p>'+
+        '<p>ж.к. Свобода, ул. Ген.Никола Жеков 22, бл. Бриз Север 2, партер</p>'+
+        '</div>'+
+        '</div>';
 
-    // var infowindow = new google.maps.InfoWindow({
-    //     content: contentString
-    // });
+    var infowindow = new google.maps.InfoWindow({
+        content: contentString
+    });
 
     var marker = new google.maps.Marker({
         position: myLatlng,
@@ -30,7 +47,7 @@ function initialize() {
         title: "Дентален център - КМ Дент"
     });
 
-    // infowindow.open(map, marker);
+    infowindow.open(map, marker);
 }
 
 function loadScript() {
@@ -46,16 +63,16 @@ window.onload = loadScript;
 
 // CONTACTS DROPDOWN CLOSE BUTTON
 
-$('#close__btn').click(function(){
-    $('#off__canvas__contacts').removeClass('offcanvas__top--open');
-    return false;
-});
+// $('#close__btn').click(function(){
+//     $('#off__canvas__contacts').removeClass('offcanvas__top--open');
+//     return false;
+// });
 
 // CONTACTS MAIN NAV DROPDOWN TOGGLE BUTTON
-$('#toggle__btn').click(function(){
-    $('#off__canvas__contacts').toggleClass('offcanvas__top--open');
-    return false;
-});
+// $('#toggle__btn').click(function(){
+//     $('#off__canvas__contacts').toggleClass('offcanvas__top--open');
+//     return false;
+// });
 
 //================= FLEX SLIDER SCRIPTS ==================//
 
