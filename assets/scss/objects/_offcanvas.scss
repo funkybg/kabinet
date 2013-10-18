@@ -8,14 +8,13 @@
 
 .offcanvas {
 	position: fixed;
-	margin-top: -150%;
+	margin-top: -350%;
 	-webkit-transition: all 0.4s;
 	-moz-transition: all 0.4s;
 	-o-transition: all 0.4s;
 	-ms-transition: all 0.4s;
 	transition: all 0.4s;
 	width:100%;
-	top:2em;
 }
 
 .offcanvas__top--open {
@@ -35,11 +34,11 @@
 	float: right;
 }
 
-#map-canvas, #map-canvas2 {
+#map-canvas {
 	height:100%;
 	width:100%;
 	display:block;
 	position:absolute;
-	z-index: 9999;
+	z-index: -20;
 	padding-bottom:6.1em;
 }

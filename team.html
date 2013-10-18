@@ -5,9 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-    <title>Услуги | Дентален център - КМ Дент</title>
+    <title>Кабинетът | Дентален център - КМ Дент</title>
 
-    <link rel="stylesheet" href="">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400,600&subset=cyrillic,latin' rel='stylesheet' type='text/css'>
 
     <link rel="shortcut icon" href="TODO">
     
@@ -20,28 +21,32 @@
 </head>
 <body>
 <!--MAP OFF-CANVAS START-->
-<div class="container--full">
-    <div class="map">MAP</div>
-    <div class="contact">
-        <h3 class="color__text--green">Информация за контакт</h3>
-        <p class="color__text--gray80">ж.к. Свобода, ул. Ген.Никола Жеков 22,<br>бл. Бриз Север 2, партер</p>
-        <p class="color__text--gray80">д-р Елияна  Мартева <strong class="color__text--green">0888 54 56 81</strong><br>д-р Любен  Костов <strong class="color__text--green">0887 392 082</strong></p>
-        <p><i class="facebook">facebook</i></p>
-        <h3 class="color__text--green">Упътвания</h3>
-        <p class="color__text--gray80">Спирка 24-ти ДКЦ ( код 0018 и 0019 ):<br>- автобус: 85 и 108<br>- трамвай: 6<br>- маршрутно такси: 8 и 31</p>
-        <a class="button button__close color__element--purple" href="#">затвори<i class="close"></i></a>
+<div id="off__canvas__contacts" class="offcanvas">
+    <div id="map-canvas"></div>
+    <div class="pure-g-r">
+        <div class="pure-u-1 l-box">
+            <div class="contact">
+                <h3 class="color__text--green">Информация за контакт</h3>
+                <p>ж.к. Свобода, ул. Ген.Никола Жеков 22,<br>бл. Бриз Север 2, партер</p>
+                <p>д-р Елияна  Мартева <strong class="color__text--green">0888 54 56 81</strong><br>д-р Любен  Костов <strong class="color__text--green">0887 392 082</strong></p>
+                <p><i class="facebook">facebook</i></p>
+                <h3 class="color__text--green">Упътвания</h3>
+                <p>Спирка 24-ти ДКЦ ( код 0018 и 0019 ):<br>- автобус: 85 и 108<br>- трамвай: 6<br>- маршрутно такси: 8 и 31</p>
+                <a id="close__btn" class="button color__element--purple" href="contacts.html">затвори<i class="close"></i></a>
+            </div>
+        </div>
     </div>
 </div>
 <!--MAP OFF-CANVAS END-->
 
 <!--NAV START-->
-<div class="grid">
-    <div class="grid__element">
-        <ul id="top" class="nav nav__header">
-            <li><a href="index.html">КАБИНЕТЪТ</a></li>
+<div  class="nav__container">
+    <div>
+        <ul class="nav nav__header">
+            <li class="active"><a href="index.html">КАБИНЕТЪТ</a></li>
             <li><a href="services.html">УСЛУГИ</a></li>
             <li><a href="team.html">ЕКИП</a></li>
-            <li><a href="contacts.html">КОНТАКТИ</a></li>
+            <li><a id="toggle__btn" href="contacts.html">КОНТАКТИ</a></li>
         </ul>
     </div>
 </div>
@@ -59,16 +64,16 @@
 
 <!--CONTENT START-->
 <!--SUBHEADER CONTENT: TEAM IMAGE + TEAM NAV START-->
-<div class="grid">
-    <div class="grid__element--1of2">
+<div class="pure-g-r">
+    <div class="pure-u-1-2">
             <img src="assets/images/team-x1.png" alt=" Елияна  Мартева и  Любен  Костов">
     </div>
 <!--    TEAM NAV START-->
-    <div class="grid__element--1of2">
+    <div class="pure-u-1-2">
         <h1 class="color__text--green">Ние сме...</h1>
         <h3 class="color__text--gray50">Екип с над <span class="color__text--green">10 години</span> практически опит.</h3>
-        <div class="grid">
-            <div class="grid__element--1of2">
+        <div class="pure-g-r">
+            <div class="pure-u-1-2">
                 <svg width="43" height="43">
                     <image xlink:href="assets/images/doc.svg" src="assets/images/doc.png" alt="икона доктор" width="43" height="43"/>
                 </svg>
@@ -77,7 +82,7 @@
                 </div>
                 <a class="button button__more color__element--purple" href="#vcard-eli">+ повече</a>
             </div>
-            <div class="grid__element--1of2">
+            <div class="pure-u-1-2">
                 <svg width="43" height="43">
                     <image xlink:href="assets/images/doc.svg" src="assets/images/doc.png" alt="икона доктор" width="43" height="43"/>
                 </svg>
@@ -86,7 +91,7 @@
                 </div>
                 <a class="button button__more color__element--purple" href="#vcard-lubo">+ повече</a>
             </div>
-            <div class="grid__element--1of2">
+            <div class="pure-u-1-2">
                 <svg width="43" height="43">
                     <image xlink:href="assets/images/nurse.svg" src="assets/images/nurse.png" alt="икона сестра" width="43" height="43"/>
                 </svg>
@@ -102,14 +107,14 @@
 <!--VCARD ELIANA START-->
 <div class="container--full color__element--gray">
 <!--    VCARD__ID START-->
-    <div class="grid">
-        <div class="grid__element--1of3">
+    <div class="pure-g-r">
+        <div class="pure-u-1-3">
             <img src="assets/images/eli-x1.png" alt="информация за д-р Елияна Мартева"/>
         </div>
-        <div class="grid__element--2of3">
+        <div class="pure-u-2-3">
             <h1 id="vcard-eli">д-р Елияна Мартева<br><span class="color__text--gray50 h1--mini">лекар по дентална медицина</span></h1>
-            <p class="color__text--gray80">Завършила  дентална медицина в Медицински университет, Факултет по дентална медицина-гр. София през 2002г.</p>
-            <p class="color__text--gray80">Член е на Българското ендодонтско общество.</p>
+            <p>Завършила  дентална медицина в Медицински университет, Факултет по дентална медицина-гр. София през 2002г.</p>
+            <p>Член е на Българското ендодонтско общество.</p>
             <p class="colort__text--gray80">Основни акценти в професионалната и кариера са <span class="color__test--green">ендодонтията</span> и <span class="color__test--green">директните възстановявания</span>.</p>
             <div class="button button__more">
                 <a href="" id="after-grad" class="color__element--green">Следдипломни квалификации</a>
@@ -123,9 +128,9 @@
     </div>
 <!--    VCARD__ID END-->
 <!--    VCARD__LIST AFTER GRAD START-->
-    <div class="grid">
+    <div class="pure-g-r">
 <!--    VCARD__LIST__NAV START-->
-        <div class="grid__element--1of5">
+        <div class="pure-u-1-5">
             <ul class="nav nav__vcard">
                 <li><a href="#sem-e">семинари</a></li>
                 <li><a href="#sim-e">симпозиуми</a></li>
@@ -135,7 +140,7 @@
         </div>
 <!--    VCARD__LIST__NAV END-->
 <!--    VCARD__LIST__BODY START-->
-        <div class="grid__element--4of5">
+        <div class="pure-u-4-5">
 <!--            VCARD__LIS__BODY SEMINAR START-->
                 <div class="block block__team">
                     <h3 id="sem-e" class="color__text--green">Семинари</h3>
@@ -183,13 +188,13 @@
 </div>
 <!--VCARD ELIANA END-->
 <!--VCARD LUBO START-->
-<div class="container--full color__element--gray">
+<div class="container--full">
 <!--    VCARD__ID START-->
-    <div class="grid">
-        <div class="grid__element--2of3">
+    <div class="pure-g-r">
+        <div class="pure-u-2-3">
             <h1 id="vcard-lubo">д-р Любен Костов<br><span class="color__text--gray50 h1--mini">лекар по дентална медицина</span></h1>
-            <p class="color__text--gray80">Завършил дентална медицина в Медицински университет, Факултет по дентална медицина - гр. София през 2002г.</p>
-            <p class="color__text--gray80">Член е на Българското ендодотско общество.</p>
+            <p>Завършил дентална медицина в Медицински университет, Факултет по дентална медицина - гр. София през 2002г.</p>
+            <p>Член е на Българското ендодотско общество.</p>
             <p class="colort__text--gray80">Работи основно в областите <span class="color__test--green">естетика</span> и <span class="color__test--green">ендодонтия</span>.</p>
             <div class="button button__more">
                 <a href="" id="after-grad" class="color__element--green">Следдипломни квалификации</a>
@@ -200,15 +205,15 @@
                 </div>
             </div>
         </div>
-        <div class="grid__element--1of3">
+        <div class="pure-u-1-3">
             <img src="assets/images/lubo-x1.png" alt="информация за д-р Любен Костов"/>
         </div>
     </div>
 <!--    VCARD__ID END-->
 <!--    VCARD__LIST AFTER GRAD START-->
-    <div class="grid">
+    <div class="pure-g-r">
 <!--    VCARD__LIST__NAV START-->
-        <div class="grid__element--1of5">
+        <div class="pure-u-1-5">
             <ul class="nav nav__vcard">
                 <li><a href="#sem-l">семинари</a></li>
                 <li><a href="#sim-l">симпозиуми</a></li>
@@ -218,7 +223,7 @@
         </div>
 <!--    VCARD__LIST__NAV END-->
 <!--    VCARD__LIST__BODY START-->
-        <div class="grid__element--4of5">
+        <div class="pure-u-4-5">
 <!--            VCARD__LIS__BODY SEMINAR START-->
                 <div class="block block__team">
                     <h3 id="sem-l" class="color__text--green">Семинари</h3>
@@ -284,23 +289,25 @@
 <!--BACK TO TOP END-->
 
 <!--FOOTER START-->
-<div class="container--full color__element--gray">
-    <div class="grid">
-        <div class="grid__element--2of4">
+<div class="footer color__element--gray">
+    <div class="pure-g-r">
+        <div class="pure-u-1-2 l-box">
             <h3 class="color__text--green">Как да ни  намерите?</h3>
-            <p class="color__text--gray80">ж.к. Свобода, ул. Ген.Никола Жеков 22, бл. Бриз Север 2, партер</p>
-            <p class="color__text--gray80"> Елияна  Мартева 0888 54 56 81<br> Любен  Костов 0887 392 082</p>
+            <p>ж.к. Свобода, ул. Ген.Никола Жеков 22, бл. Бриз Север 2, партер</p>
+            <p>д-р Елияна  Мартева 0888 54 56 81<br>д-р Любен  Костов 0887 392 082</p>
             <p><i class="facebook">facebook</i></p>
         </div>
-        <div class="grid__element--2of4">
+        <div class="pure-u-1-2 l-box footer__map--offset pure-hidden-tablet pure-hidden-phone">
             <svg width="543" height="299">
                 <image xlink:href="assets/images/map.svg" src="assets/images/map.png" alt="икона доктор" width="543" height="299"/>
             </svg>
         </div>
-        <hr class="ruler ruler__footer color__element--gren">
-        <div class="grid__element--1of1">
-            <div class="nav left">
-                <ul>
+    </div>
+    <hr class="footer__hr">
+    <div class="pure-g-r">
+        <div class="pure-u-1 l-box">
+            <div class="right">
+                <ul class="nav nav__footer">
                     <li><a href="index.html">КАБИНЕТЪТ</a></li>
                     <li><a href="services.html">УСЛУГИ</a></li>
                     <li><a href="team.html">ЕКИП</a></li>
@@ -310,6 +317,10 @@
         </div>
     </div>
 </div>
+<!-- SCRIPTS START -->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script src="assets/js/app.js"></script>
+<!-- SCRIPTS END -->
 <!--FOOTER END-->
 </body>
 </html>

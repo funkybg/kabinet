@@ -1,0 +1,12 @@
+/*------------------------------------*\
+    $MAP VARIABLES
+\*------------------------------------*/
+
+.map__holder {
+	display:block;
+}
+
+.map__holder > div#map-canvas {
+	position:relative;
+	height: 25em;
+}

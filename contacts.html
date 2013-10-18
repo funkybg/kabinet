@@ -7,7 +7,8 @@
 
     <title>Кабинетът | Дентален център - КМ Дент</title>
 
-    <link rel="stylesheet" href="">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400,600&subset=cyrillic,latin' rel='stylesheet' type='text/css'>
 
     <link rel="shortcut icon" href="TODO">
     
@@ -17,36 +18,16 @@
     <meta name="copyright" content="Дентален център КМ Дент" />
     
     <link type="text/plain" rel="author" href="humans.txt">
-    <style type="text/css">
-      html { height: 100% }
-      body { height: 100%; margin: 0; padding: 0 }
-      #map-canvas, #map-canvas2 {height:auto; width:100%; display:block;padding-bottom:30%;}
-    </style>
 </head>
 <body>
-<!--MAP OFF-CANVAS START-->
-<div class="container--full">
-    <div id="map-canvas"></div>
-    <div class="contact">
-        <h3 class="color__text--green">Информация за контакт</h3>
-        <p class="color__text--gray80">ж.к. Свобода, ул. Ген.Никола Жеков 22,<br>бл. Бриз Север 2, партер</p>
-        <p class="color__text--gray80">д-р Елияна  Мартева <strong class="color__text--green">0888 54 56 81</strong><br>д-р Любен  Костов <strong class="color__text--green">0887 392 082</strong></p>
-        <p><i class="facebook">facebook</i></p>
-        <h3 class="color__text--green">Упътвания</h3>
-        <p class="color__text--gray80">Спирка 24-ти ДКЦ ( код 0018 и 0019 ):<br>- автобус: 85 и 108<br>- трамвай: 6<br>- маршрутно такси: 8 и 31</p>
-        <a class="button button__close color__element--purple" href="#">затвори<i class="close"></i></a>
-    </div>
-</div>
-<!--MAP OFF-CANVAS END-->
-
 <!--NAV START-->
-<div class="grid">
-    <div class="grid__element">
+<div  class="nav__container">
+    <div>
         <ul class="nav nav__header">
-            <li><a href="index.html">КАБИНЕТЪТ</a></li>
+            <li class="active"><a href="index.html">КАБИНЕТЪТ</a></li>
             <li><a href="services.html">УСЛУГИ</a></li>
             <li><a href="team.html">ЕКИП</a></li>
-            <li><a href="contacts.html">КОНТАКТИ</a></li>
+            <li><a id="toggle__btn" href="contacts.html">КОНТАКТИ</a></li>
         </ul>
     </div>
 </div>
@@ -57,8 +38,8 @@
 <!----------------->
 
 <!--MAP CANVAS START-->
-<div class="container--full">
-    <div id="map-canvas2"></div>
+<div class="map__holder">
+    <div id="map-canvas"></div>
 </div>
 <!--MAP CANVAS END-->
 
@@ -67,32 +48,33 @@
 <!--GREEN RULER END-->
 
 <!--CONTENT START-->
-<div class="grid">
-    <div class="grid__element--1of2">
+<div class="pure-g-r">
+    <div class="pure-u-1-2">
         <h3 class="color__test--green">Информация за контакт</h3>
         <p>ж.к. Свобода, ул. Ген.Никола Жеков 22, бл. Бриз Север 2, партер</p>
         <p>д-р Елияна  Мартева <span class="color__text-green">0888 54 56 81</span><br>д-р Любен  Костов <span class="color__text--green">0887 392 082</span></p>
         <p><i class="facebook">facebook</i></p>
     </div>
-    <div class="drit__element--1of2">
+    <div class="pure-u-1-2">
         <h3 class="color__text--green">Упътвания</h3>
-        <p class="color__text--gray80">Спирка 24-ти ДКЦ ( код 0018 и 0019 ):<br>- автобус: 85 и 108<br>- трамвай: 6<br>- маршрутно такси: 8 и 31</p>
-        <div class="button button__map">
-            <a href="" id="street-view" class="color__element--green">Виж в SteetView</a>
-            <div class="button__icon__wrapper">
-                <svg width="31" height="31">
-                    <image xlink:href="assets/images/sv.svg" src="assets/images/sv.png" alt="икона стрийт вю" width="31" height="31"/>
+        <p>Спирка 24-ти ДКЦ ( код 0018 и 0019 ):<br>- автобус: 85 и 108<br>- трамвай: 6<br>- маршрутно такси: 8 и 31</p>
+        <div class="button__map">
+            <a href="" id="street-view">
+                <svg width="31" height="29">
+                    <image xlink:href="assets/images/sv.svg" src="assets/images/sv.png" alt="икона стрийт вю" width="31" height="29"/>
                 </svg>
-            </div>
+                <span>Виж снимка</span>
+            </a>
         </div>
-        <div class="button button__map">
-            <a href="" id="map-view" class="color__element--green">Виж на картата</a>
-            <div class="button__icon__wrapper">
+        <div class="button__map">
+            <a href="" id="map-view">
                 <svg width="31" height="29">
                     <image xlink:href="assets/images/gmaps.svg" src="assets/images/gmaps.png" alt="икона карта" width="31" height="29"/>
                 </svg>
-            </div>
+                <span>На картата</span>
+            </a>
         </div>
+
     </div>
 </div>
 <!--CONTENT END-->
@@ -102,12 +84,12 @@
 <!--------------->
 
 <!--FOOTER START-->
-<div class="container--full color__element--gray">
-    <div class="grid">
-        <hr class="ruler ruler__footer color__element--gren">
-        <div class="grid__element--1of1">
-            <div class="nav left">
-                <ul>
+<div class="footer color__element--gray">
+    <hr class="footer__hr">
+    <div class="pure-g-r">
+        <div class="pure-u-1 l-box">
+            <div class="right">
+                <ul class="nav nav__footer">
                     <li><a href="index.html">КАБИНЕТЪТ</a></li>
                     <li><a href="services.html">УСЛУГИ</a></li>
                     <li><a href="team.html">ЕКИП</a></li>
@@ -117,10 +99,10 @@
         </div>
     </div>
 </div>
-<!--FOOTER END-->
-
-<!--SCRIPTS START-->
+<!-- SCRIPTS START -->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 <script src="assets/js/app.js"></script>
-<!--SCRIPTS START-->
+<!-- SCRIPTS END -->
+<!--FOOTER END-->
 </body>
 </html>

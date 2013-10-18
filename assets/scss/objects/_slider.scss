@@ -20,7 +20,7 @@
 
 .caption {
 	display: block;
-	margin-top: -35%;
+    margin-top:5em;
 	z-index: 1000;
 }
 
@@ -35,9 +35,7 @@
 .flexslider a:active,
 .flex-container a:focus,
 .flexslider a:focus  {outline: none;}
-.slides,
-.flex-control-nav,
-.flex-direction-nav {margin: 0; padding: 0; list-style: none;}
+.slides {margin: 0; padding: 0; list-style: none;}
 
 /* Icon Fonts
 *********************************/
@@ -63,7 +61,26 @@ html[xmlns] .slides {display: block;}
 
 /* FlexSlider Default Theme
 *********************************/
-.flexslider { margin: 0; background: #fff; position: relative; zoom: 1; z-index: -1; }
+.flexslider { margin: 0;position: relative; zoom: 1; z-index: -50;}
 .flex-viewport { max-height: 2000px; -webkit-transition: all 1s ease; -moz-transition: all 1s ease; -o-transition: all 1s ease; transition: all 1s ease; }
 .loading .flex-viewport { max-height: 300px; }
 .flexslider .slides { zoom: 1; }
+
+.slides > li  {
+	height: 0;
+	background-repeat: no-repeat;
+	background-size: cover;
+    background-position:center;
+    padding-bottom: 27%;
+}
+.slider__image--first {
+	background-image: url(../images/Zen-Bamboo-Stones-mirror-x1.jpg);
+}
+
+.slider__image--second {
+	background-image: url(../images/slide5-01-x1.jpg);
+}
+
+.slider__image--third {
+	background-image: url(../images/slide6-01-x1.jpg);
+}
