@@ -1,3 +1,32 @@
+//================= BUTTONS SCRIPTS ==================//
+
+// CONTACTS DROPDOWN CLOSE BUTTON
+
+// $('#close__btn').click(function(){
+//     $('#off__canvas__contacts').removeClass('offcanvas__top--open');
+//     return false;
+// });
+
+// CONTACTS MAIN NAV DROPDOWN TOGGLE BUTTON
+// $('#toggle__btn').click(function(){
+//     $('#off__canvas__contacts').toggleClass('offcanvas__top--open');
+//     return false;
+// });
+
+
+//================= MENU SCROLL SCRIPTS ==================//
+
+    $('body,html,document,window').scroll(function() {    
+        var scroll = $('.nav').scrollTop();
+    
+        if (scroll <= 500) {
+            $('#top').removeClass('clearHeader').addClass("darkHeader");
+        } else {
+            $('#top').removeClass("darkHeader").addClass('clearHeader');
+        }
+        console.log(scroll);
+    });
+
 //================= ASYCH FONTS SCRIPTS ==================//
 
 $(window).load(function(){
@@ -58,21 +87,6 @@ function loadScript() {
 }
 
 window.onload = loadScript;
-
-//================= BUTTONS SCRIPTS ==================//
-
-// CONTACTS DROPDOWN CLOSE BUTTON
-
-// $('#close__btn').click(function(){
-//     $('#off__canvas__contacts').removeClass('offcanvas__top--open');
-//     return false;
-// });
-
-// CONTACTS MAIN NAV DROPDOWN TOGGLE BUTTON
-// $('#toggle__btn').click(function(){
-//     $('#off__canvas__contacts').toggleClass('offcanvas__top--open');
-//     return false;
-// });
 
 //================= FLEX SLIDER SCRIPTS ==================//
 
