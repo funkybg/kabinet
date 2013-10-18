@@ -5,9 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-    <title>Услуги | Дентален център - КМ Дент</title>
+    <title>Екип | Дентален център - КМ Дент</title>
 
-    <link rel="stylesheet" href="">
+    <link rel="stylesheet" href="assets/css/style.css">
 
     <link rel="shortcut icon" href="TODO">
     
@@ -41,14 +41,14 @@
 <!--SMALL HEADER IMAGE END-->
 
 <!--CONTENT START-->
-<div class="grid">
-    <div class="grid__element--1of1">
+<div class="pure-g-r">
+    <div class="pure-u-1">
         <h1 class="color__text--green">Нашите услуги...</h1>
         <h3 class="color__text--gray50 text--slim">Богат набор от услуги, в <span class="color__text--green">7 области</span> на лечение.</h3>
     </div>
 
 <!--SERVICE MENU START-->
-    <div class="grid__element-1of5">
+    <div class="pure-u-1-5">
         <ul class="nav nav__service">
             <li><a href="#endo">ендодонтско<br>лечение</a></li>
             <li><a href="#prot">протетично<br>лечение</a></li>
@@ -63,7 +63,7 @@
 <!--SERVICE MENU END-->
 
 <!--SERVICE LIST START-->
-    <div class="grid__element--4of5">
+    <div class="pure-u-4-5">
 <!--        SERVICE START-->
         <div class="block block__service">
             <h3 id="endo" class="color__text--green">Ендодонтско лечение</h3>
@@ -74,13 +74,11 @@
             <p class="color__text--gray80 block--indent">- Машинно разширяване на кореновите канали - ендодонтски мотор и електронен апекслокатор Morita и NSK,никел-титанови ротационни инструменти,ултразвукови инструменти.
 </p>
             <p class="color__text--gray80 block--indent">- Запълване с апарат за вертикална кондензация VDW BeeFill 2 in1-с топлина се пластифицира гутаперка,като по този начин се осигурява триизмерно запълване на кореновите канали.</p>
-            <div class="button button__more">
-                <a class="color__element--green" href="#">Видео</a>
-                <div class="button__icon__wrapper">
-                    <svg width="25" height="25">
-                        <image xlink:href="assets/images/play.svg" src="assets/images/play.png" alt="икона доктор" width="25" height="25"/>
+            <div class="button__aftergrad">
+                <a href="" id="after-grad" class="button__aftergrad__link"><span class="button__aftergrad__text">Видео</span><svg width="25" height="29" class="button__aftergrad__image">
+                        <image xlink:href="assets/images/play.svg" src="assets/images/play.png" alt="икона плюс" width="25" height="28"/>
                     </svg>
-                </div>
+                </a>
             </div>
             <div class="block block__video"></div>
         </div>
@@ -159,23 +157,25 @@
 <!--BACK TO TOP END-->
 
 <!--FOOTER START-->
-<div class="container--full color__element--gray">
-    <div class="grid">
-        <div class="grid__element--2of4">
+<div class="footer color__element--gray">
+    <div class="pure-g-r">
+        <div class="pure-u-1-2 l-box">
             <h3 class="color__text--green">Как да ни  намерите?</h3>
-            <p class="color__text--gray80">ж.к. Свобода, ул. Ген.Никола Жеков 22, бл. Бриз Север 2, партер</p>
-            <p class="color__text--gray80">д-р Елияна  Мартева 0888 54 56 81<br>д-р Любен  Костов 0887 392 082</p>
+            <p>ж.к. Свобода, ул. Ген.Никола Жеков 22, бл. Бриз Север 2, партер</p>
+            <p>д-р Елияна  Мартева 0888 54 56 81<br>д-р Любен  Костов 0887 392 082</p>
             <p><i class="facebook">facebook</i></p>
         </div>
-        <div class="grid__element--2of4">
+        <div class="pure-u-1-2 l-box footer__map--offset pure-hidden-tablet pure-hidden-phone">
             <svg width="543" height="299">
                 <image xlink:href="assets/images/map.svg" src="assets/images/map.png" alt="икона доктор" width="543" height="299"/>
             </svg>
         </div>
-        <hr class="ruler ruler__footer color__element--gren">
-        <div class="grid__element--1of1">
-            <div class="nav left">
-                <ul>
+    </div>
+    <hr class="footer__hr">
+    <div class="pure-g-r">
+        <div class="pure-u-1 l-box">
+            <div class="right">
+                <ul class="nav nav__footer">
                     <li><a href="index.html">КАБИНЕТЪТ</a></li>
                     <li><a href="services.html">УСЛУГИ</a></li>
                     <li><a href="team.html">ЕКИП</a></li>
@@ -185,6 +185,10 @@
         </div>
     </div>
 </div>
+<!-- SCRIPTS START -->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script src="assets/js/app.js"></script>
+<!-- SCRIPTS END -->
 <!--FOOTER END-->
 </body>
 </html>
