@@ -21,16 +21,20 @@
 	position: fixed;
 }
 .nav__header a {
-	padding: 1em;
+	// padding: 1em;
+	min-height: 3.2em;
+	line-height: 3.2em;
+	padding: 0 1em;
 }
 
 .nav a {
 	display:block;
-	font-size: 1em;
+	font-size: 0.9em;
 }
 
 .nav__footer a {
 	padding:0.5em;
+	font-size: 0.8em;
 }
 .nav__header li:hover, .button:hover {
 	background-color: $green;
@@ -38,7 +42,6 @@
 
 .active {
 	background-color: $green;
-	font-weight: 700;
 }
 
 .nav > li {
@@ -63,7 +66,6 @@
 .button {
 	font-size: 0.9em;
 	padding:0.3em 0.5em;
-	font-weight: 600;
 }
 
 .button__map svg,.button__map img {
@@ -80,6 +82,31 @@
 	padding: 0.54em;
 	width: 8.5em;
 	float:left;
+}
+
+/*------------------------------------*\
+    $BUTTON AFTER GRAD
+\*------------------------------------*/
+
+.button__aftergrad__text,.button__aftergrad__image {
+    display: inline-block;
+    *display: inline;
+    zoom: 1;
+    vertical-align: middle;
+    padding: 0.2em 0.8em;
+    min-height: 29px;
+}
+.button__aftergrad__image {
+	background-color: $purple;
+}
+.button__aftergrad__text {
+	background-color: $green;
+	padding-right: 1.5em;
+	line-height: 1.7em;
+	color:$white;
+}
+.button__aftergrad__link:hover .button__aftergrad__text {
+	background-color: $purple;
 }
 
 /*------------------------------------*\

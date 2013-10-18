@@ -16,11 +16,13 @@ h1.giga {
 h2.giga {
 	font-size: 2.5em;
 }
+.subheading {
+	font-size:0.8em;
+}
 
 .text--italic {font-style: italic;}
-.text--slim {font-weight: 300;}
+.text--slim {font-weight: 200;}
 
-body,
 .pure-g [class *= "pure-u"],
 .pure-g-r [class *= "pure-u"] {
     /* Set you're content font stack here: */

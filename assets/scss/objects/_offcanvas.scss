@@ -26,19 +26,10 @@
 	transition: all 0.4s;
 }
 
-.contact {
-	position:relative;
-	background-color: $white;
-	padding:1em;
-	z-index: 10000;
-	float: right;
-}
-
-#map-canvas {
-	height:100%;
-	width:100%;
-	display:block;
-	position:absolute;
-	z-index: -20;
-	padding-bottom:6.1em;
-}
+// .contact {
+// 	position:absolute;
+// 	background-color: $white;
+// 	padding:1em;
+// 	z-index: 10000;
+// 	top:5%;
+// }

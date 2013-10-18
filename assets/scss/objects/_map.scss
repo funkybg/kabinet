@@ -2,11 +2,11 @@
     $MAP VARIABLES
 \*------------------------------------*/
 
-.map__holder {
+#map-canvas {
+	height:100%;
+	width:100%;
 	display:block;
-}
-
-.map__holder > div#map-canvas {
 	position:relative;
-	height: 25em;
+	z-index: 20;
+	height: 30em;
 }

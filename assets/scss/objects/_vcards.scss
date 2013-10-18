@@ -1,0 +1,43 @@
+/*------------------------------------*\
+    $VCARD and TAGS MODULE DEFINITIONS
+\*------------------------------------*/
+
+/*------------------------------------*\
+    $CONTENT
+\*------------------------------------*/
+
+/*  
+ * TAGS
+ * VCARDS
+ *
+ */
+
+/*------------------------------------*\
+    $TAGS
+\*------------------------------------*/
+
+.tags {
+	padding: 0.5em 1em;
+	max-width: 65%;
+}
+
+.tags__text,.tags__image,.tags__button {
+    display: inline-block;
+    *display: inline;
+    zoom: 1;
+    vertical-align: middle;
+}
+
+.tags__image {
+	margin-right: 1.5em;
+}
+.tags__text {
+	width:60%;
+}
+
+.tags:hover {
+	background-color: $grayLight;
+}
+.tags:hover .tags__button {
+	background-color: $green;
+}

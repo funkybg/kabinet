@@ -8,7 +8,6 @@
     <title>Кабинетът | Дентален център - КМ Дент</title>
 
     <link rel="stylesheet" href="assets/css/style.css">
-    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400,600&subset=cyrillic,latin' rel='stylesheet' type='text/css'>
 
     <link rel="shortcut icon" href="TODO">
     
@@ -20,33 +19,12 @@
     <link type="text/plain" rel="author" href="humans.txt">
 </head>
 <body>
-<!--MAP OFF-CANVAS START-->
-<div id="off__canvas__contacts" class="offcanvas">
-    <div id="map-canvas"></div>
-    <div class="pure-g-r">
-        <div class="pure-u-1 l-box">
-            <div class="contact">
-                <h3 class="color__text--green">Информация за контакт</h3>
-                <p>ж.к. Свобода, ул. Ген.Никола Жеков 22,<br>бл. Бриз Север 2, партер</p>
-                <p>д-р Елияна  Мартева <strong class="color__text--green">0888 54 56 81</strong><br>д-р Любен  Костов <strong class="color__text--green">0887 392 082</strong></p>
-                <p><i class="facebook">facebook</i></p>
-                <h3 class="color__text--green">Упътвания</h3>
-                <p>Спирка 24-ти ДКЦ ( код 0018 и 0019 ):<br>- автобус: 85 и 108<br>- трамвай: 6<br>- маршрутно такси: 8 и 31</p>
-                <a id="close__btn" class="button color__element--purple" href="contacts.html">затвори<i class="close"></i></a>
-            </div>
-        </div>
-    </div>
-</div>
-<!--MAP OFF-CANVAS END-->
 
 <!--NAV START-->
-<div  class="nav__container">
+<div id="top" class="nav__container">
     <div>
         <ul class="nav nav__header">
-            <li class="active"><a href="index.html">КАБИНЕТЪТ</a></li>
-            <li><a href="services.html">УСЛУГИ</a></li>
-            <li><a href="team.html">ЕКИП</a></li>
-            <li><a id="toggle__btn" href="contacts.html">КОНТАКТИ</a></li>
+            <li class="active"><a href="index.html">КАБИНЕТЪТ</a></li><li><a href="services.html">УСЛУГИ</a></li><li><a href="team.html">ЕКИП</a></li><li><a id="toggle__btn" href="contacts.html">КОНТАКТИ</a></li>
         </ul>
     </div>
 </div>
@@ -57,48 +35,43 @@
 <!----------------->
 
 <!--SMALL HEADER IMAGE START-->
-<div class="container--full">
     <img src="assets/images/header-small-x1-01.jpg" alt="малък хедър">
-</div>
 <!--SMALL HEADER IMAGE END-->
 
 <!--CONTENT START-->
 <!--SUBHEADER CONTENT: TEAM IMAGE + TEAM NAV START-->
 <div class="pure-g-r">
     <div class="pure-u-1-2">
-            <img src="assets/images/team-x1.png" alt=" Елияна  Мартева и  Любен  Костов">
+            <img src="assets/images/team-x1.png" alt="Елияна  Мартева и  Любен  Костов">
     </div>
 <!--    TEAM NAV START-->
     <div class="pure-u-1-2">
         <h1 class="color__text--green">Ние сме...</h1>
         <h3 class="color__text--gray50">Екип с над <span class="color__text--green">10 години</span> практически опит.</h3>
-        <div class="pure-g-r">
-            <div class="pure-u-1-2">
-                <svg width="43" height="43">
-                    <image xlink:href="assets/images/doc.svg" src="assets/images/doc.png" alt="икона доктор" width="43" height="43"/>
-                </svg>
-                <div class="block__nametag">
-                    <h3>д-р Елияна Мартева<br><span class="color__text--gray50 h3--mini">стоматолог</span></h3>
+                <div class="tags">
+                    <a href="#vcard-eli">
+                        <svg width="43" height="43" class="tags__image">
+                            <image xlink:href="assets/images/doc.svg" src="assets/images/doc.png" alt="икона доктор" width="43" height="43"/>
+                        </svg>
+                        <span class="tags__text">д-р Елияна Мартева<br><span class="color__text--gray50 h3--mini">стоматолог</span></span>
+                        <span class="button tags__button color__element--purple" href="#vcard-eli">+ повече</span>
+                    </a>
                 </div>
-                <a class="button button__more color__element--purple" href="#vcard-eli">+ повече</a>
-            </div>
-            <div class="pure-u-1-2">
-                <svg width="43" height="43">
-                    <image xlink:href="assets/images/doc.svg" src="assets/images/doc.png" alt="икона доктор" width="43" height="43"/>
-                </svg>
-                <div class="block__nametag">
-                    <h3>д-р Любен Костов<br><span class="color__text--gray50 h3--mini">стоматолог</span></h3>
+                <div class="tags">
+                    <a href="#vcard-lubo">
+                        <svg width="43" height="43" class="tags__image">
+                            <image xlink:href="assets/images/doc.svg" src="assets/images/doc.png" alt="икона доктор" width="43" height="43"/>
+                        </svg>
+                        <span class="tags__text">д-р Любен Костов<br><span class="color__text--gray50 h3--mini">стоматолог</span></span>
+                        <span class="button tags__button color__element--purple">+ повече</span>
+                    </a>
                 </div>
-                <a class="button button__more color__element--purple" href="#vcard-lubo">+ повече</a>
-            </div>
-            <div class="pure-u-1-2">
-                <svg width="43" height="43">
-                    <image xlink:href="assets/images/nurse.svg" src="assets/images/nurse.png" alt="икона сестра" width="43" height="43"/>
-                </svg>
-                <div class="block__nametag">
-                    <h3>Албена Димитрова<br><span class="color__text--gray50 h3--mini">дентален асистент</span></h3>
+                <div class="tags">
+                    <svg width="43" height="43" class="tags__image">
+                        <image xlink:href="assets/images/nurse.svg" src="assets/images/nurse.png" alt="икона сестра" width="43" height="43"/>
+                    </svg>
+                    <span class="tags__text">Албена Димитрова<br><span class="color__text--gray50 h3--mini">дентален асистент</span></span>
                 </div>
-            </div>
         </div>
     </div>
 <!--    TEAM NAV END-->
@@ -112,17 +85,15 @@
             <img src="assets/images/eli-x1.png" alt="информация за д-р Елияна Мартева"/>
         </div>
         <div class="pure-u-2-3">
-            <h1 id="vcard-eli">д-р Елияна Мартева<br><span class="color__text--gray50 h1--mini">лекар по дентална медицина</span></h1>
+            <h2 id="vcard-eli" class="color__text--green">д-р Елияна Мартева<br><span class="color__text--gray50 subheading">лекар по дентална медицина</span></h2>
             <p>Завършила  дентална медицина в Медицински университет, Факултет по дентална медицина-гр. София през 2002г.</p>
             <p>Член е на Българското ендодонтско общество.</p>
-            <p class="colort__text--gray80">Основни акценти в професионалната и кариера са <span class="color__test--green">ендодонтията</span> и <span class="color__test--green">директните възстановявания</span>.</p>
-            <div class="button button__more">
-                <a href="" id="after-grad" class="color__element--green">Следдипломни квалификации</a>
-                <div class="button__icon__wrapper">
-                    <svg width="31" height="29">
+            <p class="colort__text--gray80">Основни акценти в професионалната и кариера са <span class="color__text--green">ендодонтията</span> и <span class="color__text--green">директните възстановявания</span>.</p>
+            <div class="button__aftergrad">
+                <a href="" id="after-grad" class="button__aftergrad__link"><span class="button__aftergrad__text">Следдипломни квалификации</span><svg width="31" height="29" class="button__aftergrad__image">
                         <image xlink:href="assets/images/plus.svg" src="assets/images/plus.png" alt="икона плюс" width="31" height="29"/>
                     </svg>
-                </div>
+                </a>
             </div>
         </div>
     </div>
@@ -192,17 +163,15 @@
 <!--    VCARD__ID START-->
     <div class="pure-g-r">
         <div class="pure-u-2-3">
-            <h1 id="vcard-lubo">д-р Любен Костов<br><span class="color__text--gray50 h1--mini">лекар по дентална медицина</span></h1>
+            <h2 id="vcard-lubo" class="color__text--green">д-р Любен Костов<br><span class="color__text--gray50 subheading">лекар по дентална медицина</span></h2>
             <p>Завършил дентална медицина в Медицински университет, Факултет по дентална медицина - гр. София през 2002г.</p>
             <p>Член е на Българското ендодотско общество.</p>
-            <p class="colort__text--gray80">Работи основно в областите <span class="color__test--green">естетика</span> и <span class="color__test--green">ендодонтия</span>.</p>
-            <div class="button button__more">
-                <a href="" id="after-grad" class="color__element--green">Следдипломни квалификации</a>
-                <div class="button__icon__wrapper">
-                    <svg width="31" height="29">
+            <p class="colort__text--gray80">Работи основно в областите <span class="color__text--green">естетика</span> и <span class="color__text--green">ендодонтия</span>.</p>
+            <div class="button__aftergrad">
+                <a href="" id="after-grad" class="button__aftergrad__link"><span class="button__aftergrad__text">Следдипломни квалификации</span><svg width="31" height="29" class="button__aftergrad__image">
                         <image xlink:href="assets/images/plus.svg" src="assets/images/plus.png" alt="икона плюс" width="31" height="29"/>
                     </svg>
-                </div>
+                </a>
             </div>
         </div>
         <div class="pure-u-1-3">
