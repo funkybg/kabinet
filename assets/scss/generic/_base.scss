@@ -79,11 +79,12 @@ html {
     font-size: $base-font-size; /* 1 */
     -ms-text-size-adjust: 100%; /* 2 */
     -webkit-text-size-adjust: 100%; /* 2 */
+    overflow-y:scroll;
 }
 
 html,body{
-    height:100%;
-    overflow:auto;
+    height: auto;
+    min-height: 100%;
 }
 
 /**
@@ -107,8 +108,6 @@ textarea {
 body {
     margin: 0;
     padding: 0;
-    height:100%;
-    overflow-y:scroll;
 }
 
 /* ==========================================================================

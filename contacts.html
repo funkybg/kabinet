@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="bg">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,7 +8,6 @@
     <title>Контакти | Дентален център - КМ Дент</title>
 
     <link rel="stylesheet" href="assets/css/style.css">
-    <!-- <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400,600&subset=cyrillic' rel='stylesheet' type='text/css'> -->
 
     <link rel="shortcut icon" href="TODO">
     
@@ -24,7 +23,7 @@
 <div id="top" class="nav__container">
     <div>
         <ul class="nav nav__header">
-            <li class="active"><a href="index.html">КАБИНЕТЪТ</a></li><li><a href="services.html">УСЛУГИ</a></li><li><a href="team.html">ЕКИП</a></li><li><a id="toggle__btn" href="contacts.html">КОНТАКТИ</a></li>
+            <li><a href="index.html">КАБИНЕТЪТ</a></li><li><a href="services.html">УСЛУГИ</a></li><li><a href="team.html">ЕКИП</a></li><li><a class="active"href="contacts.html">КОНТАКТИ</a></li>
         </ul>
     </div>
 </div>
@@ -54,18 +53,15 @@
         <h3 class="color__text--green">Упътвания</h3>
         <p>Спирка 24-ти ДКЦ ( код 0018 и 0019 ):<br>- автобус: 85 и 108<br>- трамвай: 6<br>- маршрутно такси: 8 и 31</p>
         <div class="button__aftergrad">
-            <a href="" id="after-grad" class="button__aftergrad__link"><span style="min-width:5.25em;" class="button__aftergrad__text">На снимка</span><svg width="31" height="29" class="button__aftergrad__image">
+            <a href="" id="view" class="button__aftergrad__link"><span class="button__aftergrad__text">На снимка</span><svg width="31" height="29" class="button__aftergrad__image">
                     <image xlink:href="assets/images/sv.svg" src="assets/images/sv.png" alt="икона плюс" width="31" height="29"/>
                 </svg>
             </a>
-        </div>
-        <div class="button__aftergrad">
-            <a href="" id="after-grad" class="button__aftergrad__link"><span class="button__aftergrad__text">На картата</span><svg width="31" height="29" class="button__aftergrad__image">
+            <a href="" id="map" class="button__aftergrad__link"><span class="button__aftergrad__text active--map">На картата</span><svg width="31" height="29" class="button__aftergrad__image">
                     <image xlink:href="assets/images/gmaps.svg" src="assets/images/gmaps.png" alt="икона плюс" width="31" height="29"/>
                 </svg>
             </a>
         </div>
-
     </div>
 </div>
 <!--CONTENT END-->
@@ -84,9 +80,11 @@
             <p><i class="facebook">facebook</i></p>
         </div>
         <div class="pure-u-1-2 l-box footer__map--offset pure-hidden-tablet pure-hidden-phone">
-            <svg width="543" height="299">
-                <image xlink:href="assets/images/map.svg" src="assets/images/map.png" alt="икона доктор" width="543" height="299"/>
-            </svg>
+            <a href="contacts.html">
+                <svg width="543" height="299">
+                    <image xlink:href="assets/images/map.svg" src="assets/images/map.png" alt="икона доктор" width="543" height="299"/>
+                </svg>
+            </a>
         </div>
     </div>
     <hr class="footer__hr">

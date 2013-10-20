@@ -38,7 +38,17 @@
     $CONTAINERS
 \*------------------------------------*/
 
+.container--full {
+	display: block;
+	position: relative;
+	height:auto;
+}
 
 /*------------------------------------*\
     $POSITION
 \*------------------------------------*/
+.center {
+	max-width: 1200px;
+	margin-right: auto;
+	margin-left: auto;
+}

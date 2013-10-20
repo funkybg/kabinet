@@ -38,6 +38,11 @@
 }
 .nav__header li:hover, .button:hover {
 	background-color: $green;
+	-webkit-transition: background-color 0.2s;
+	-moz-transition: background-color 0.2s;
+	-o-transition: background-color 0.2s;
+	-ms-transition: background-color 0.2s;
+	transition: background-color 0.2s;
 }
 
 .active {
@@ -106,6 +111,20 @@
 	color:$white;
 }
 .button__aftergrad__link:hover .button__aftergrad__text {
+	background-color: $purple;
+	-webkit-transition: background-color 0.2s;
+	-moz-transition: background-color 0.2s;
+	-o-transition: background-color 0.2s;
+	-ms-transition: background-color 0.2s;
+	transition: background-color 0.2s;
+}
+
+.button__aftergrad__link:hover .button__aftergrad__image {
+	-webkit-transform:rotateY(360deg);
+	transition: all 1s;
+}
+
+.active--map {
 	background-color: $purple;
 }
 

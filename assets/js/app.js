@@ -1,31 +1,18 @@
 //================= BUTTONS SCRIPTS ==================//
 
-// CONTACTS DROPDOWN CLOSE BUTTON
-
-// $('#close__btn').click(function(){
-//     $('#off__canvas__contacts').removeClass('offcanvas__top--open');
-//     return false;
-// });
-
-// CONTACTS MAIN NAV DROPDOWN TOGGLE BUTTON
-// $('#toggle__btn').click(function(){
-//     $('#off__canvas__contacts').toggleClass('offcanvas__top--open');
-//     return false;
-// });
-
 
 //================= MENU SCROLL SCRIPTS ==================//
 
-    $('body,html,document,window').scroll(function() {    
-        var scroll = $('.nav').scrollTop();
+    // $(window).scroll(function() {
+    //     var scroll = $(document).scrollTop();
     
-        if (scroll <= 500) {
-            $('#top').removeClass('clearHeader').addClass("darkHeader");
-        } else {
-            $('#top').removeClass("darkHeader").addClass('clearHeader');
-        }
-        console.log(scroll);
-    });
+    //     if (scroll > 100) {
+    //         $('div#top').removeClass('nav__header--small').addClass('nav__header--wide');
+    //     }
+    //      else {
+    //         $('div#top').removeClass('nav__header--wide').addClass('nav__header--small');
+    //     }
+    // });
 
 //================= ASYCH FONTS SCRIPTS ==================//
 
@@ -44,13 +31,16 @@ $(window).load(function(){
       })();
   });
 
-//================= GOOGLE MAPS SCRIPS ==================//
+//================= GOOGLE MAPS SCRIPTS ==================//
+
 function initialize() {
     var myLatlng = new google.maps.LatLng(42.7370990, 23.3019066);
 
     var mapOptions = {
         zoom: 18,
         center: myLatlng,
+        streetViewControl: false,
+        scrollwheel: false,
         mapTypeId: google.maps.MapTypeId.ROADMAP
     }
 
@@ -76,7 +66,58 @@ function initialize() {
         title: "Дентален център - КМ Дент"
     });
 
+    var transitLayer = new google.maps.TransitLayer();
+    transitLayer.setMap(map);
+
     infowindow.open(map, marker);
+
+    var infostate = true;
+
+    google.maps.event.addListener(infowindow, 'closeclick', function() {
+        infostate = false;
+    });
+
+    google.maps.event.addListener(marker, 'click', function() {
+        if (infostate == false) {
+            infowindow.open(map, marker);
+            infostate = true;
+        } else if (infostate == true) {
+            infowindow.close(map, marker);
+            infostate = false;
+        }
+    });
+
+    //================= GOOGLE STREET VIEW INIT SCRIPTS ==================//
+
+    var panoramaOptions = {
+    position: myLatlng,
+    pov: {
+      heading: 0,
+      pitch: 0
+    },
+    zoom: 0
+    };
+    var sView = new google.maps.StreetViewPanorama(
+      document.getElementById('map-canvas'),
+      panoramaOptions);
+    sView.setVisible(false);
+
+    //================= GOOGLE STREET VIEW TOGGLE SCRIPTS ==================//
+
+    $('#map').click(function(){
+        sView.setVisible(false);
+        $('#map > span').addClass('active--map');
+        $('#view > span').removeClass('active--map');
+        return false;
+    });
+    
+    $('#view').click(function(){
+        sView.setVisible(true);
+        $('#view > span').addClass('active--map');
+        $('#map > span').removeClass('active--map');
+        return false;
+    });
+
 }
 
 function loadScript() {
@@ -87,6 +128,7 @@ function loadScript() {
 }
 
 window.onload = loadScript;
+
 
 //================= FLEX SLIDER SCRIPTS ==================//
 

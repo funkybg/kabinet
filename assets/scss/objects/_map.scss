@@ -8,5 +8,13 @@
 	display:block;
 	position:relative;
 	z-index: 20;
-	height: 30em;
+	padding-bottom: 30em;
+}
+
+.gm-style-iw {
+	padding:0.5em;
+}
+
+#map-canvas img {
+    max-width: none!important; 
 }
