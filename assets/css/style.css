@@ -1626,6 +1626,7 @@ html[xmlns] .slides {
     $CONTENT
 \*------------------------------------*/
 /*  
+ *
  * TAGS
  * VCARDS
  *
@@ -1633,10 +1634,9 @@ html[xmlns] .slides {
 /*------------------------------------*\
     $TAGS
 \*------------------------------------*/
-/* line 19, ../scss/objects/_vcards.scss */
+/* line 20, ../scss/objects/_vcards.scss */
 .tags {
   padding: 0.5em 1em;
-  max-width: 65%;
 }
 
 /* line 24, ../scss/objects/_vcards.scss */
@@ -1654,7 +1654,7 @@ html[xmlns] .slides {
 
 /* line 34, ../scss/objects/_vcards.scss */
 .tags__text {
-  width: 60%;
+  width: 55%;
 }
 
 /* line 38, ../scss/objects/_vcards.scss */
