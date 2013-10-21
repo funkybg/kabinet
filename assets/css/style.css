@@ -1325,31 +1325,39 @@ ul {
 /*------------------------------------*\
     $BUTTON AFTER GRAD
 \*------------------------------------*/
-/* line 96, ../scss/objects/_nav.scss */
-.button__aftergrad__text, .button__aftergrad__image {
+/* line 95, ../scss/objects/_nav.scss */
+.button__aftergrad__link {
   display: inline-block;
   *display: inline;
   zoom: 1;
+  background-color: #70ae11;
+}
+
+/* line 101, ../scss/objects/_nav.scss */
+.button__aftergrad__text {
   vertical-align: middle;
   padding: 0.2em 0.8em;
-  min-height: 29px;
-}
-
-/* line 104, ../scss/objects/_nav.scss */
-.button__aftergrad__image {
-  background-color: #8a60c0;
-}
-
-/* line 107, ../scss/objects/_nav.scss */
-.button__aftergrad__text {
-  background-color: #70ae11;
   padding-right: 1.5em;
   line-height: 1.7em;
   color: white;
 }
 
-/* line 113, ../scss/objects/_nav.scss */
-.button__aftergrad__link:hover .button__aftergrad__text {
+/* line 108, ../scss/objects/_nav.scss */
+.button__aftergrad__image__container {
+  display: inline-block;
+  *display: inline;
+  zoom: 1;
+  background-color: #8a60c0;
+}
+
+/* line 114, ../scss/objects/_nav.scss */
+.button__aftergrad__image {
+  vertical-align: middle;
+  padding: 0.2em 0.8em;
+}
+
+/* line 118, ../scss/objects/_nav.scss */
+.button__aftergrad__link:hover {
   background-color: #8a60c0;
   -webkit-transition: background-color 0.2s;
   -moz-transition: background-color 0.2s;
@@ -1358,13 +1366,21 @@ ul {
   transition: background-color 0.2s;
 }
 
-/* line 122, ../scss/objects/_nav.scss */
+/* line 127, ../scss/objects/_nav.scss */
 .button__aftergrad__link:hover .button__aftergrad__image {
   -webkit-transform: rotateY(360deg);
-  transition: all 1s;
+  -moz-transform: rotateY(360deg);
+  -o-transform: rotateY(360deg);
+  -ms-transform: rotateY(360deg);
+  transform: rotateY(360deg);
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  -ms-transition: all 0.5s;
+  transition: all 0.5s;
 }
 
-/* line 127, ../scss/objects/_nav.scss */
+/* line 140, ../scss/objects/_nav.scss */
 .active--map {
   background-color: #8a60c0;
 }
@@ -1372,18 +1388,18 @@ ul {
 /*------------------------------------*\
     $LINKS
 \*------------------------------------*/
-/* line 135, ../scss/objects/_nav.scss */
+/* line 148, ../scss/objects/_nav.scss */
 a {
   text-decoration: none;
   color: #1a1a1a;
 }
 
-/* line 140, ../scss/objects/_nav.scss */
+/* line 153, ../scss/objects/_nav.scss */
 .nav__header a, .button {
   color: white;
 }
 
-/* line 144, ../scss/objects/_nav.scss */
+/* line 157, ../scss/objects/_nav.scss */
 .nav__footer a:hover {
   color: #70ae11;
 }

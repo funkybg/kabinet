@@ -106,15 +106,15 @@ function initialize() {
 
     $('#map').click(function(){
         sView.setVisible(false);
-        $('#map > span').addClass('active--map');
-        $('#view > span').removeClass('active--map');
+        $('#map').addClass('active--map');
+        $('#view').removeClass('active--map');
         return false;
     });
     
     $('#view').click(function(){
         sView.setVisible(true);
-        $('#view > span').addClass('active--map');
-        $('#map > span').removeClass('active--map');
+        $('#view').addClass('active--map');
+        $('#map').removeClass('active--map');
         return false;
     });
 

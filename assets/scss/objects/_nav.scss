@@ -92,25 +92,30 @@
 /*------------------------------------*\
     $BUTTON AFTER GRAD
 \*------------------------------------*/
-
-.button__aftergrad__text,.button__aftergrad__image {
+.button__aftergrad__link {
     display: inline-block;
     *display: inline;
     zoom: 1;
-    vertical-align: middle;
-    padding: 0.2em 0.8em;
-    min-height: 29px;
-}
-.button__aftergrad__image {
-	background-color: $purple;
+	background-color: $green;
 }
 .button__aftergrad__text {
-	background-color: $green;
+    vertical-align: middle;
+    padding: 0.2em 0.8em;
 	padding-right: 1.5em;
 	line-height: 1.7em;
 	color:$white;
 }
-.button__aftergrad__link:hover .button__aftergrad__text {
+.button__aftergrad__image__container {
+    display: inline-block;
+    *display: inline;
+    zoom: 1;
+	background-color: $purple;
+}
+.button__aftergrad__image {
+    vertical-align: middle;
+    padding: 0.2em 0.8em;
+}
+.button__aftergrad__link:hover {
 	background-color: $purple;
 	-webkit-transition: background-color 0.2s;
 	-moz-transition: background-color 0.2s;
@@ -121,7 +126,15 @@
 
 .button__aftergrad__link:hover .button__aftergrad__image {
 	-webkit-transform:rotateY(360deg);
-	transition: all 1s;
+	-moz-transform:rotateY(360deg);
+	-o-transform:rotateY(360deg);
+	-ms-transform:rotateY(360deg);
+	transform:rotateY(360deg);
+	-webkit-transition: all 0.5s;
+	-moz-transition: all 0.5s;
+	-o-transition: all 0.5s;
+	-ms-transition: all 0.5s;
+	transition: all 0.5s;
 }
 
 .active--map {
