@@ -9,6 +9,7 @@
 /*  
  *
  * TAGS
+ * TAGS - PORTRAIT TABLETS
  * VCARDS
  *
  */
@@ -29,8 +30,9 @@
 }
 
 .tags__image {
-	margin-right: 1.5em;
+    margin-right: 1.5em;
 }
+
 .tags__text {
 	width:55%;
 }
@@ -50,4 +52,23 @@
     -o-transition: background-color 0.2s;
     -ms-transition: background-color 0.2s;
     transition: background-color 0.2s;
+}
+
+/*------------------------------------*\
+    $TAGS - PORTRAIT TABLETS
+\*------------------------------------*/
+
+@media (min-width: 768px) and (max-width: 866px) { 
+    .tags__text {
+        width:70%;
+    }
+}
+
+/*------------------------------------*\
+    $VCARDS
+\*------------------------------------*/
+
+.collapsed {
+    height: 0px;
+    overflow: hidden;
 }
