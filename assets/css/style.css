@@ -1020,14 +1020,20 @@ this the same font stack that Normalize.css sets for the `body`.
     display: none;
   }
 }
-/* line 357, ../scss/generic/_grids.scss */
+@media (min-width: 768px) and (max-width: 866px) {
+  /* line 357, ../scss/generic/_grids.scss */
+  .pure-hidden-tablet-portait {
+    display: none !important;
+  }
+}
+/* line 362, ../scss/generic/_grids.scss */
 .pure-g-r > div {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
 
-/* line 362, ../scss/generic/_grids.scss */
+/* line 367, ../scss/generic/_grids.scss */
 .l-box {
   padding-left: 0.5em;
   padding-right: 0.5em;
@@ -1103,6 +1109,11 @@ this the same font stack that Normalize.css sets for the `body`.
   max-width: 1200px;
   margin-right: auto;
   margin-left: auto;
+}
+
+/* line 73, ../scss/generic/_helpers.scss */
+.bottom {
+  vertical-align: bottom;
 }
 
 /*------------------------------------*\
