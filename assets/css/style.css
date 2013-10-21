@@ -1370,17 +1370,17 @@ ul {
 .button__aftergrad__link:hover .button__aftergrad__image {
   -webkit-transform: rotateY(360deg);
   -moz-transform: rotateY(360deg);
-  -o-transform: rotateY(360deg);
+  -o-transform: scaleX(360deg);
   -ms-transform: rotateY(360deg);
   transform: rotateY(360deg);
-  -webkit-transition: all 0.5s;
-  -moz-transition: all 0.5s;
-  -o-transition: all 0.5s;
-  -ms-transition: all 0.5s;
-  transition: all 0.5s;
+  -webkit-transition: all 1s;
+  -moz-transition: all 1s;
+  -o-transition: all 1s;
+  -ms-transition: all 1s;
+  transition: all 1s;
 }
 
-/* line 140, ../scss/objects/_nav.scss */
+/* line 141, ../scss/objects/_nav.scss */
 .active--map {
   background-color: #8a60c0;
 }
@@ -1388,18 +1388,18 @@ ul {
 /*------------------------------------*\
     $LINKS
 \*------------------------------------*/
-/* line 148, ../scss/objects/_nav.scss */
+/* line 149, ../scss/objects/_nav.scss */
 a {
   text-decoration: none;
   color: #1a1a1a;
 }
 
-/* line 153, ../scss/objects/_nav.scss */
+/* line 154, ../scss/objects/_nav.scss */
 .nav__header a, .button {
   color: white;
 }
 
-/* line 157, ../scss/objects/_nav.scss */
+/* line 158, ../scss/objects/_nav.scss */
 .nav__footer a:hover {
   color: #70ae11;
 }
