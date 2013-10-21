@@ -1,5 +1,47 @@
 //================= BUTTONS SCRIPTS ==================//
 
+//================= TOGGLE VCARDS ==================//
+    $(window).load(function(){
+
+        $('#vcards__eli--collapse').addClass('collapsed');
+        $('#vcards__lubo--collapse').addClass('collapsed');
+
+        $('#after-grad-eli').click(function(){
+            $('#vcards__eli--collapse').toggleClass('collapsed');
+            return false;
+        });
+
+        $('#after-grad-lubo').click(function(){
+            $('#vcards__lubo--collapse').toggleClass('collapsed');
+            return false;
+        });
+
+//================= ASYCH FONTS SCRIPTS ==================//
+
+        WebFontConfig = {
+        google: { families: [ 'Open+Sans:300italic,400:cyrillic' ] }
+      };
+      (function() {
+        var wf = document.createElement('script');
+        wf.src = ('https:' == document.location.protocol ? 'https' : 'http')+
+          '://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
+        wf.type = 'text/javascript';
+        wf.async = 'true';
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(wf, s);
+    })();
+
+//================= FLEX SLIDER INIT SCRIPTS ==================//
+    
+        $('.flexslider').flexslider({
+            directionNav: false,
+            controlNav: false,
+        });
+
+
+    });
+
+
 
 //================= MENU SCROLL SCRIPTS ==================//
 
@@ -16,20 +58,6 @@
 
 //================= ASYCH FONTS SCRIPTS ==================//
 
-$(window).load(function(){
-    WebFontConfig = {
-        google: { families: [ 'Open+Sans:300italic,400:cyrillic' ] }
-      };
-      (function() {
-        var wf = document.createElement('script');
-        wf.src = ('https:' == document.location.protocol ? 'https' : 'http')+
-          '://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
-        wf.type = 'text/javascript';
-        wf.async = 'true';
-        var s = document.getElementsByTagName('script')[0];
-        s.parentNode.insertBefore(wf, s);
-      })();
-  });
 
 //================= GOOGLE MAPS SCRIPTS ==================//
 
@@ -132,12 +160,6 @@ window.onload = loadScript;
 
 //================= FLEX SLIDER SCRIPTS ==================//
 
-$(window).load(function() {
-  $('.flexslider').flexslider({
-    directionNav: false,
-    controlNav: false,
-  });
-});
 
 /*
  * jQuery FlexSlider v2.2.0
