@@ -8,6 +8,8 @@
 /**
  * FLOATS..............float left-right colors
  * OFFSETS.............Speciffic offsets
+ * MARGINS.............Generic margins
+ * PADDINGS............Generic paddings
  * CONTAINERS..........non grid container
  * POSITIONS...........Position helpers
  *
@@ -33,6 +35,22 @@
 .footer__map--offset {
 	margin-top: -2.2em;
 }
+
+/*------------------------------------*\
+    $MARGINS
+\*------------------------------------*/
+
+.margin__l--3xbase {
+	margin-left: 3em;
+}
+.margin__b--2xbase {
+	margin-bottom: 2em;
+}
+
+/*------------------------------------*\
+    $PADDINGS
+\*------------------------------------*/
+
 
 /*------------------------------------*\
     $CONTAINERS
