@@ -99,21 +99,22 @@
 	background-color: $green;
 }
 .button__aftergrad__text {
-    vertical-align: middle;
-    padding: 0.2em 0.8em;
 	padding-right: 1.5em;
-	line-height: 1.7em;
+	padding-left: 0.7em;
 	color:$white;
 }
 .button__aftergrad__image__container {
+    vertical-align: middle;
     display: inline-block;
     *display: inline;
     zoom: 1;
 	background-color: $purple;
 }
 .button__aftergrad__image {
-    vertical-align: middle;
-    padding: 0.2em 0.8em;
+    padding-left: 0.3em;
+    padding-right: 0.3em;
+    padding-top: 0.3em;
+    padding-bottom: 0.05em;
 }
 .button__aftergrad__link:hover {
 	background-color: $purple;
