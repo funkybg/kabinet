@@ -1639,18 +1639,19 @@ html[xmlns] .slides {
 /*  
  *
  * TAGS
+ * TAGS - PORTRAIT TABLETS
  * VCARDS
  *
  */
 /*------------------------------------*\
     $TAGS
 \*------------------------------------*/
-/* line 20, ../scss/objects/_vcards.scss */
+/* line 21, ../scss/objects/_vcards.scss */
 .tags {
   padding: 0.5em 1em;
 }
 
-/* line 24, ../scss/objects/_vcards.scss */
+/* line 25, ../scss/objects/_vcards.scss */
 .tags__text, .tags__image, .tags__button {
   display: inline-block;
   *display: inline;
@@ -1658,17 +1659,17 @@ html[xmlns] .slides {
   vertical-align: middle;
 }
 
-/* line 31, ../scss/objects/_vcards.scss */
+/* line 32, ../scss/objects/_vcards.scss */
 .tags__image {
   margin-right: 1.5em;
 }
 
-/* line 34, ../scss/objects/_vcards.scss */
+/* line 36, ../scss/objects/_vcards.scss */
 .tags__text {
   width: 55%;
 }
 
-/* line 38, ../scss/objects/_vcards.scss */
+/* line 40, ../scss/objects/_vcards.scss */
 .tags:hover {
   background-color: #e9e9e9;
   -webkit-transition: background-color 0.2s;
@@ -1678,7 +1679,7 @@ html[xmlns] .slides {
   transition: background-color 0.2s;
 }
 
-/* line 46, ../scss/objects/_vcards.scss */
+/* line 48, ../scss/objects/_vcards.scss */
 .tags:hover .tags__button {
   background-color: #70ae11;
   -webkit-transition: background-color 0.2s;
@@ -1686,4 +1687,22 @@ html[xmlns] .slides {
   -o-transition: background-color 0.2s;
   -ms-transition: background-color 0.2s;
   transition: background-color 0.2s;
+}
+
+/*------------------------------------*\
+    $TAGS - PORTRAIT TABLETS
+\*------------------------------------*/
+@media (min-width: 768px) and (max-width: 866px) {
+  /* line 62, ../scss/objects/_vcards.scss */
+  .tags__text {
+    width: 70%;
+  }
+}
+/*------------------------------------*\
+    $VCARDS
+\*------------------------------------*/
+/* line 71, ../scss/objects/_vcards.scss */
+.collapsed {
+  height: 0px;
+  overflow: hidden;
 }
