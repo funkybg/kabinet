@@ -18,7 +18,8 @@
 .nav__header {
 	background-color: $purple;
 	z-index: 100;
-	position: fixed;
+	position: relative;
+	margin-bottom: -3em;
 }
 .nav__header a {
 	// padding: 1em;
@@ -51,7 +52,6 @@
     zoom: 1;
     vertical-align: middle;
 }
-
 .nav__container {
 	max-width: 1200px;
 	margin-left:auto;
