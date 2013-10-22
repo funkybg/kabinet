@@ -1,0 +1,23 @@
+/*------------------------------------*\
+    $SMALL HEADER IMAGE DEFINITIONS
+\*------------------------------------*/
+
+.header__img--small {
+	background-image: url(../images/header-small-x1-01.jpg);
+	height: 0;
+	background-repeat: no-repeat;
+	background-size: cover;
+    background-position:center;
+    padding-bottom: 10%;
+}
+
+@media (max-width: 768px) { 
+    .header__img--small {
+    	background-image: none;
+    }
+}
+@media (max-width: 480px) { 
+    .header__img--small { 
+    padding-bottom: 30%;
+    }
+}
