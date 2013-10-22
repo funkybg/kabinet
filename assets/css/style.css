@@ -1703,6 +1703,5 @@ html[xmlns] .slides {
 \*------------------------------------*/
 /* line 71, ../scss/objects/_vcards.scss */
 .collapsed {
-  height: 0px;
-  overflow: hidden;
+  display: none;
 }
