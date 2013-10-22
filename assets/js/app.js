@@ -48,14 +48,11 @@
 
 $(window).scroll(function() {
     var scroll = $(document).scrollTop();
-    console.log('scroll fired')   
     if (scroll > 250) {
         $('#side_menu').addClass('fixed');
-        console.log('if case')
     }
      else {
         $('#side_menu').removeClass('fixed');
-        console.log('else case')
     }
 });
 
