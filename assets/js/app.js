@@ -49,7 +49,7 @@
 $(window).scroll(function() {
     var scroll = $(document).scrollTop();
     console.log('scroll fired')   
-    if (scroll > 120) {
+    if (scroll > 250) {
         $('#side_menu').addClass('fixed');
         console.log('if case')
     }
@@ -59,8 +59,31 @@ $(window).scroll(function() {
     }
 });
 
-//================= ASYCH FONTS SCRIPTS ==================//
+//================= SCROLLING SCRIPTS ==================//
 
+$(function() {
+    $('ul.nav a').bind('click',function(event){
+        var $anchor = $(this);
+        $('html, body').stop().animate({
+            scrollTop: $($anchor.attr('href')).offset().top
+        }, 300);
+        return false;
+    });
+    $('.tags a').bind('click',function(event){
+        var $anchor = $(this);
+        $('html, body').stop().animate({
+            scrollTop: $($anchor.attr('href')).offset().top
+        }, 300);
+        return false;
+    });
+    $('#back_top a').bind('click',function(event){
+        var $anchor = $(this);
+        $('html, body').stop().animate({
+            scrollTop: $($anchor.attr('href')).offset().top
+        }, 300);
+        return false;
+    });
+});
 
 //================= GOOGLE MAPS SCRIPTS ==================//
 
