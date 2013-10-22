@@ -1640,7 +1640,7 @@ html[xmlns] .slides {
  *
  * TAGS
  * TAGS - PORTRAIT TABLETS
- * VCARDS
+ * VCARDS - COLLAPSE
  *
  */
 /*------------------------------------*\
@@ -1699,7 +1699,7 @@ html[xmlns] .slides {
   }
 }
 /*------------------------------------*\
-    $VCARDS
+    $VCARDS - COLLAPSE
 \*------------------------------------*/
 /* line 71, ../scss/objects/_vcards.scss */
 .collapsed {
