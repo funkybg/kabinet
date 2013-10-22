@@ -30,3 +30,19 @@ $white:#ffffff;
 $base-font: 'Open Sans', Sans-serif, FreeSans, Arimo, "Droid Sans", Helvetica, Arial, sans-serif;
 // $base-font: Arial;
 $base-font-size: 100%;
+
+ /*------------------------------------*\
+    $BORDERS
+\*------------------------------------*/
+
+@mixin border__bottom--green {
+	border-bottom: 1px dotted $green;
+}
+
+@mixin hover__transition {
+	-webkit-transition: background-color 0.2s;
+	-moz-transition: background-color 0.2s;
+	-o-transition: background-color 0.2s;
+	-ms-transition: background-color 0.2s;
+	transition: background-color 0.2s;
+}
