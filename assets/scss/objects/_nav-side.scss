@@ -3,15 +3,14 @@
 \*------------------------------------*/
 
 .nav__side {
-    display: inline-block;
-    *display: inline;
-    zoom: 1;
+    display: block;
+    top: 80px;
     margin-top: 1em;
-    top: 10%;
 }
 
 .nav__side > li {
 	display: block;
+	line-height: 1.5em;
 }
 
 .nav__side > li:hover {
