@@ -6,6 +6,7 @@
     $CONTENT
 \*------------------------------------*/
 /**
+ * BORDERS AND ARROWS..border clear for last child
  * FLOATS..............float left-right colors
  * OFFSETS.............Speciffic offsets
  * MARGINS.............Generic margins
@@ -14,7 +15,13 @@
  * POSITIONS...........Position helpers
  *
  */
+/*------------------------------------*\
+    $BORDERS
+\*------------------------------------*/
 
+.border--none {
+	border: none!important;
+}
 
 /*------------------------------------*\
     $FLOATS
@@ -72,4 +79,8 @@
 }
 .bottom {
     vertical-align: bottom;
+}
+
+.fixed {
+	position: fixed!important;
 }
