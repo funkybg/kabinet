@@ -24,6 +24,7 @@
  * SLIDER--------------Main page slider styles
  * MAP.................Contacts page map
  * VCARDS..............TEAM page personal info styles ( module )
+ * SMALL HEADER IMAGE..small hader image styles
  *
  */
 /*------------------------------------*\
@@ -1286,29 +1287,30 @@ ul {
 .nav__header {
   background-color: #8a60c0;
   z-index: 100;
-  position: fixed;
+  position: relative;
+  margin-bottom: -3em;
 }
 
-/* line 23, ../scss/objects/_nav.scss */
+/* line 24, ../scss/objects/_nav.scss */
 .nav__header a {
   min-height: 3.2em;
   line-height: 3.2em;
   padding: 0 1em;
 }
 
-/* line 30, ../scss/objects/_nav.scss */
+/* line 31, ../scss/objects/_nav.scss */
 .nav a {
   display: block;
   font-size: 0.9em;
 }
 
-/* line 35, ../scss/objects/_nav.scss */
+/* line 36, ../scss/objects/_nav.scss */
 .nav__footer a {
   padding: 0.5em;
   font-size: 0.8em;
 }
 
-/* line 39, ../scss/objects/_nav.scss */
+/* line 40, ../scss/objects/_nav.scss */
 .nav__header li:hover, .button:hover {
   background-color: #70ae11;
   -webkit-transition: background-color 0.2s;
@@ -1318,12 +1320,12 @@ ul {
   transition: background-color 0.2s;
 }
 
-/* line 44, ../scss/objects/_nav.scss */
+/* line 45, ../scss/objects/_nav.scss */
 .active {
   background-color: #70ae11;
 }
 
-/* line 48, ../scss/objects/_nav.scss */
+/* line 49, ../scss/objects/_nav.scss */
 .nav li {
   display: inline-block;
   *display: inline;
@@ -1458,19 +1460,18 @@ a {
 \*------------------------------------*/
 /* line 5, ../scss/objects/_nav-side.scss */
 .nav__side {
-  display: inline-block;
-  *display: inline;
-  zoom: 1;
+  display: block;
+  top: 80px;
   margin-top: 1em;
-  top: 10%;
 }
 
-/* line 13, ../scss/objects/_nav-side.scss */
+/* line 11, ../scss/objects/_nav-side.scss */
 .nav__side > li {
   display: block;
+  line-height: 1.5em;
 }
 
-/* line 17, ../scss/objects/_nav-side.scss */
+/* line 16, ../scss/objects/_nav-side.scss */
 .nav__side > li:hover {
   background-color: #70ae11;
   -webkit-transition: background-color 0.2s;
@@ -1480,19 +1481,19 @@ a {
   transition: background-color 0.2s;
 }
 
-/* line 22, ../scss/objects/_nav-side.scss */
+/* line 21, ../scss/objects/_nav-side.scss */
 .nav__side a {
   font-size: 0.9em;
   padding: 0.3em 0.5em;
   border-bottom: 1px dotted #70ae11;
 }
 
-/* line 28, ../scss/objects/_nav-side.scss */
+/* line 27, ../scss/objects/_nav-side.scss */
 .nav__side a:hover {
   color: white;
 }
 
-/* line 32, ../scss/objects/_nav-side.scss */
+/* line 31, ../scss/objects/_nav-side.scss */
 .active__side a {
   color: white;
 }
@@ -1676,18 +1677,16 @@ html[xmlns] .slides {
 #map-canvas {
   height: 100%;
   width: 100%;
-  display: block;
-  position: relative;
   z-index: 20;
   padding-bottom: 30em;
 }
 
-/* line 14, ../scss/objects/_map.scss */
+/* line 11, ../scss/objects/_map.scss */
 .gm-style-iw {
   padding: 0.5em;
 }
 
-/* line 18, ../scss/objects/_map.scss */
+/* line 15, ../scss/objects/_map.scss */
 #map-canvas img {
   max-width: none !important;
 }
@@ -1766,4 +1765,30 @@ html[xmlns] .slides {
 /* line 71, ../scss/objects/_vcards.scss */
 .collapsed {
   display: none;
+}
+
+/*------------------------------------*\
+    $SMALL HEADER IMAGE DEFINITIONS
+\*------------------------------------*/
+/* line 5, ../scss/objects/_img-header.scss */
+.header__img--small {
+  background-image: url(../images/header-small-x1-01.jpg);
+  height: 0;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  padding-bottom: 10%;
+}
+
+@media (max-width: 768px) {
+  /* line 15, ../scss/objects/_img-header.scss */
+  .header__img--small {
+    background-image: none;
+  }
+}
+@media (max-width: 480px) {
+  /* line 20, ../scss/objects/_img-header.scss */
+  .header__img--small {
+    padding-bottom: 30%;
+  }
 }
