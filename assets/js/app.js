@@ -7,11 +7,13 @@
 
         $('#after-grad-eli').click(function(){
             $('#vcards__eli--collapse').toggle('fast');
+            $('#after-grad-eli').toggleClass('active--map');
             return false;
         });
 
         $('#after-grad-lubo').click(function(){
             $('#vcards__lubo--collapse').toggle('fast');
+            $('#after-grad-lubo').toggleClass('active--map');
             return false;
         });
 
@@ -44,16 +46,18 @@
 
 //================= MENU SCROLL SCRIPTS ==================//
 
-    // $(window).scroll(function() {
-    //     var scroll = $(document).scrollTop();
-    
-    //     if (scroll > 100) {
-    //         $('div#top').removeClass('nav__header--small').addClass('nav__header--wide');
-    //     }
-    //      else {
-    //         $('div#top').removeClass('nav__header--wide').addClass('nav__header--small');
-    //     }
-    // });
+$(window).scroll(function() {
+    var scroll = $(document).scrollTop();
+    console.log('scroll fired')   
+    if (scroll > 120) {
+        $('#side_menu').addClass('fixed');
+        console.log('if case')
+    }
+     else {
+        $('#side_menu').removeClass('fixed');
+        console.log('else case')
+    }
+});
 
 //================= ASYCH FONTS SCRIPTS ==================//
 
