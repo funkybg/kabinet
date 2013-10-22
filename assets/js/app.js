@@ -1,8 +1,7 @@
-//================= BUTTONS SCRIPTS ==================//
-
-//================= TOGGLE VCARDS ==================//
+//================= ONLOAD SCRIPTS ==================//
     $(window).load(function(){
 
+//================= TOGGLE VCARDS ==================//
         $('#vcards__eli--collapse').addClass('collapsed');
         $('#vcards__lubo--collapse').addClass('collapsed');
 
