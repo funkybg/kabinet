@@ -20,6 +20,7 @@
  * FOOTER..............Footer module styles
  * HR..................RULERS
  * NAV.................Navs and buttons ( icon button module )
+ * NAV-SIDE............Side nav module ( extends NAV )
  * OFFCANVAS...........Styles related to the offcanvas modules
  * BULLET--------------The green bullets in the main page
  * SLIDER--------------Main page slider styles
@@ -53,6 +54,7 @@
  @import "objects/hr";
  @import "objects/lists";
  @import "objects/nav";
+ @import "objects/nav-side";
  @import "objects/offcanvas";
  @import "objects/bullet";
  @import "objects/slider";
