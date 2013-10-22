@@ -1,0 +1,34 @@
+/*------------------------------------*\
+    $NAV SIDE MODULE
+\*------------------------------------*/
+
+.nav__side {
+    display: inline-block;
+    *display: inline;
+    zoom: 1;
+    margin-top: 1em;
+    top: 10%;
+}
+
+.nav__side > li {
+	display: block;
+}
+
+.nav__side > li:hover {
+	background-color: $green;
+	@include hover__transition;
+}
+
+.nav__side a {
+	font-size: 0.9em;
+	padding: 0.3em 0.5em;
+	@include border__bottom--green;
+}
+
+.nav__side a:hover {
+	color:$white;
+}
+
+.active__side a {
+	color:$white;
+}
