@@ -38,11 +38,7 @@
 }
 .nav__header li:hover, .button:hover {
 	background-color: $green;
-	-webkit-transition: background-color 0.2s;
-	-moz-transition: background-color 0.2s;
-	-o-transition: background-color 0.2s;
-	-ms-transition: background-color 0.2s;
-	transition: background-color 0.2s;
+	@include hover__transition;
 }
 
 .active {
@@ -118,11 +114,7 @@
 }
 .button__aftergrad__link:hover {
 	background-color: $purple;
-	-webkit-transition: background-color 0.2s;
-	-moz-transition: background-color 0.2s;
-	-o-transition: background-color 0.2s;
-	-ms-transition: background-color 0.2s;
-	transition: background-color 0.2s;
+	@include hover__transition;
 }
 
 .button__aftergrad__link:hover .button__aftergrad__image {
