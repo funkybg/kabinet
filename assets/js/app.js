@@ -7,12 +7,12 @@
         $('#vcards__lubo--collapse').addClass('collapsed');
 
         $('#after-grad-eli').click(function(){
-            $('#vcards__eli--collapse').toggleClass('collapsed');
+            $('#vcards__eli--collapse').toggle('fast');
             return false;
         });
 
         $('#after-grad-lubo').click(function(){
-            $('#vcards__lubo--collapse').toggleClass('collapsed');
+            $('#vcards__lubo--collapse').toggle('fast');
             return false;
         });
 
