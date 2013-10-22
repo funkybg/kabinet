@@ -18,6 +18,7 @@
  * FOOTER..............Footer module styles
  * HR..................RULERS
  * NAV.................Navs and buttons ( icon button module )
+ * NAV-SIDE............Side nav module ( extends NAV )
  * OFFCANVAS...........Styles related to the offcanvas modules
  * BULLET--------------The green bullets in the main page
  * SLIDER--------------Main page slider styles
@@ -47,6 +48,9 @@
 \*------------------------------------*/
  /*------------------------------------*\
     $FONTS
+\*------------------------------------*/
+ /*------------------------------------*\
+    $BORDERS
 \*------------------------------------*/
 /**
  * Generic utility styles etc.
@@ -1046,6 +1050,7 @@ this the same font stack that Normalize.css sets for the `body`.
     $CONTENT
 \*------------------------------------*/
 /**
+ * BORDERS AND ARROWS..border clear for last child
  * FLOATS..............float left-right colors
  * OFFSETS.............Speciffic offsets
  * MARGINS.............Generic margins
@@ -1055,14 +1060,22 @@ this the same font stack that Normalize.css sets for the `body`.
  *
  */
 /*------------------------------------*\
+    $BORDERS
+\*------------------------------------*/
+/* line 22, ../scss/generic/_helpers.scss */
+.border--none {
+  border: none !important;
+}
+
+/*------------------------------------*\
     $FLOATS
 \*------------------------------------*/
-/* line 23, ../scss/generic/_helpers.scss */
+/* line 30, ../scss/generic/_helpers.scss */
 .left {
   float: left;
 }
 
-/* line 27, ../scss/generic/_helpers.scss */
+/* line 34, ../scss/generic/_helpers.scss */
 .right {
   float: right;
 }
@@ -1070,7 +1083,7 @@ this the same font stack that Normalize.css sets for the `body`.
 /*------------------------------------*\
     $OFFSETS
 \*------------------------------------*/
-/* line 35, ../scss/generic/_helpers.scss */
+/* line 42, ../scss/generic/_helpers.scss */
 .footer__map--offset {
   margin-top: -2.2em;
 }
@@ -1078,12 +1091,12 @@ this the same font stack that Normalize.css sets for the `body`.
 /*------------------------------------*\
     $MARGINS
 \*------------------------------------*/
-/* line 43, ../scss/generic/_helpers.scss */
+/* line 50, ../scss/generic/_helpers.scss */
 .margin__l--3xbase {
   margin-left: 3em;
 }
 
-/* line 46, ../scss/generic/_helpers.scss */
+/* line 53, ../scss/generic/_helpers.scss */
 .margin__b--2xbase {
   margin-bottom: 2em;
 }
@@ -1094,7 +1107,7 @@ this the same font stack that Normalize.css sets for the `body`.
 /*------------------------------------*\
     $CONTAINERS
 \*------------------------------------*/
-/* line 59, ../scss/generic/_helpers.scss */
+/* line 66, ../scss/generic/_helpers.scss */
 .container--full {
   display: block;
   position: relative;
@@ -1104,16 +1117,21 @@ this the same font stack that Normalize.css sets for the `body`.
 /*------------------------------------*\
     $POSITION
 \*------------------------------------*/
-/* line 68, ../scss/generic/_helpers.scss */
+/* line 75, ../scss/generic/_helpers.scss */
 .center {
   max-width: 1200px;
   margin-right: auto;
   margin-left: auto;
 }
 
-/* line 73, ../scss/generic/_helpers.scss */
+/* line 80, ../scss/generic/_helpers.scss */
 .bottom {
   vertical-align: bottom;
+}
+
+/* line 84, ../scss/generic/_helpers.scss */
+.fixed {
+  position: fixed !important;
 }
 
 /*------------------------------------*\
@@ -1300,12 +1318,12 @@ ul {
   transition: background-color 0.2s;
 }
 
-/* line 48, ../scss/objects/_nav.scss */
+/* line 44, ../scss/objects/_nav.scss */
 .active {
   background-color: #70ae11;
 }
 
-/* line 52, ../scss/objects/_nav.scss */
+/* line 48, ../scss/objects/_nav.scss */
 .nav li {
   display: inline-block;
   *display: inline;
@@ -1313,14 +1331,14 @@ ul {
   vertical-align: middle;
 }
 
-/* line 59, ../scss/objects/_nav.scss */
+/* line 55, ../scss/objects/_nav.scss */
 .nav__container {
   max-width: 1200px;
   margin-left: auto;
   margin-right: auto;
 }
 
-/* line 64, ../scss/objects/_nav.scss */
+/* line 60, ../scss/objects/_nav.scss */
 .nav__container ul {
   float: right;
 }
@@ -1328,13 +1346,13 @@ ul {
 /*------------------------------------*\
     $BUTTONS
 \*------------------------------------*/
-/* line 71, ../scss/objects/_nav.scss */
+/* line 67, ../scss/objects/_nav.scss */
 .button {
   font-size: 0.9em;
   padding: 0.3em 0.5em;
 }
 
-/* line 76, ../scss/objects/_nav.scss */
+/* line 72, ../scss/objects/_nav.scss */
 .button__map svg, .button__map img {
   position: relative;
   background-color: #70ae11;
@@ -1343,7 +1361,7 @@ ul {
   float: left;
 }
 
-/* line 84, ../scss/objects/_nav.scss */
+/* line 80, ../scss/objects/_nav.scss */
 .button__map span {
   display: block;
   position: relative;
@@ -1355,7 +1373,7 @@ ul {
 /*------------------------------------*\
     $BUTTON AFTER GRAD
 \*------------------------------------*/
-/* line 95, ../scss/objects/_nav.scss */
+/* line 91, ../scss/objects/_nav.scss */
 .button__aftergrad__link {
   display: inline-block;
   *display: inline;
@@ -1363,14 +1381,14 @@ ul {
   background-color: #70ae11;
 }
 
-/* line 101, ../scss/objects/_nav.scss */
+/* line 97, ../scss/objects/_nav.scss */
 .button__aftergrad__text {
   padding-right: 1.5em;
   padding-left: 0.7em;
   color: white;
 }
 
-/* line 106, ../scss/objects/_nav.scss */
+/* line 102, ../scss/objects/_nav.scss */
 .button__aftergrad__image__container {
   vertical-align: middle;
   display: inline-block;
@@ -1379,7 +1397,7 @@ ul {
   background-color: #8a60c0;
 }
 
-/* line 113, ../scss/objects/_nav.scss */
+/* line 109, ../scss/objects/_nav.scss */
 .button__aftergrad__image {
   padding-left: 0.3em;
   padding-right: 0.3em;
@@ -1387,7 +1405,7 @@ ul {
   padding-bottom: 0.05em;
 }
 
-/* line 119, ../scss/objects/_nav.scss */
+/* line 115, ../scss/objects/_nav.scss */
 .button__aftergrad__link:hover {
   background-color: #8a60c0;
   -webkit-transition: background-color 0.2s;
@@ -1397,7 +1415,7 @@ ul {
   transition: background-color 0.2s;
 }
 
-/* line 128, ../scss/objects/_nav.scss */
+/* line 120, ../scss/objects/_nav.scss */
 .button__aftergrad__link:hover .button__aftergrad__image {
   -webkit-transform: rotateY(360deg);
   -moz-transform: rotateY(360deg);
@@ -1411,7 +1429,7 @@ ul {
   transition: all 1s;
 }
 
-/* line 142, ../scss/objects/_nav.scss */
+/* line 134, ../scss/objects/_nav.scss */
 .active--map {
   background-color: #8a60c0;
 }
@@ -1419,20 +1437,64 @@ ul {
 /*------------------------------------*\
     $LINKS
 \*------------------------------------*/
-/* line 150, ../scss/objects/_nav.scss */
+/* line 142, ../scss/objects/_nav.scss */
 a {
   text-decoration: none;
   color: #1a1a1a;
 }
 
-/* line 155, ../scss/objects/_nav.scss */
+/* line 147, ../scss/objects/_nav.scss */
 .nav__header a, .button {
   color: white;
 }
 
-/* line 159, ../scss/objects/_nav.scss */
+/* line 151, ../scss/objects/_nav.scss */
 .nav__footer a:hover {
   color: #70ae11;
+}
+
+/*------------------------------------*\
+    $NAV SIDE MODULE
+\*------------------------------------*/
+/* line 5, ../scss/objects/_nav-side.scss */
+.nav__side {
+  display: inline-block;
+  *display: inline;
+  zoom: 1;
+  margin-top: 1em;
+  top: 10%;
+}
+
+/* line 13, ../scss/objects/_nav-side.scss */
+.nav__side > li {
+  display: block;
+}
+
+/* line 17, ../scss/objects/_nav-side.scss */
+.nav__side > li:hover {
+  background-color: #70ae11;
+  -webkit-transition: background-color 0.2s;
+  -moz-transition: background-color 0.2s;
+  -o-transition: background-color 0.2s;
+  -ms-transition: background-color 0.2s;
+  transition: background-color 0.2s;
+}
+
+/* line 22, ../scss/objects/_nav-side.scss */
+.nav__side a {
+  font-size: 0.9em;
+  padding: 0.3em 0.5em;
+  border-bottom: 1px dotted #70ae11;
+}
+
+/* line 28, ../scss/objects/_nav-side.scss */
+.nav__side a:hover {
+  color: white;
+}
+
+/* line 32, ../scss/objects/_nav-side.scss */
+.active__side a {
+  color: white;
 }
 
 /*------------------------------------*\
