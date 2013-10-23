@@ -1509,18 +1509,18 @@ a {
 \*------------------------------------*/
 /* line 5, ../scss/objects/_nav-side.scss */
 .nav__side {
-  display: block;
   top: 10px;
   margin-top: 1em;
+  max-width: 12em;
 }
 
-/* line 11, ../scss/objects/_nav-side.scss */
+/* line 12, ../scss/objects/_nav-side.scss */
 .nav__side > li {
   display: block;
   line-height: 1.5em;
 }
 
-/* line 16, ../scss/objects/_nav-side.scss */
+/* line 17, ../scss/objects/_nav-side.scss */
 .nav__side > li:hover {
   background-color: #70ae11;
   -webkit-transition: background-color 0.2s;
@@ -1530,47 +1530,42 @@ a {
   transition: background-color 0.2s;
 }
 
-/* line 21, ../scss/objects/_nav-side.scss */
+/* line 22, ../scss/objects/_nav-side.scss */
 .nav__side a {
   font-size: 0.9em;
   padding: 0.3em 0.5em;
   border-bottom: 1px dotted #70ae11;
 }
 
-/* line 27, ../scss/objects/_nav-side.scss */
+/* line 28, ../scss/objects/_nav-side.scss */
 .nav__side a:hover {
   color: white;
 }
 
-/* line 31, ../scss/objects/_nav-side.scss */
+/* line 32, ../scss/objects/_nav-side.scss */
 .active__side a {
   color: white;
 }
 
-/* line 40, ../scss/objects/_nav-side.scss */
-.margin__l--14xbase {
-  margin-left: 20%;
-}
-
-/* line 43, ../scss/objects/_nav-side.scss */
+/* line 38, ../scss/objects/_nav-side.scss */
 .fixed {
-  width: 16%;
-  max-width: 12em !important;
+  width: 16.2%;
 }
 
-/* line 47, ../scss/objects/_nav-side.scss */
+/* line 41, ../scss/objects/_nav-side.scss */
 .fixed > li {
   width: 100%;
 }
 
 @media (max-width: 767px) {
-  /* line 52, ../scss/objects/_nav-side.scss */
+  /* line 46, ../scss/objects/_nav-side.scss */
   .nav__side {
     position: relative !important;
+    max-width: none;
     width: 100%;
   }
 
-  /* line 56, ../scss/objects/_nav-side.scss */
+  /* line 51, ../scss/objects/_nav-side.scss */
   .margin__l--14xbase {
     margin-left: auto;
   }

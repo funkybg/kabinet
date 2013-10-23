@@ -3,9 +3,10 @@
 \*------------------------------------*/
 
 .nav__side {
-    display: block;
     top: 10px;
     margin-top: 1em;
+
+	max-width: 12em;
 }
 
 .nav__side > li {
@@ -34,15 +35,8 @@
 
 // $ TEST STYLES
 
-.width__min--14xbase {
-	// min-width: 14em;
-}
-.margin__l--14xbase {
-	margin-left: 20%;
-}
 .fixed {
-	width:16%;
-	max-width: 12em!important;
+	width:16.2%;
 }
 .fixed > li {
 	width:100%;
@@ -51,6 +45,7 @@
 @media (max-width: 767px) {
 	.nav__side {
 		position: relative!important;
+		max-width: none;
 		width:100%;
 	}
 	.margin__l--14xbase {
