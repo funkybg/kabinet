@@ -8,6 +8,8 @@
 /**
  * MENU
  * BUTTONS
+ * BUTTON AFTER GRAD
+ * BUTTONS BACK TO TOP
  * LINKS
  */
 
@@ -123,16 +125,34 @@
 	-o-transform:scaleX(360deg);
 	-ms-transform:rotateY(360deg);
 	transform:rotateY(360deg);
-
-	-webkit-transition: all 1s;
-	-moz-transition: all 1s;
-	-o-transition: all 1s;
-	-ms-transition: all 1s;
-	transition: all 1s;
+	@include all__transition;
 }
 
 .active--map {
 	background-color: $purple;
+}
+
+/*------------------------------------*\
+    $BUTTONS BACK TO TOP
+\*------------------------------------*/
+.button__top {
+	position: fixed;
+	right: 10%;
+	bottom: 20%;
+	-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=40)";
+	filter: alpha(opacity=40);
+	opacity:0.4;
+	font-size: 0.8em;
+}
+.button__top:hover {
+	-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+	filter: alpha(opacity=100);
+	opacity:1;
+	@include opacity__transition;
+}
+.button__top svg {
+	display: block;
+	margin: auto;
 }
 
 /*------------------------------------*\
