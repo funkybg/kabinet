@@ -52,10 +52,12 @@ $(window).scroll(function() {
     if (scroll > 250) {
         $('#side_menu').addClass('fixed');
         $('#back_top').removeClass('collapsed');
+        $('#services__body').addClass('margin__l--14xbase');
     }
      else {
         $('#side_menu').removeClass('fixed');
         $('#back_top').addClass('collapsed');
+        $('#services__body').removeClass('margin__l--14xbase');
     }
 });
 
