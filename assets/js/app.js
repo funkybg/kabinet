@@ -4,6 +4,7 @@
 //================= TOGGLE VCARDS ==================//
         $('#vcards__eli--collapse').addClass('collapsed');
         $('#vcards__lubo--collapse').addClass('collapsed');
+        $('#back_top').addClass('collapsed');
 
         $('#after-grad-eli').click(function(){
             $('#vcards__eli--collapse').toggle('fast');
@@ -50,9 +51,11 @@ $(window).scroll(function() {
     var scroll = $(document).scrollTop();
     if (scroll > 250) {
         $('#side_menu').addClass('fixed');
+        $('#back_top').removeClass('collapsed');
     }
      else {
         $('#side_menu').removeClass('fixed');
+        $('#back_top').addClass('collapsed');
     }
 });
 
