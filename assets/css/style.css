@@ -156,7 +156,7 @@ button,
 input,
 select,
 textarea {
-  font-family: "Open Sans", Sans-serif, FreeSans, Arimo, "Droid Sans", Helvetica, Arial, sans-serif;
+  font-family: "Open Sans", FreeSans, Arimo, "Droid Sans", Helvetica, Arial, sans-serif;
   color: #1a1a1a;
 }
 
@@ -935,7 +935,7 @@ this the same font stack that Normalize.css sets for the `body`.
 
     * Helvetica, Arial, sans-serif: Common font stack on OS X and Windows.
     */
-  font-family: FreeSans, Arimo, "Droid Sans", Helvetica, Arial, sans-serif;
+  font-family: "Open Sans", FreeSans, Arimo, "Droid Sans", Helvetica, Arial, sans-serif;
     /*
     Use flexbox when possible to avoid `letter-spacing` side-effects.
 
@@ -1238,7 +1238,7 @@ h2.giga {
 .pure-g [class*="pure-u"],
 .pure-g-r [class*="pure-u"] {
   /* Set you're content font stack here: */
-  font-family: "Open Sans", Sans-serif, FreeSans, Arimo, "Droid Sans", Helvetica, Arial, sans-serif;
+  font-family: "Open Sans", FreeSans, Arimo, "Droid Sans", Helvetica, Arial, sans-serif;
 }
 
 /**
