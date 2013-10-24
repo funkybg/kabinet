@@ -1514,13 +1514,13 @@ a {
   max-width: 12em;
 }
 
-/* line 12, ../scss/objects/_nav-side.scss */
+/* line 11, ../scss/objects/_nav-side.scss */
 .nav__side > li {
   display: block;
   line-height: 1.5em;
 }
 
-/* line 17, ../scss/objects/_nav-side.scss */
+/* line 16, ../scss/objects/_nav-side.scss */
 .nav__side > li:hover {
   background-color: #70ae11;
   -webkit-transition: background-color 0.2s;
@@ -1530,44 +1530,40 @@ a {
   transition: background-color 0.2s;
 }
 
-/* line 22, ../scss/objects/_nav-side.scss */
+/* line 21, ../scss/objects/_nav-side.scss */
 .nav__side a {
   font-size: 0.9em;
   padding: 0.3em 0.5em;
   border-bottom: 1px dotted #70ae11;
 }
 
-/* line 28, ../scss/objects/_nav-side.scss */
+/* line 27, ../scss/objects/_nav-side.scss */
 .nav__side a:hover {
   color: white;
 }
 
-/* line 32, ../scss/objects/_nav-side.scss */
+/* line 31, ../scss/objects/_nav-side.scss */
 .active__side a {
   color: white;
 }
 
-/* line 38, ../scss/objects/_nav-side.scss */
+/*------------------------------------*\
+    $NAV SIDE FIXED HELPER STYLES
+\*------------------------------------*/
+/* line 39, ../scss/objects/_nav-side.scss */
 .fixed {
   width: 16.2%;
 }
 
-/* line 41, ../scss/objects/_nav-side.scss */
+/* line 42, ../scss/objects/_nav-side.scss */
 .fixed > li {
   width: 100%;
 }
 
 @media (max-width: 767px) {
-  /* line 46, ../scss/objects/_nav-side.scss */
+  /* line 47, ../scss/objects/_nav-side.scss */
   .nav__side {
-    position: relative !important;
-    max-width: none;
-    width: 100%;
-  }
-
-  /* line 51, ../scss/objects/_nav-side.scss */
-  .margin__l--14xbase {
-    margin-left: auto;
+    display: none;
   }
 }
 /*------------------------------------*\
