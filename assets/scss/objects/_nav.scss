@@ -70,11 +70,14 @@
     $MENU FOR SMALL SCREENS < 1023
 \*------------------------------------*/
 @media only screen and (max-width : 1023px) {
-	.nav__side {
+	body {
+		overflow: hidden;
+	}
+	[role="side_menu"] {
 		display: none;
 	}
 	.nav__container {
-		position:absolute;
+		position:fixed;
 		background: $purple;
 		height: 100%;
 		width: 85%;
@@ -82,9 +85,7 @@
 		z-index: 100;
 		-webkit-box-shadow: inset -2px 0px 8px -1px #111111;
 		box-shadow: inset -2px 0px 8px -1px #111111;
-	}
-	.nav__container ul {
-		float: left;
+		overflow: auto;
 	}
 	.nav__header {
 		width:100%;
@@ -97,6 +98,7 @@
 	.active1 .content__mask--mobile {
 		// position:absolute;
 		margin-left:85%;
+		float:left;
 	}
 }
 
