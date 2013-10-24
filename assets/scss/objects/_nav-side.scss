@@ -43,13 +43,23 @@
 	width:100%;
 }
 
-@media (max-width: 767px) {
+// @media (max-width: 767px) {
+// 	.nav__side {
+// 		position: relative!important;
+// 		max-width: none;
+// 		width:100%;
+// 	}
+// 	.margin__l--14xbase {
+// 		margin-left: auto;
+// 	}
+// }
+
+/*---------------------------------------------------------------*\
+    $NAV SIDE SMALL SCREENS < 1023 is integrated in main nav
+\*---------------------------------------------------------------*/
+
+@media only screen and (max-width : 1023px) {
 	.nav__side {
-		position: relative!important;
-		max-width: none;
-		width:100%;
-	}
-	.margin__l--14xbase {
-		margin-left: auto;
+		display: none;
 	}
 }

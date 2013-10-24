@@ -6,12 +6,15 @@
     $CONTENT
 \*------------------------------------*/
 /**
+ *
  * MENU
+ * MENU FOR SMALL SCREENS < 1023
  * BUTTONS
  * BUTTON AFTER GRAD
  * BUTTONS BACK TO TOP
  * LINKS
- */
+ *
+ **/
 
 /*------------------------------------*\
     $MENU
@@ -62,6 +65,41 @@
 .nav__container ul {
 	float: right;
 }
+
+/*------------------------------------*\
+    $MENU FOR SMALL SCREENS < 1023
+\*------------------------------------*/
+@media only screen and (max-width : 1023px) {
+	.nav__side {
+		display: none;
+	}
+	.nav__container {
+		position:absolute;
+		background: $purple;
+		height: 100%;
+		width: 85%;
+		padding: 0px;
+		z-index: 100;
+		-webkit-box-shadow: inset -2px 0px 8px -1px #111111;
+		box-shadow: inset -2px 0px 8px -1px #111111;
+	}
+	.nav__container ul {
+		float: left;
+	}
+	.nav__header {
+		width:100%;
+		background: none;
+	}
+	.nav__header > li {
+		display: block;
+	}
+
+	.active1 .content__mask--mobile {
+		// position:absolute;
+		margin-left:85%;
+	}
+}
+
 /*------------------------------------*\
     $BUTTONS
 \*------------------------------------*/
