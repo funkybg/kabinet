@@ -1362,25 +1362,35 @@ ul {
 }
 
 /* line 65, ../scss/objects/_nav.scss */
-.nav__container ul {
+.nav__container > ul {
   float: right;
+}
+
+/* line 68, ../scss/objects/_nav.scss */
+.nav__level2 {
+  display: none;
 }
 
 /*------------------------------------*\
     $MENU FOR SMALL SCREENS < 1023
 \*------------------------------------*/
 @media only screen and (max-width: 1023px) {
-  /* line 73, ../scss/objects/_nav.scss */
+  /* line 76, ../scss/objects/_nav.scss */
   body {
     overflow: hidden;
   }
 
-  /* line 76, ../scss/objects/_nav.scss */
+  /* line 79, ../scss/objects/_nav.scss */
   [role="side_menu"] {
     display: none;
   }
 
-  /* line 79, ../scss/objects/_nav.scss */
+  /* line 82, ../scss/objects/_nav.scss */
+  .nav__level2 {
+    display: block;
+  }
+
+  /* line 85, ../scss/objects/_nav.scss */
   .nav__container {
     position: fixed;
     background: #8a60c0;
@@ -1393,18 +1403,18 @@ ul {
     overflow: auto;
   }
 
-  /* line 90, ../scss/objects/_nav.scss */
+  /* line 96, ../scss/objects/_nav.scss */
   .nav__header {
     width: 100%;
     background: none;
   }
 
-  /* line 94, ../scss/objects/_nav.scss */
-  .nav__header > li {
+  /* line 100, ../scss/objects/_nav.scss */
+  .nav__header li {
     display: block;
   }
 
-  /* line 98, ../scss/objects/_nav.scss */
+  /* line 104, ../scss/objects/_nav.scss */
   .active1 .content__mask--mobile {
     margin-left: 85%;
     float: left;
@@ -1413,13 +1423,13 @@ ul {
 /*------------------------------------*\
     $BUTTONS
 \*------------------------------------*/
-/* line 109, ../scss/objects/_nav.scss */
+/* line 115, ../scss/objects/_nav.scss */
 .button {
   font-size: 0.9em;
   padding: 0.3em 0.5em;
 }
 
-/* line 114, ../scss/objects/_nav.scss */
+/* line 120, ../scss/objects/_nav.scss */
 .button__map svg, .button__map img {
   position: relative;
   background-color: #70ae11;
@@ -1428,7 +1438,7 @@ ul {
   float: left;
 }
 
-/* line 122, ../scss/objects/_nav.scss */
+/* line 128, ../scss/objects/_nav.scss */
 .button__map span {
   display: block;
   position: relative;
@@ -1440,7 +1450,7 @@ ul {
 /*------------------------------------*\
     $BUTTON AFTER GRAD
 \*------------------------------------*/
-/* line 133, ../scss/objects/_nav.scss */
+/* line 139, ../scss/objects/_nav.scss */
 .button__aftergrad__link {
   display: inline-block;
   *display: inline;
@@ -1448,14 +1458,14 @@ ul {
   background-color: #70ae11;
 }
 
-/* line 139, ../scss/objects/_nav.scss */
+/* line 145, ../scss/objects/_nav.scss */
 .button__aftergrad__text {
   padding-right: 1.5em;
   padding-left: 0.7em;
   color: white;
 }
 
-/* line 144, ../scss/objects/_nav.scss */
+/* line 150, ../scss/objects/_nav.scss */
 .button__aftergrad__image__container {
   vertical-align: middle;
   display: inline-block;
@@ -1464,7 +1474,7 @@ ul {
   background-color: #8a60c0;
 }
 
-/* line 151, ../scss/objects/_nav.scss */
+/* line 157, ../scss/objects/_nav.scss */
 .button__aftergrad__image {
   padding-left: 0.3em;
   padding-right: 0.3em;
@@ -1472,7 +1482,7 @@ ul {
   padding-bottom: 0.05em;
 }
 
-/* line 157, ../scss/objects/_nav.scss */
+/* line 163, ../scss/objects/_nav.scss */
 .button__aftergrad__link:hover {
   background-color: #8a60c0;
   -webkit-transition: background-color 0.2s;
@@ -1482,7 +1492,7 @@ ul {
   transition: background-color 0.2s;
 }
 
-/* line 162, ../scss/objects/_nav.scss */
+/* line 168, ../scss/objects/_nav.scss */
 .button__aftergrad__link:hover .button__aftergrad__image {
   -webkit-transform: rotateY(360deg);
   -moz-transform: rotateY(360deg);
@@ -1496,7 +1506,7 @@ ul {
   transition: all 1s;
 }
 
-/* line 171, ../scss/objects/_nav.scss */
+/* line 177, ../scss/objects/_nav.scss */
 .active--map {
   background-color: #8a60c0;
 }
@@ -1504,7 +1514,7 @@ ul {
 /*------------------------------------*\
     $BUTTONS BACK TO TOP
 \*------------------------------------*/
-/* line 178, ../scss/objects/_nav.scss */
+/* line 184, ../scss/objects/_nav.scss */
 .button__top {
   position: fixed;
   right: 10%;
@@ -1515,7 +1525,7 @@ ul {
   font-size: 0.8em;
 }
 
-/* line 187, ../scss/objects/_nav.scss */
+/* line 193, ../scss/objects/_nav.scss */
 .button__top:hover {
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
   filter: alpha(opacity=100);
@@ -1527,7 +1537,7 @@ ul {
   transition: opacity 0.2s;
 }
 
-/* line 193, ../scss/objects/_nav.scss */
+/* line 199, ../scss/objects/_nav.scss */
 .button__top svg {
   display: block;
   margin: auto;
@@ -1536,18 +1546,18 @@ ul {
 /*------------------------------------*\
     $LINKS
 \*------------------------------------*/
-/* line 202, ../scss/objects/_nav.scss */
+/* line 208, ../scss/objects/_nav.scss */
 a {
   text-decoration: none;
   color: #1a1a1a;
 }
 
-/* line 207, ../scss/objects/_nav.scss */
+/* line 213, ../scss/objects/_nav.scss */
 .nav__header a, .button {
   color: white;
 }
 
-/* line 211, ../scss/objects/_nav.scss */
+/* line 217, ../scss/objects/_nav.scss */
 .nav__footer a:hover {
   color: #70ae11;
 }

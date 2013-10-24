@@ -62,8 +62,11 @@
 	margin-left:auto;
 	margin-right: auto;
 }
-.nav__container ul {
+.nav__container > ul {
 	float: right;
+}
+.nav__level2 {
+	display:none;
 }
 
 /*------------------------------------*\
@@ -75,6 +78,9 @@
 	}
 	[role="side_menu"] {
 		display: none;
+	}
+	.nav__level2 {
+		display:block;
 	}
 	.nav__container {
 		position:fixed;
@@ -91,7 +97,7 @@
 		width:100%;
 		background: none;
 	}
-	.nav__header > li {
+	.nav__header li {
 		display: block;
 	}
 
