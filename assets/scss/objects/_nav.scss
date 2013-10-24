@@ -65,7 +65,7 @@
 .nav__container > ul {
 	float: right;
 }
-.nav__level2 {
+.offcanvas {
 	display:none;
 }
 
@@ -76,11 +76,18 @@
 	body {
 		overflow: hidden;
 	}
+	.active {
+		background: none;
+	}
 	[role="side_menu"] {
 		display: none;
 	}
-	.nav__level2 {
+	.offcanvas {
 		display:block;
+		padding-left: 6%;
+	}
+	.nav__header li:hover {
+		background: none;
 	}
 	.nav__container {
 		position:fixed;
@@ -92,7 +99,9 @@
 		-webkit-box-shadow: inset -2px 0px 8px -1px #111111;
 		box-shadow: inset -2px 0px 8px -1px #111111;
 		overflow: auto;
+		margin-left: -85%;
 	}
+	.active1 [role="nav--offcanvas"] {margin-left: 0;}
 	.nav__header {
 		width:100%;
 		background: none;
