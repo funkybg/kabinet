@@ -1403,14 +1403,9 @@ ul {
   }
 
   /* line 89, ../scss/objects/_nav.scss */
-  .nav__header li:hover {
-    background: none;
-  }
-
-  /* line 92, ../scss/objects/_nav.scss */
   .nav__container {
     position: fixed;
-    background: #8a60c0;
+    background: #70ae11;
     height: 100%;
     width: 85%;
     padding: 0px;
@@ -1421,20 +1416,25 @@ ul {
     margin-left: -85%;
   }
 
-  /* line 104, ../scss/objects/_nav.scss */
+  /* line 101, ../scss/objects/_nav.scss */
   .active1 [role="nav--offcanvas"] {
     margin-left: 0;
   }
 
-  /* line 105, ../scss/objects/_nav.scss */
+  /* line 102, ../scss/objects/_nav.scss */
   .nav__header {
     width: 100%;
     background: none;
   }
 
-  /* line 109, ../scss/objects/_nav.scss */
+  /* line 106, ../scss/objects/_nav.scss */
   .nav__header li {
     display: block;
+  }
+
+  /* line 109, ../scss/objects/_nav.scss */
+  .nav__header li:hover {
+    background: none;
   }
 
   /* line 113, ../scss/objects/_nav.scss */
@@ -1585,6 +1585,23 @@ a {
   color: #70ae11;
 }
 
+@media only screen and (max-width: 1023px) {
+  /* line 231, ../scss/objects/_nav.scss */
+  .nav__header a {
+    color: #70ae11;
+    border-left: 0.5em solid white;
+  }
+
+  /* line 235, ../scss/objects/_nav.scss */
+  .nav__header a:hover {
+    border-left: 0.5em solid #70ae11;
+  }
+
+  /* line 238, ../scss/objects/_nav.scss */
+  .offcanvas a {
+    color: #1a1a1a;
+  }
+}
 /*------------------------------------*\
     $NAV SIDE MODULE
 \*------------------------------------*/
