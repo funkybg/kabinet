@@ -58,3 +58,10 @@ $base-font-size: 100%;
 	-ms-transition: all 1s;
 	transition: all 1s;
 }
+@mixin left__transition {
+	-webkit-transition: margin-left 0.5s Ease-Out;
+	-moz-transition: margin-left 0.5s Ease-Out;
+	-o-transition: margin-left 0.5s Ease-Out;
+	-ms-transition: margin-left 0.5s Ease-Out;
+	transition: margin-left 0.5s Ease-Out;
+}
