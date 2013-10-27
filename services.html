@@ -18,12 +18,14 @@
     
     <link type="text/plain" rel="author" href="humans.txt">
 </head>
-<body class="active1">
+<body>
 
 <!--NAV TOGGLE START-->
-<a href="top" class="mobile-menu-toggle">
+<div role="nav__mobile--holder" id="mmenu-toggle">
+    <a role="nav__mobile--toggle" href="top" class="mobile-menu-toggle">
     <span></span>
-</a>
+    </a>
+</div>
 <!--NAV TOGGLE END-->
 
 <!--NAV START-->
@@ -51,7 +53,7 @@
 <!--NAV END-->
 
 <!-- CONTENT MOBILE MASK START -->
-<div class="content__mask--mobile">
+<div class="content__mask--mobile" role="nav__mobile--content-mask">
 <!----------------->
 <!--PAYLOAD START-->
 <!----------------->
