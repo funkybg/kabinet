@@ -2,59 +2,84 @@
     $OFFCANVAS MODULE STYLES
 \*------------------------------------*/
 
+.mobile-menu-toggle {
+    display: none; /* show this only on small screens */
+    top: 0; /* "#menu width" */
+    background: $green;
+    font-size: 0.7em; /* change this value to increase/decrease button size */
+    z-index: 101;
+    width: 2em;
+    height: auto;
+    padding: 2.1em 1.6em;
+}
+
+.mobile-menu-toggle:hover, {
+    background: $purple;
+}
+.active-off [role="nav__mobile--toggle"] {
+    background:$purple;
+}
+
 .mobile-menu-toggle span {
-            position: fixed;
-            display: block;
-            z-index: 200;
-            top:1em;
-            width:3em;
-        }
+    position: relative;
+    display: block;
+}
 
-        .mobile-menu-toggle span,
-        .mobile-menu-toggle span:before,
-        .mobile-menu-toggle span:after {
-            background-color: #fff;
-            width: 100%;
-            height: .2em;
-            -webkit-transition: all 0.8s;
-               -moz-transition: all 0.8s;
-                -ms-transition: all 0.8s;
-                 -o-transition: all 0.8s;
-                    transition: all 0.8s;
-        }
+.mobile-menu-toggle span,
+.mobile-menu-toggle span:before,
+.mobile-menu-toggle span:after {
+    background-color: #fff;
+    width: 100%;
+    height: .2em;
+    -webkit-transition: all 0.8s;
+       -moz-transition: all 0.8s;
+        -ms-transition: all 0.8s;
+         -o-transition: all 0.8s;
+            transition: all 0.8s;
+}
 
-            .mobile-menu-toggle span:before,
-            .mobile-menu-toggle span:after {
-                position: absolute;
-                margin-top: -.6em;
-                content: " ";
-            }
+    .mobile-menu-toggle span:before,
+    .mobile-menu-toggle span:after {
+        position: absolute;
+        margin-top: -.6em;
+        content: " ";
+    }
 
-            .mobile-menu-toggle span:after {
-                margin-top: .6em;
-            }
+    .mobile-menu-toggle span:after {
+        margin-top: .6em;
+    }
 
-        .mobile-menu-toggle.active span {
-            background: transparent;
-        }
+.mobile-menu-toggle.active-off span {
+    background: transparent;
+}
 
-            .mobile-menu-toggle.active span:before {
-                -webkit-transform: rotate(45deg) translate(.5em, .4em);
-                   -moz-transform: rotate(45deg) translate(.5em, .4em);
-                    -ms-transform: rotate(45deg) translate(.5em, .4em);
-                     -o-transform: rotate(45deg) translate(.5em, .4em);
-                        transform: rotate(45deg) translate(.5em, .4em);
-            }
+    .mobile-menu-toggle.active-off span:before {
+        -webkit-transform: rotate(45deg) translate(.5em, .4em);
+           -moz-transform: rotate(45deg) translate(.5em, .4em);
+            -ms-transform: rotate(45deg) translate(.5em, .4em);
+             -o-transform: rotate(45deg) translate(.5em, .4em);
+                transform: rotate(45deg) translate(.5em, .4em);
+    }
 
-            .mobile-menu-toggle.active span:after {
-                -webkit-transform: rotate(-45deg) translate(.45em, -.35em);
-                   -moz-transform: rotate(-45deg) translate(.45em, -.35em);
-                    -ms-transform: rotate(-45deg) translate(.45em, -.35em);
-                     -o-transform: rotate(-45deg) translate(.45em, -.35em);
-                        transform: rotate(-45deg) translate(.45em, -.35em);
-            }
+    .mobile-menu-toggle.active-off span:after {
+        -webkit-transform: rotate(-45deg) translate(.45em, -.35em);
+           -moz-transform: rotate(-45deg) translate(.45em, -.35em);
+            -ms-transform: rotate(-45deg) translate(.45em, -.35em);
+             -o-transform: rotate(-45deg) translate(.45em, -.35em);
+                transform: rotate(-45deg) translate(.45em, -.35em);
+    }
+[role="nav__mobile--holder"], [role="nav__mobile--toggle"], [role="nav--offcanvas"], .content__mask--mobile {
+    @include left__transition;
+}
 
-/*------------------------------------*\
-    $CONTENTS
-\*------------------------------------*/
+/*----------------------------------------------*\
+    $SHOW OFF CANVAS MENU ONLY ON SMALL DEVICES
+\*----------------------------------------------*/
 
+@media only screen and (max-width : 1023px) {
+    .mobile-menu-toggle {
+        position: fixed;
+        left: 0;
+        display: block;
+    }
+}
