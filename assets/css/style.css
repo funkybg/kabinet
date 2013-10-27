@@ -1405,7 +1405,7 @@ ul {
   /* line 89, ../scss/objects/_nav.scss */
   .nav__container {
     position: fixed;
-    background: #70ae11;
+    background: #e9e9e9;
     height: 100%;
     width: 85%;
     padding: 0px;
@@ -1417,7 +1417,7 @@ ul {
   }
 
   /* line 101, ../scss/objects/_nav.scss */
-  .active1 [role="nav--offcanvas"] {
+  .active-off [role="nav--offcanvas"] {
     margin-left: 0;
   }
 
@@ -1438,21 +1438,39 @@ ul {
   }
 
   /* line 113, ../scss/objects/_nav.scss */
-  .active1 .content__mask--mobile {
+  .active-off .content__mask--mobile {
     margin-left: 85%;
     float: left;
+  }
+
+  /* line 118, ../scss/objects/_nav.scss */
+  [role="nav__mobile--holder"] {
+    position: fixed;
+    left: 0;
+    width: 100%;
+    background-color: #8a60c0;
+    height: 3.05em;
+    z-index: 99;
+  }
+
+  /*------------------------------------*\
+      $ACTIVATE SIDENAV
+  \*------------------------------------*/
+  /* line 130, ../scss/objects/_nav.scss */
+  .active-off [role="nav__mobile--toggle"], .active-off [role="nav__mobile--holder"], .active-off [role="nav__mobile--content-mask"] {
+    margin-left: 85%;
   }
 }
 /*------------------------------------*\
     $BUTTONS
 \*------------------------------------*/
-/* line 124, ../scss/objects/_nav.scss */
+/* line 139, ../scss/objects/_nav.scss */
 .button {
   font-size: 0.9em;
   padding: 0.3em 0.5em;
 }
 
-/* line 129, ../scss/objects/_nav.scss */
+/* line 144, ../scss/objects/_nav.scss */
 .button__map svg, .button__map img {
   position: relative;
   background-color: #70ae11;
@@ -1461,7 +1479,7 @@ ul {
   float: left;
 }
 
-/* line 137, ../scss/objects/_nav.scss */
+/* line 152, ../scss/objects/_nav.scss */
 .button__map span {
   display: block;
   position: relative;
@@ -1473,7 +1491,7 @@ ul {
 /*------------------------------------*\
     $BUTTON AFTER GRAD
 \*------------------------------------*/
-/* line 148, ../scss/objects/_nav.scss */
+/* line 163, ../scss/objects/_nav.scss */
 .button__aftergrad__link {
   display: inline-block;
   *display: inline;
@@ -1481,14 +1499,14 @@ ul {
   background-color: #70ae11;
 }
 
-/* line 154, ../scss/objects/_nav.scss */
+/* line 169, ../scss/objects/_nav.scss */
 .button__aftergrad__text {
   padding-right: 1.5em;
   padding-left: 0.7em;
   color: white;
 }
 
-/* line 159, ../scss/objects/_nav.scss */
+/* line 174, ../scss/objects/_nav.scss */
 .button__aftergrad__image__container {
   vertical-align: middle;
   display: inline-block;
@@ -1497,7 +1515,7 @@ ul {
   background-color: #8a60c0;
 }
 
-/* line 166, ../scss/objects/_nav.scss */
+/* line 181, ../scss/objects/_nav.scss */
 .button__aftergrad__image {
   padding-left: 0.3em;
   padding-right: 0.3em;
@@ -1505,7 +1523,7 @@ ul {
   padding-bottom: 0.05em;
 }
 
-/* line 172, ../scss/objects/_nav.scss */
+/* line 187, ../scss/objects/_nav.scss */
 .button__aftergrad__link:hover {
   background-color: #8a60c0;
   -webkit-transition: background-color 0.2s;
@@ -1515,7 +1533,7 @@ ul {
   transition: background-color 0.2s;
 }
 
-/* line 177, ../scss/objects/_nav.scss */
+/* line 192, ../scss/objects/_nav.scss */
 .button__aftergrad__link:hover .button__aftergrad__image {
   -webkit-transform: rotateY(360deg);
   -moz-transform: rotateY(360deg);
@@ -1529,7 +1547,7 @@ ul {
   transition: all 1s;
 }
 
-/* line 186, ../scss/objects/_nav.scss */
+/* line 201, ../scss/objects/_nav.scss */
 .active--map {
   background-color: #8a60c0;
 }
@@ -1537,7 +1555,7 @@ ul {
 /*------------------------------------*\
     $BUTTONS BACK TO TOP
 \*------------------------------------*/
-/* line 193, ../scss/objects/_nav.scss */
+/* line 209, ../scss/objects/_nav.scss */
 .button__top {
   position: fixed;
   right: 10%;
@@ -1548,7 +1566,7 @@ ul {
   font-size: 0.8em;
 }
 
-/* line 202, ../scss/objects/_nav.scss */
+/* line 218, ../scss/objects/_nav.scss */
 .button__top:hover {
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
   filter: alpha(opacity=100);
@@ -1560,7 +1578,7 @@ ul {
   transition: opacity 0.2s;
 }
 
-/* line 208, ../scss/objects/_nav.scss */
+/* line 224, ../scss/objects/_nav.scss */
 .button__top svg {
   display: block;
   margin: auto;
@@ -1569,35 +1587,35 @@ ul {
 /*------------------------------------*\
     $LINKS
 \*------------------------------------*/
-/* line 217, ../scss/objects/_nav.scss */
+/* line 233, ../scss/objects/_nav.scss */
 a {
   text-decoration: none;
   color: #1a1a1a;
 }
 
-/* line 222, ../scss/objects/_nav.scss */
+/* line 238, ../scss/objects/_nav.scss */
 .nav__header a, .button {
   color: white;
 }
 
-/* line 226, ../scss/objects/_nav.scss */
+/* line 242, ../scss/objects/_nav.scss */
 .nav__footer a:hover {
   color: #70ae11;
 }
 
 @media only screen and (max-width: 1023px) {
-  /* line 231, ../scss/objects/_nav.scss */
+  /* line 247, ../scss/objects/_nav.scss */
   .nav__header a {
     color: #70ae11;
     border-left: 0.5em solid white;
   }
 
-  /* line 235, ../scss/objects/_nav.scss */
+  /* line 251, ../scss/objects/_nav.scss */
   .nav__header a:hover {
     border-left: 0.5em solid #70ae11;
   }
 
-  /* line 238, ../scss/objects/_nav.scss */
+  /* line 254, ../scss/objects/_nav.scss */
   .offcanvas a {
     color: #1a1a1a;
   }
@@ -1671,15 +1689,37 @@ a {
     $OFFCANVAS MODULE STYLES
 \*------------------------------------*/
 /* line 5, ../scss/objects/_offcanvas.scss */
-.mobile-menu-toggle span {
-  position: fixed;
-  display: block;
-  z-index: 200;
-  top: 1em;
-  width: 3em;
+.mobile-menu-toggle {
+  display: none;
+  /* show this only on small screens */
+  top: 0;
+  /* "#menu width" */
+  background: #70ae11;
+  font-size: 0.7em;
+  /* change this value to increase/decrease button size */
+  z-index: 101;
+  width: 2em;
+  height: auto;
+  padding: 2.1em 1.6em;
 }
 
-/* line 15, ../scss/objects/_offcanvas.scss */
+/* line 16, ../scss/objects/_offcanvas.scss */
+.mobile-menu-toggle:hover {
+  background: #8a60c0;
+}
+
+/* line 19, ../scss/objects/_offcanvas.scss */
+.active-off [role="nav__mobile--toggle"] {
+  background: #8a60c0;
+}
+
+/* line 23, ../scss/objects/_offcanvas.scss */
+.mobile-menu-toggle span {
+  position: relative;
+  display: block;
+}
+
+/* line 30, ../scss/objects/_offcanvas.scss */
 .mobile-menu-toggle span,
 .mobile-menu-toggle span:before,
 .mobile-menu-toggle span:after {
@@ -1693,7 +1733,7 @@ a {
   transition: all 0.8s;
 }
 
-/* line 27, ../scss/objects/_offcanvas.scss */
+/* line 42, ../scss/objects/_offcanvas.scss */
 .mobile-menu-toggle span:before,
 .mobile-menu-toggle span:after {
   position: absolute;
@@ -1701,18 +1741,18 @@ a {
   content: " ";
 }
 
-/* line 33, ../scss/objects/_offcanvas.scss */
+/* line 48, ../scss/objects/_offcanvas.scss */
 .mobile-menu-toggle span:after {
   margin-top: .6em;
 }
 
-/* line 37, ../scss/objects/_offcanvas.scss */
-.mobile-menu-toggle.active span {
+/* line 52, ../scss/objects/_offcanvas.scss */
+.mobile-menu-toggle.active-off span {
   background: transparent;
 }
 
-/* line 41, ../scss/objects/_offcanvas.scss */
-.mobile-menu-toggle.active span:before {
+/* line 56, ../scss/objects/_offcanvas.scss */
+.mobile-menu-toggle.active-off span:before {
   -webkit-transform: rotate(45deg) translate(0.5em, 0.4em);
   -moz-transform: rotate(45deg) translate(0.5em, 0.4em);
   -ms-transform: rotate(45deg) translate(0.5em, 0.4em);
@@ -1720,8 +1760,8 @@ a {
   transform: rotate(45deg) translate(0.5em, 0.4em);
 }
 
-/* line 49, ../scss/objects/_offcanvas.scss */
-.mobile-menu-toggle.active span:after {
+/* line 64, ../scss/objects/_offcanvas.scss */
+.mobile-menu-toggle.active-off span:after {
   -webkit-transform: rotate(-45deg) translate(0.45em, -0.35em);
   -moz-transform: rotate(-45deg) translate(0.45em, -0.35em);
   -ms-transform: rotate(-45deg) translate(0.45em, -0.35em);
@@ -1729,9 +1769,26 @@ a {
   transform: rotate(-45deg) translate(0.45em, -0.35em);
 }
 
-/*------------------------------------*\
-    $CONTENTS
-\*------------------------------------*/
+/* line 71, ../scss/objects/_offcanvas.scss */
+[role="nav__mobile--holder"], [role="nav__mobile--toggle"], [role="nav--offcanvas"], .content__mask--mobile {
+  -webkit-transition: margin-left 0.5s Ease-Out;
+  -moz-transition: margin-left 0.5s Ease-Out;
+  -o-transition: margin-left 0.5s Ease-Out;
+  -ms-transition: margin-left 0.5s Ease-Out;
+  transition: margin-left 0.5s Ease-Out;
+}
+
+/*----------------------------------------------*\
+    $SHOW OFF CANVAS MENU ONLY ON SMALL DEVICES
+\*----------------------------------------------*/
+@media only screen and (max-width: 1023px) {
+  /* line 80, ../scss/objects/_offcanvas.scss */
+  .mobile-menu-toggle {
+    position: fixed;
+    left: 0;
+    display: block;
+  }
+}
 /*------------------------------------*\
     $BULLET
 \*------------------------------------*/
