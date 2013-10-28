@@ -96,9 +96,9 @@
 		-webkit-box-shadow: inset -2px 0px 8px -1px #111111;
 		box-shadow: inset -2px 0px 8px -1px #111111;
 		overflow: auto;
-		left: -80%;
+		margin-left: -80%;
 	}
-	[role="nav--offcanvas"].open {left: 0;}
+	.open [role="nav--offcanvas"] {margin-left: 0;}
 	.nav__header {
 		width:100%;
 		background: none;
@@ -110,9 +110,9 @@
 		background: none;
 	}
 
-	.content__mask--mobile.open {
+	.open .content__mask--mobile {
 		// position:absolute;
-		left:80%;
+		margin-left:80%;
 		float:left;
 	}
 	[role="nav__mobile--holder"] {
@@ -127,8 +127,8 @@
     $ACTIVATE SIDENAV
 \*------------------------------------*/
 
-.open [role="nav__mobile--toggle"],.open [role="nav__mobile--holder"], .open [role="nav__mobile--content-mask"]{
-        left: 80%;
+.open [role="nav__mobile--holder"], .open [role="nav__mobile--content-mask"]{
+        margin-left: 80%;
     }
 }
 

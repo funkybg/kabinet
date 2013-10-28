@@ -68,9 +68,9 @@
              -o-transform: rotate(-45deg) translate(.45em, -.35em);
                 transform: rotate(-45deg) translate(.45em, -.35em);
     }
-// [role="nav__mobile--holder"], [role="nav__mobile--toggle"], [role="nav--offcanvas"], .content__mask--mobile {
-//     @include left__transition;
-// }
+[role="nav__mobile--holder"], [role="nav__mobile--toggle"], [role="nav--offcanvas"], .content__mask--mobile {
+    @include left__transition;
+}
 
 /*----------------------------------------------*\
     $SHOW OFF CANVAS MENU ONLY ON SMALL DEVICES
@@ -114,41 +114,41 @@
 // }
 // @-webkit-keyframes open {
 //     0%      {-webkit-transform: translate3d(0,0,0);}
-//     80%    {-webkit-transform: translate3d(83%,0,0);}
+//     70%    {-webkit-transform: translate3d(83%,0,0);}
 //     100%  {-webkit-transform: translate3d(80%,0,0);}
 // }
 // @-moz-keyframes open {
 //     0%      {-moz-transform: translate3d(0,0,0);}
-//     80%    {-moz-transform: translate3d(83%,0,0);}
+//     70%    {-moz-transform: translate3d(83%,0,0);}
 //     100%  {-moz-transform: translate3d(80%,0,0);}
 // }
 // @keyframes open {
 //     0%      {transform: translate3d(0,0,0);}
-//     80%    {transform: translate3d(83%,0,0);}
+//     70%    {transform: translate3d(83%,0,0);}
 //     100%  {transform: translate3d(80%,0,0);}
 // }
 
 /*Content Sliding Closed Effect*/
-.close 
-{
-    -webkit-transform: translate3d(0,0,0);
-    -webkit-animation: close .3s ease-in-out;
+// .close 
+// {
+//     -webkit-transform: translate3d(0,0,0);
+//     -webkit-animation: close .3s ease-in-out;
     
-    -moz-transform: translate3d(0,0,0);
-    -moz-animation: close .3s ease-in-out;
+//     -moz-transform: translate3d(0,0,0);
+//     -moz-animation: close .3s ease-in-out;
     
-    transform: translate3d(0,0,0);
-    animation: close .3s ease-in-out;
-}
-@-webkit-keyframes close {
-    0%      {-webkit-transform: translate3d(80%,0,0);}
-    100%  {-webkit-transform: translate3d(0,0,0);}
-}
-@-moz-keyframes close {
-    0%       {-moz-transform: translate3d(80%,0,0);}
-    100%  {-moz-transform: translate3d(0,0,0);}
-}
-@keyframes close {
-    0%       {transform: translate3d(80%,0,0);}
-    100%  {transform: translate3d(0,0,0);}
-}
+//     transform: translate3d(0,0,0);
+//     animation: close .3s ease-in-out;
+// }
+// @-webkit-keyframes close {
+//     0%      {-webkit-transform: translate3d(80%,0,0);}
+//     100%  {-webkit-transform: translate3d(0,0,0);}
+// }
+// @-moz-keyframes close {
+//     0%       {-moz-transform: translate3d(80%,0,0);}
+//     100%  {-moz-transform: translate3d(0,0,0);}
+// }
+// @keyframes close {
+//     0%       {transform: translate3d(80%,0,0);}
+//     100%  {transform: translate3d(0,0,0);}
+// }
