@@ -1418,7 +1418,7 @@ ul {
 
   /* line 101, ../scss/objects/_nav.scss */
   [role="nav--offcanvas"].open {
-    margin-left: 0;
+    margin-left: -64%;
   }
 
   /* line 102, ../scss/objects/_nav.scss */
