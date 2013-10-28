@@ -96,9 +96,9 @@
 		-webkit-box-shadow: inset -2px 0px 8px -1px #111111;
 		box-shadow: inset -2px 0px 8px -1px #111111;
 		overflow: auto;
-		margin-left: -80%;
+		left: -80%;
 	}
-	[role="nav--offcanvas"].open {margin-left: -64%;}
+	[role="nav--offcanvas"].open {left: 0;}
 	.nav__header {
 		width:100%;
 		background: none;
@@ -112,7 +112,7 @@
 
 	.content__mask--mobile.open {
 		// position:absolute;
-		margin-left:80%;
+		left:80%;
 		float:left;
 	}
 	[role="nav__mobile--holder"] {
@@ -128,7 +128,7 @@
 \*------------------------------------*/
 
 .open [role="nav__mobile--toggle"],.open [role="nav__mobile--holder"], .open [role="nav__mobile--content-mask"]{
-        margin-left: 80%;
+        left: 80%;
     }
 }
 

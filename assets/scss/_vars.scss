@@ -59,14 +59,9 @@ $base-font-size: 100%;
 	transition: all 1s;
 }
 @mixin left__transition {	
-	-webkit-transition: margin-left 0.5s Ease-Out;
-	-moz-transition: margin-left 0.5s Ease-Out;
-	-o-transition: margin-left 0.5s Ease-Out;
-	-ms-transition: margin-left 0.5s Ease-Out;
-	transition: margin-left 0.5s Ease-Out;
-	-webkit-transform: translate3d(0,0,0);
-	-moz-transform: translate3d(0,0,0);
-	-o-transform: translate3d(0,0,0);
-	-ms-transform: translate3d(0,0,0);
-	transform: translate3d(0,0,0);
+	-webkit-transition: left 0.5s Ease-Out;
+	-moz-transition: left 0.5s Ease-Out;
+	-o-transition: left 0.5s Ease-Out;
+	-ms-transition: left 0.5s Ease-Out;
+	transition: left 0.5s Ease-Out;
 }

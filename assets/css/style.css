@@ -1413,12 +1413,12 @@ ul {
     -webkit-box-shadow: inset -2px 0px 8px -1px #111111;
     box-shadow: inset -2px 0px 8px -1px #111111;
     overflow: auto;
-    margin-left: -80%;
+    left: -80%;
   }
 
   /* line 101, ../scss/objects/_nav.scss */
   [role="nav--offcanvas"].open {
-    margin-left: -64%;
+    left: 0;
   }
 
   /* line 102, ../scss/objects/_nav.scss */
@@ -1439,7 +1439,7 @@ ul {
 
   /* line 113, ../scss/objects/_nav.scss */
   .content__mask--mobile.open {
-    margin-left: 80%;
+    left: 80%;
     float: left;
   }
 
@@ -1458,7 +1458,7 @@ ul {
   \*------------------------------------*/
   /* line 130, ../scss/objects/_nav.scss */
   .open [role="nav__mobile--toggle"], .open [role="nav__mobile--holder"], .open [role="nav__mobile--content-mask"] {
-    margin-left: 80%;
+    left: 80%;
   }
 }
 /*------------------------------------*\
@@ -1788,67 +1788,15 @@ a {
 /*Content Sliding Open Effect*/
 /* line 104, ../scss/objects/_offcanvas.scss */
 .open {
-  -webkit-transform: translate3d(80%, 0, 0);
-  -webkit-animation: open .5s ease-in-out;
-  -moz-transform: translate3d(80%, 0, 0);
-  -moz-animation: open .5s ease-in-out;
-  transform: translate3d(80%, 0, 0);
-  animation: open .5s ease-in-out;
-}
-
-@-webkit-keyframes open {
-  /* line 115, ../scss/objects/_offcanvas.scss */
-  0% {
-    -webkit-transform: translate3d(0, 0, 0);
-  }
-
-  /* line 116, ../scss/objects/_offcanvas.scss */
-  70% {
-    -webkit-transform: translate3d(83%, 0, 0);
-  }
-
-  /* line 117, ../scss/objects/_offcanvas.scss */
-  100% {
-    -webkit-transform: translate3d(80%, 0, 0);
-  }
-}
-
-@-moz-keyframes open {
-  /* line 120, ../scss/objects/_offcanvas.scss */
-  0% {
-    -moz-transform: translate3d(0, 0, 0);
-  }
-
-  /* line 121, ../scss/objects/_offcanvas.scss */
-  70% {
-    -moz-transform: translate3d(83%, 0, 0);
-  }
-
-  /* line 122, ../scss/objects/_offcanvas.scss */
-  100% {
-    -moz-transform: translate3d(80%, 0, 0);
-  }
-}
-
-@keyframes open {
-  /* line 125, ../scss/objects/_offcanvas.scss */
-  0% {
-    transform: translate3d(0, 0, 0);
-  }
-
-  /* line 126, ../scss/objects/_offcanvas.scss */
-  70% {
-    transform: translate3d(83%, 0, 0);
-  }
-
-  /* line 127, ../scss/objects/_offcanvas.scss */
-  100% {
-    transform: translate3d(80%, 0, 0);
-  }
+  -webkit-transition: left 0.5s Ease-Out;
+  -moz-transition: left 0.5s Ease-Out;
+  -o-transition: left 0.5s Ease-Out;
+  -ms-transition: left 0.5s Ease-Out;
+  transition: left 0.5s Ease-Out;
 }
 
 /*Content Sliding Closed Effect*/
-/* line 132, ../scss/objects/_offcanvas.scss */
+/* line 133, ../scss/objects/_offcanvas.scss */
 .close {
   -webkit-transform: translate3d(0, 0, 0);
   -webkit-animation: close .3s ease-in-out;
@@ -1859,36 +1807,36 @@ a {
 }
 
 @-webkit-keyframes close {
-  /* line 143, ../scss/objects/_offcanvas.scss */
+  /* line 144, ../scss/objects/_offcanvas.scss */
   0% {
     -webkit-transform: translate3d(80%, 0, 0);
   }
 
-  /* line 144, ../scss/objects/_offcanvas.scss */
+  /* line 145, ../scss/objects/_offcanvas.scss */
   100% {
     -webkit-transform: translate3d(0, 0, 0);
   }
 }
 
 @-moz-keyframes close {
-  /* line 147, ../scss/objects/_offcanvas.scss */
+  /* line 148, ../scss/objects/_offcanvas.scss */
   0% {
     -moz-transform: translate3d(80%, 0, 0);
   }
 
-  /* line 148, ../scss/objects/_offcanvas.scss */
+  /* line 149, ../scss/objects/_offcanvas.scss */
   100% {
     -moz-transform: translate3d(0, 0, 0);
   }
 }
 
 @keyframes close {
-  /* line 151, ../scss/objects/_offcanvas.scss */
+  /* line 152, ../scss/objects/_offcanvas.scss */
   0% {
     transform: translate3d(80%, 0, 0);
   }
 
-  /* line 152, ../scss/objects/_offcanvas.scss */
+  /* line 153, ../scss/objects/_offcanvas.scss */
   100% {
     transform: translate3d(0, 0, 0);
   }
