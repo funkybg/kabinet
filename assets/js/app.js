@@ -99,7 +99,7 @@ $(function() {
 $(function() {
 
     // var items = $('#mmenu-toggle, .content__mask--mobile, .nav__container');
-    var items = $('.content__mask--mobile, .nav__container, #mmenu-toggle');
+    var items = $('.nav__container, #mmenu-toggle, .mobile-menu-toggle, .content__mask--mobile');
     
     var open = function() {
                             $(items).removeClass('close').addClass('open');

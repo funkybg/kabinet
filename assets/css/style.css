@@ -1416,6 +1416,11 @@ ul {
     margin-left: -80%;
   }
 
+  /* line 101, ../scss/objects/_nav.scss */
+  [role="nav--offcanvas"].open {
+    margin-left: 0;
+  }
+
   /* line 102, ../scss/objects/_nav.scss */
   .nav__header {
     width: 100%;
@@ -1432,6 +1437,12 @@ ul {
     background: none;
   }
 
+  /* line 113, ../scss/objects/_nav.scss */
+  .content__mask--mobile.open {
+    margin-left: 80%;
+    float: left;
+  }
+
   /* line 118, ../scss/objects/_nav.scss */
   [role="nav__mobile--holder"] {
     position: fixed;
@@ -1445,6 +1456,10 @@ ul {
   /*------------------------------------*\
       $ACTIVATE SIDENAV
   \*------------------------------------*/
+  /* line 130, ../scss/objects/_nav.scss */
+  .open [role="nav__mobile--toggle"], .open [role="nav__mobile--holder"], .open [role="nav__mobile--content-mask"] {
+    margin-left: 80%;
+  }
 }
 /*------------------------------------*\
     $BUTTONS
@@ -1694,7 +1709,7 @@ a {
 }
 
 /* line 19, ../scss/objects/_offcanvas.scss */
-.active-off [role="nav__mobile--toggle"] {
+[role="nav__mobile--toggle"].open {
   background: #8a60c0;
 }
 
@@ -1732,7 +1747,7 @@ a {
 }
 
 /* line 52, ../scss/objects/_offcanvas.scss */
-.mobile-menu-toggle.active-off span {
+.mobile-menu-toggle.open span {
   background: transparent;
 }
 
@@ -1760,7 +1775,7 @@ a {
 @media only screen and (max-width: 1023px) {
   /* line 80, ../scss/objects/_offcanvas.scss */
   .mobile-menu-toggle {
-    position: fixed;
+    position: absolute;
     left: 0;
     display: block;
   }
@@ -1773,112 +1788,19 @@ a {
 /*Content Sliding Open Effect*/
 /* line 104, ../scss/objects/_offcanvas.scss */
 .open {
-  -webkit-transform: translate3d(80%, 0, 0);
-  -webkit-animation: open .5s ease-in-out;
-  -moz-transform: translate3d(80%, 0, 0);
-  -moz-animation: open .5s ease-in-out;
-  transform: translate3d(80%, 0, 0);
-  animation: open .5s ease-in-out;
-}
-
-@-webkit-keyframes open {
-  /* line 115, ../scss/objects/_offcanvas.scss */
-  0% {
-    -webkit-transform: translate3d(0, 0, 0);
-  }
-
-  /* line 116, ../scss/objects/_offcanvas.scss */
-  70% {
-    -webkit-transform: translate3d(83%, 0, 0);
-  }
-
-  /* line 117, ../scss/objects/_offcanvas.scss */
-  100% {
-    -webkit-transform: translate3d(80%, 0, 0);
-  }
-}
-
-@-moz-keyframes open {
-  /* line 120, ../scss/objects/_offcanvas.scss */
-  0% {
-    -moz-transform: translate3d(0, 0, 0);
-  }
-
-  /* line 121, ../scss/objects/_offcanvas.scss */
-  70% {
-    -moz-transform: translate3d(83%, 0, 0);
-  }
-
-  /* line 122, ../scss/objects/_offcanvas.scss */
-  100% {
-    -moz-transform: translate3d(80%, 0, 0);
-  }
-}
-
-@keyframes open {
-  /* line 125, ../scss/objects/_offcanvas.scss */
-  0% {
-    transform: translate3d(0, 0, 0);
-  }
-
-  /* line 126, ../scss/objects/_offcanvas.scss */
-  70% {
-    transform: translate3d(83%, 0, 0);
-  }
-
-  /* line 127, ../scss/objects/_offcanvas.scss */
-  100% {
-    transform: translate3d(80%, 0, 0);
-  }
+  -webkit-transition: margin-left 0.5s Ease-Out;
+  -moz-transition: margin-left 0.5s Ease-Out;
+  -o-transition: margin-left 0.5s Ease-Out;
+  -ms-transition: margin-left 0.5s Ease-Out;
+  transition: margin-left 0.5s Ease-Out;
+  -webkit-transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
+  -o-transform: translate3d(0, 0, 0);
+  -ms-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
 }
 
 /*Content Sliding Closed Effect*/
-/* line 132, ../scss/objects/_offcanvas.scss */
-.close {
-  -webkit-transform: translate3d(0, 0, 0);
-  -webkit-animation: close .3s ease-in-out;
-  -moz-transform: translate3d(0, 0, 0);
-  -moz-animation: close .3s ease-in-out;
-  transform: translate3d(0, 0, 0);
-  animation: close .3s ease-in-out;
-}
-
-@-webkit-keyframes close {
-  /* line 143, ../scss/objects/_offcanvas.scss */
-  0% {
-    -webkit-transform: translate3d(80%, 0, 0);
-  }
-
-  /* line 144, ../scss/objects/_offcanvas.scss */
-  100% {
-    -webkit-transform: translate3d(0, 0, 0);
-  }
-}
-
-@-moz-keyframes close {
-  /* line 147, ../scss/objects/_offcanvas.scss */
-  0% {
-    -moz-transform: translate3d(80%, 0, 0);
-  }
-
-  /* line 148, ../scss/objects/_offcanvas.scss */
-  100% {
-    -moz-transform: translate3d(0, 0, 0);
-  }
-}
-
-@keyframes close {
-  /* line 151, ../scss/objects/_offcanvas.scss */
-  0% {
-    transform: translate3d(80%, 0, 0);
-  }
-
-  /* line 152, ../scss/objects/_offcanvas.scss */
-  100% {
-    transform: translate3d(0, 0, 0);
-  }
-}
-
 /*------------------------------------*\
     $BULLET
 \*------------------------------------*/

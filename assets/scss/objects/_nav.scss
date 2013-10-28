@@ -98,7 +98,7 @@
 		overflow: auto;
 		margin-left: -80%;
 	}
-	// .active-off [role="nav--offcanvas"] {margin-left: 0;}
+	[role="nav--offcanvas"].open {margin-left: 0;}
 	.nav__header {
 		width:100%;
 		background: none;
@@ -110,11 +110,11 @@
 		background: none;
 	}
 
-	// .active-off .content__mask--mobile {
-	// 	// position:absolute;
-	// 	margin-left:80%;
-	// 	float:left;
-	// }
+	.content__mask--mobile.open {
+		// position:absolute;
+		margin-left:80%;
+		float:left;
+	}
 	[role="nav__mobile--holder"] {
 		position: fixed;
 		left:0;
@@ -127,9 +127,9 @@
     $ACTIVATE SIDENAV
 \*------------------------------------*/
 
-// .active-off [role="nav__mobile--toggle"],.active-off [role="nav__mobile--holder"], .active-off [role="nav__mobile--content-mask"]{
-//         margin-left: 80%;
-//     }
+.open [role="nav__mobile--toggle"],.open [role="nav__mobile--holder"], .open [role="nav__mobile--content-mask"]{
+        margin-left: 80%;
+    }
 }
 
 /*------------------------------------*\
