@@ -49,28 +49,28 @@
         margin-top: .6em;
     }
 
-.open .mobile-menu-toggle span {
-    background: transparent;
-}
+// .open .mobile-menu-toggle span {
+//     background: transparent;
+// }
 
-     .open .mobile-menu-toggle span:before {
-        -webkit-transform: rotate(45deg) translate(.5em, .4em);
-           -moz-transform: rotate(45deg) translate(.5em, .4em);
-            -ms-transform: rotate(45deg) translate(.5em, .4em);
-             -o-transform: rotate(45deg) translate(.5em, .4em);
-                transform: rotate(45deg) translate(.5em, .4em);
-    }
+//      .open .mobile-menu-toggle span:before {
+//         -webkit-transform: rotate(45deg) translate(.5em, .4em);
+//            -moz-transform: rotate(45deg) translate(.5em, .4em);
+//             -ms-transform: rotate(45deg) translate(.5em, .4em);
+//              -o-transform: rotate(45deg) translate(.5em, .4em);
+//                 transform: rotate(45deg) translate(.5em, .4em);
+//     }
 
-     .open .mobile-menu-toggle span:after {
-        -webkit-transform: rotate(-45deg) translate(.45em, -.35em);
-           -moz-transform: rotate(-45deg) translate(.45em, -.35em);
-            -ms-transform: rotate(-45deg) translate(.45em, -.35em);
-             -o-transform: rotate(-45deg) translate(.45em, -.35em);
-                transform: rotate(-45deg) translate(.45em, -.35em);
-    }
-[role="nav__mobile--holder"], [role="nav__mobile--toggle"], [role="nav--offcanvas"], .content__mask--mobile {
-    @include left__transition;
-}
+//      .open .mobile-menu-toggle span:after {
+//         -webkit-transform: rotate(-45deg) translate(.45em, -.35em);
+//            -moz-transform: rotate(-45deg) translate(.45em, -.35em);
+//             -ms-transform: rotate(-45deg) translate(.45em, -.35em);
+//              -o-transform: rotate(-45deg) translate(.45em, -.35em);
+//                 transform: rotate(-45deg) translate(.45em, -.35em);
+//     }
+// [role="nav__mobile--holder"], [role="nav__mobile--toggle"], [role="nav--offcanvas"], .content__mask--mobile {
+//     @include left__transition;
+// }
 
 /*----------------------------------------------*\
     $SHOW OFF CANVAS MENU ONLY ON SMALL DEVICES
@@ -102,6 +102,17 @@
 /*Content Sliding Open Effect*/
 .open 
 {@include left__transition;}
+
+.open {
+    -webkit-transition: -webkit-transform .2s cubic-bezier(.16, .68, .43, .99);
+    -moz-transition: -moz-transform .2s cubic-bezier(.16, .68, .43, .99);
+    -o-transition: -o-transform .2s cubic-bezier(.16, .68, .43, .99);
+    transition: transform .2s cubic-bezier(.16, .68, .43, .99);
+    /* improves performance issues on mobile*/
+    -webkit-backface-visibility: hidden;
+    -webkit-perspective: 1000;
+}
+
 // {   
 //     -webkit-transform: translate3d(80%,0,0);
 //     -webkit-animation: open .5s ease-in-out;

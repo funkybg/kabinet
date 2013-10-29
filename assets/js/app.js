@@ -87,12 +87,14 @@ $(function() {
 
 $(function() {
 
-    var items = $('body, #mmenu-toggle, .content__mask--mobile');
+    var items = $('#mmenu-toggle, .content__mask--mobile, .nav__container');
 
     $('#mmenu-toggle').click(function(){
         // $(items).toggleClass('active-off');
         $(items).toggleClass('open');
+        console.log("Fucking opera sux")
         return false;
+
     });
 });
 
