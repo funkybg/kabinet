@@ -86,37 +86,22 @@ $(function() {
 //================= OFF CANVAS MENU TOGGLE SCRIPTS ==================//
 
 $(function() {
-
     var items = $('#mmenu-toggle, .content__mask--mobile, .nav__container');
+    
+    var open = function() {
+                            $(items).removeClass('close').addClass('open');
+                        }
+    var close = function() { 
+                            $(items).removeClass('open').addClass('close');
+                        }
 
     $('#mmenu-toggle').click(function(){
-        // $(items).toggleClass('active-off');
-        $(items).toggleClass('open');
-        console.log("Fucking opera sux")
+        if (items.hasClass('open')) {$(close)}
+        else {$(open)}
         return false;
-
     });
+
 });
-
-// $(function() {
-
-//     // var items = $('#mmenu-toggle, .content__mask--mobile, .nav__container');
-//     var items = $('.nav__container, #mmenu-toggle, .mobile-menu-toggle, .content__mask--mobile');
-    
-//     var open = function() {
-//                             $(items).removeClass('close').addClass('open');
-//                         }
-//     var close = function() { 
-//                             $(items).removeClass('open').addClass('close');
-//                         }
-
-//     $('#mmenu-toggle').click(function(){
-//         if (items.hasClass('open')) {$(close)}
-//         else {$(open)}
-//         return false;
-//     });
-
-// });
 
 //================= GOOGLE MAPS SCRIPTS ==================//
 
