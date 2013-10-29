@@ -1747,12 +1747,12 @@ a {
 }
 
 /* line 52, ../scss/objects/_offcanvas.scss */
-.mobile-menu-toggle.open span {
+.open .mobile-menu-toggle span {
   background: transparent;
 }
 
 /* line 56, ../scss/objects/_offcanvas.scss */
-.mobile-menu-toggle.open span:before {
+.open .mobile-menu-toggle span:before {
   -webkit-transform: rotate(45deg) translate(0.5em, 0.4em);
   -moz-transform: rotate(45deg) translate(0.5em, 0.4em);
   -ms-transform: rotate(45deg) translate(0.5em, 0.4em);
@@ -1761,7 +1761,7 @@ a {
 }
 
 /* line 64, ../scss/objects/_offcanvas.scss */
-.mobile-menu-toggle.open span:after {
+.open .mobile-menu-toggle span:after {
   -webkit-transform: rotate(-45deg) translate(0.45em, -0.35em);
   -moz-transform: rotate(-45deg) translate(0.45em, -0.35em);
   -ms-transform: rotate(-45deg) translate(0.45em, -0.35em);
@@ -1776,6 +1776,11 @@ a {
   -o-transition: margin-left 0.5s Ease-Out;
   -ms-transition: margin-left 0.5s Ease-Out;
   transition: margin-left 0.5s Ease-Out;
+  -webkit-transform: translateZ(0);
+  -moz-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  -o-transform: translateZ(0);
+  transform: translateZ(0);
 }
 
 /*----------------------------------------------*\
@@ -1802,6 +1807,11 @@ a {
   -o-transition: margin-left 0.5s Ease-Out;
   -ms-transition: margin-left 0.5s Ease-Out;
   transition: margin-left 0.5s Ease-Out;
+  -webkit-transform: translateZ(0);
+  -moz-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  -o-transform: translateZ(0);
+  transform: translateZ(0);
 }
 
 /*Content Sliding Closed Effect*/

@@ -49,11 +49,11 @@
         margin-top: .6em;
     }
 
-.mobile-menu-toggle.open span {
+.open .mobile-menu-toggle span {
     background: transparent;
 }
 
-    .mobile-menu-toggle .open span:before {
+     .open .mobile-menu-toggle span:before {
         -webkit-transform: rotate(45deg) translate(.5em, .4em);
            -moz-transform: rotate(45deg) translate(.5em, .4em);
             -ms-transform: rotate(45deg) translate(.5em, .4em);
@@ -61,7 +61,7 @@
                 transform: rotate(45deg) translate(.5em, .4em);
     }
 
-    .mobile-menu-toggle .open span:after {
+     .open .mobile-menu-toggle span:after {
         -webkit-transform: rotate(-45deg) translate(.45em, -.35em);
            -moz-transform: rotate(-45deg) translate(.45em, -.35em);
             -ms-transform: rotate(-45deg) translate(.45em, -.35em);
