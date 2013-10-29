@@ -49,28 +49,25 @@
         margin-top: .6em;
     }
 
-// .open .mobile-menu-toggle span {
-//     background: transparent;
-// }
+.open .mobile-menu-toggle span {
+    background: transparent;
+}
 
-//      .open .mobile-menu-toggle span:before {
-//         -webkit-transform: rotate(45deg) translate(.5em, .4em);
-//            -moz-transform: rotate(45deg) translate(.5em, .4em);
-//             -ms-transform: rotate(45deg) translate(.5em, .4em);
-//              -o-transform: rotate(45deg) translate(.5em, .4em);
-//                 transform: rotate(45deg) translate(.5em, .4em);
-//     }
+     .open .mobile-menu-toggle span:before {
+        -webkit-transform: rotate(45deg) translate(.5em, .4em);
+           -moz-transform: rotate(45deg) translate(.5em, .4em);
+            -ms-transform: rotate(45deg) translate(.5em, .4em);
+             -o-transform: rotate(45deg) translate(.5em, .4em);
+                transform: rotate(45deg) translate(.5em, .4em);
+    }
 
-//      .open .mobile-menu-toggle span:after {
-//         -webkit-transform: rotate(-45deg) translate(.45em, -.35em);
-//            -moz-transform: rotate(-45deg) translate(.45em, -.35em);
-//             -ms-transform: rotate(-45deg) translate(.45em, -.35em);
-//              -o-transform: rotate(-45deg) translate(.45em, -.35em);
-//                 transform: rotate(-45deg) translate(.45em, -.35em);
-//     }
-// [role="nav__mobile--holder"], [role="nav__mobile--toggle"], [role="nav--offcanvas"], .content__mask--mobile {
-//     @include left__transition;
-// }
+     .open .mobile-menu-toggle span:after {
+        -webkit-transform: rotate(-45deg) translate(.45em, -.35em);
+           -moz-transform: rotate(-45deg) translate(.45em, -.35em);
+            -ms-transform: rotate(-45deg) translate(.45em, -.35em);
+             -o-transform: rotate(-45deg) translate(.45em, -.35em);
+                transform: rotate(-45deg) translate(.45em, -.35em);
+    }
 
 /*----------------------------------------------*\
     $SHOW OFF CANVAS MENU ONLY ON SMALL DEVICES
@@ -84,82 +81,14 @@
     }
 }
 
-/*----------------------------------------------*\
-    $TEST CSS OF TRUNK JS
-\*----------------------------------------------*/
-
-/* NAVIGATION ANNIMATION */
-
-/* CONTENT ANNIMATION */
-// .close {
-//     /* starting point */
-//     -webkit-transform: translate3d(0,0,0);
-//     -moz-transform: translate3d(0,0,0);
-//     transform: translate3d(0,0,0);
-//     z-index: 1;
-// }
-
-/*Content Sliding Open Effect*/
-.open 
-{@include left__transition;}
-
-.open {
-    -webkit-transition: -webkit-transform .2s cubic-bezier(.16, .68, .43, .99);
-    -moz-transition: -moz-transform .2s cubic-bezier(.16, .68, .43, .99);
-    -o-transition: -o-transform .2s cubic-bezier(.16, .68, .43, .99);
-    transition: transform .2s cubic-bezier(.16, .68, .43, .99);
-    /* improves performance issues on mobile*/
-    -webkit-backface-visibility: hidden;
-    -webkit-perspective: 1000;
+// INITIAL STATE ALSO USED FOR CLOSE ANIMATION
+[role="nav__mobile--holder"], [role="nav__mobile--toggle"], [role="nav--offcanvas"], .content__mask--mobile {
+    @include transition__animation;
 }
 
-// {   
-//     -webkit-transform: translate3d(80%,0,0);
-//     -webkit-animation: open .5s ease-in-out;
-    
-//     -moz-transform: translate3d(80%,0,0);
-//     -moz-animation: open .5s ease-in-out;
-    
-//     transform: translate3d(80%,0,0);
-//     animation: open .5s ease-in-out;
-// }
-// @-webkit-keyframes open {
-//     0%      {-webkit-transform: translate3d(0,0,0);}
-//     70%    {-webkit-transform: translate3d(83%,0,0);}
-//     100%  {-webkit-transform: translate3d(80%,0,0);}
-// }
-// @-moz-keyframes open {
-//     0%      {-moz-transform: translate3d(0,0,0);}
-//     70%    {-moz-transform: translate3d(83%,0,0);}
-//     100%  {-moz-transform: translate3d(80%,0,0);}
-// }
-// @keyframes open {
-//     0%      {transform: translate3d(0,0,0);}
-//     70%    {transform: translate3d(83%,0,0);}
-//     100%  {transform: translate3d(80%,0,0);}
-// }
-
-/*Content Sliding Closed Effect*/
-// .close 
-// {
-//     -webkit-transform: translate3d(0,0,0);
-//     -webkit-animation: close .3s ease-in-out;
-    
-//     -moz-transform: translate3d(0,0,0);
-//     -moz-animation: close .3s ease-in-out;
-    
-//     transform: translate3d(0,0,0);
-//     animation: close .3s ease-in-out;
-// }
-// @-webkit-keyframes close {
-//     0%      {-webkit-transform: translate3d(80%,0,0);}
-//     100%  {-webkit-transform: translate3d(0,0,0);}
-// }
-// @-moz-keyframes close {
-//     0%       {-moz-transform: translate3d(80%,0,0);}
-//     100%  {-moz-transform: translate3d(0,0,0);}
-// }
-// @keyframes close {
-//     0%       {transform: translate3d(80%,0,0);}
-//     100%  {transform: translate3d(0,0,0);}
-// }
+// OPEN ANIMATION
+.open 
+{
+    @include left__transition;
+    @include transition__animation;
+}
