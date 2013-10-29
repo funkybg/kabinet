@@ -81,12 +81,6 @@
     }
 }
 
-// INITIAL STATE ALSO USED FOR CLOSE ANIMATION
-[role="nav__mobile--holder"], [role="nav__mobile--toggle"], .content__mask--mobile {
-    @include base__transition;
-    @include transition__animation;
-}
-
 // OPEN ANIMATION
 .open 
 {
@@ -95,5 +89,10 @@
 }
 [role="nav--offcanvas"].open  {
     @include left__transition100;
+    @include transition__animation;    
+}
+// CLOSE ANIMATION
+.close, [role="nav--offcanvas"].close {
+    @include base__transition;
     @include transition__animation;    
 }
