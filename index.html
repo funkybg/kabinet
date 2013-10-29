@@ -19,14 +19,41 @@
     <link type="text/plain" rel="author" href="humans.txt">
 </head>
 <body>
+
+<!--NAV TOGGLE START-->
+<div role="nav__mobile--holder" id="mmenu-toggle">
+    <a role="nav__mobile--toggle" href="top" class="mobile-menu-toggle">
+    <span></span>
+    </a>
+</div>
+<!--NAV TOGGLE END-->
+
 <!--NAV START-->
-<div id="top" class="nav__container">
-    <ul class="nav nav__header">
-        <li class="active"><a href="index.html">КАБИНЕТЪТ</a></li><li><a href="services.html">УСЛУГИ</a></li><li><a href="team.html">ЕКИП</a></li><li><a href="contacts.html">КОНТАКТИ</a></li>
-    </ul>
+<div id="top" class="nav__container" role="nav--offcanvas">
+    <!-- <div> -->
+        <h2 class="offcanvas color__text--green">Дентален център - КМ Дент</h2>
+        <hr class="offcanvas">
+        <ul class="nav nav__header">
+            <li><a href="index.html">КАБИНЕТЪТ</a></li><li><a class="active" href="services.html">УСЛУГИ</a><ul class="offcanvas">
+                    <li><a href="#endo">ендодонтско лечение</a></li>
+                    <li><a href="#prot">протетично лечение</a></li>
+                    <li><a href="#paro">лечение на пародонта</a></li>
+                    <li><a href="#izbe">избелване</a></li>
+                    <li><a href="#kari">лечение на кариес</a></li>
+                    <li><a href="#dets">лечение на детски зъби</a></li>
+                    <li><a href="#adhe">адхезивни мостове</a></li>
+                    <li><a class="border--none" href="#kont">качествен контрол</a></li>
+                </ul></li><li><a href="team.html">ЕКИП</a><ul class="offcanvas">
+                    <li><a href="team.html#vcard-eli">д-р Елияна  Мартева - 0888 54 56 81</span></a></li>
+                    <li><a href="team.html#vcard-lubo">д-р Любен  Костов - 0887 392 082</span></a></li>
+                </ul></li><li><a href="contacts.html">КОНТАКТИ</a></li>
+        </ul>
+    <!-- </div> -->
 </div>
 <!--NAV END-->
 
+<!-- CONTENT MOBILE MASK START -->
+<div class="content__mask--mobile" role="nav__mobile--content-mask">
 <!----------------->
 <!--PAYLOAD START-->
 <!----------------->
@@ -116,5 +143,6 @@
 <script src="assets/js/app.js"></script>
 <!-- SCRIPTS END -->
 <!--FOOTER END-->
+</div> <!-- CONTENT MOBILE MASK END -->
 </body>
 </html>
