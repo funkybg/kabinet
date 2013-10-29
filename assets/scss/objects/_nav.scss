@@ -98,7 +98,6 @@
 		overflow: auto;
 		margin-left: -80%;
 	}
-	// .open [role="nav--offcanvas"] {margin-left: 0;}
 	.nav__header {
 		width:100%;
 		background: none;
@@ -123,13 +122,6 @@
     	height:3.05em;
     	z-index: 99;
 	}
-/*------------------------------------*\
-    $ACTIVATE SIDENAV
-\*------------------------------------*/
-
-// .open [role="nav__mobile--holder"], .open [role="nav__mobile--content-mask"]{
-//         margin-left: 80%;
-//     }
 }
 
 /*------------------------------------*\
