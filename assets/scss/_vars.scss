@@ -67,6 +67,7 @@ $base-font-size: 100%;
 	-webkit-transform: translate3d(80%,0,0);
 	-moz-transform: translate3d(80%,0,0);
 	-o-transform: translate(80%,0);
+	// take care of old opera's and some mobile versions
 	-ms-transform: translate3d(80%,0,0);
 	transform: translate3d(80%,0,0);
 }
