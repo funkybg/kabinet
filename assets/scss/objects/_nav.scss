@@ -155,11 +155,14 @@
 /*------------------------------------*\
     $BUTTON AFTER GRAD
 \*------------------------------------*/
+
 .button__aftergrad__link {
     display: inline-block;
     *display: inline;
     zoom: 1;
 	background-color: $green;
+	margin-top:0.5em; /* mainly for some extra space on small devices */
+	margin-bottom: 0.5em; /* mainly for some extra space on small devices */
 }
 .button__aftergrad__text {
 	padding-right: 1.5em;
