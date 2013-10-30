@@ -2039,7 +2039,7 @@ html[xmlns] .slides {
   width: 2em;
   height: 3em;
   background-color: #70ae11;
-  position: absolute;
+  position: fixed;
   right: 0;
   top: 40%;
   z-index: 100;
