@@ -3,10 +3,10 @@
 \*------------------------------------*/
 
 #map-canvas {
-	height:30em;
+	height:100%;
 	width:100%;
 	z-index: 20;
-	// padding-bottom: 30em;
+	padding-bottom: 30em;
 }
 .gm-style-iw {
 	padding:0.5em;
@@ -14,4 +14,15 @@
 
 #map-canvas img {
     max-width: none!important; 
+}
+
+[role="map__escape"] {
+	display: block;
+	width: 2em;
+	height: 3em;
+	background-color: $green;
+	position: absolute;
+	right: 0;
+	top: 40%;
+	z-index: 100;
 }
