@@ -1420,7 +1420,9 @@ ul {
   .nav__container {
     position: fixed;
     top: 0;
+    /* fix for odd behavour of fixed divs in android default browser */
     left: 0;
+    /* fix for odd behavour of fixed divs in android default browser */
     background: #e9e9e9;
     height: 100%;
     width: 80%;
@@ -1458,7 +1460,9 @@ ul {
   [role="nav__mobile--holder"] {
     position: fixed;
     top: 0;
+    /* fix for odd behavour of fixed divs in android default browser */
     left: 0;
+    /* fix for odd behavour of fixed divs in android default browser */
     width: 100%;
     background-color: #8a60c0;
     height: 3.05em;
