@@ -358,7 +358,11 @@ this the same font stack that Normalize.css sets for the `body`.
         display: none!important;
     }
 }
-
+@media (max-width: 420px) {
+    .pure-hidden-small-phone-portait {
+        display: none!important;
+    }
+}
 .pure-g-r > div {
         -webkit-box-sizing: border-box;
         -moz-box-sizing: border-box;
