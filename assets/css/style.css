@@ -2056,7 +2056,7 @@ html[xmlns] .slides {
   top: 40%;
   right: 0;
   border-radius: 55px 0 0 55px;
-  position: fixed;
+  position: absolute;
   background: rgba(112, 174, 17, 0.7) url(../images/scroll-icon.png) 70% 50% no-repeat;
   color: #fff;
   background-size: 12px 25px;
@@ -2073,7 +2073,7 @@ html[xmlns] .slides {
   content: ' ';
   z-index: -1;
   display: block;
-  position: fixed;
+  position: absolute;
   left: -10px;
   top: -10px;
   width: 45px;
