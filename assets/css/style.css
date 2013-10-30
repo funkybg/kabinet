@@ -2033,16 +2033,58 @@ html[xmlns] .slides {
   max-width: none !important;
 }
 
-/* line 19, ../scss/objects/_map.scss */
-[role="map__escape"] {
-  display: block;
-  width: 2em;
-  height: 3em;
-  background-color: #70ae11;
-  position: fixed;
-  right: 0;
-  top: 40%;
+/* line 18, ../scss/objects/_map.scss */
+.mapescape-scroll {
+  background: transparent;
   z-index: 100;
+  width: 40px;
+  right: 0;
+  top: 30px;
+  position: fixed;
+  transition: right .3s;
+  -moz-transition: right .3s;
+  /* Firefox 4 */
+  -webkit-transition: right .3s;
+  /* Safari and Chrome */
+}
+
+/* line 29, ../scss/objects/_map.scss */
+.mapescape-scroll-tab {
+  width: 35px;
+  height: 70px;
+  right: 0;
+  border-radius: 55px 0 0 55px;
+  position: absolute;
+  background: rgba(112, 174, 17, 0.7) url(../images/scroll-icon.png) 70% 50% no-repeat;
+  color: #fff;
+  background-size: 12px 25px;
+  transition: top .3s;
+  -moz-transition: top .3s;
+  /* Firefox 4 */
+  -webkit-transition: top .3s;
+  /* Safari and Chrome */
+}
+
+/* active state */
+/* line 42, ../scss/objects/_map.scss */
+.scroll-active .mapescape-scroll-tab:before {
+  content: ' ';
+  z-index: -1;
+  display: block;
+  position: absolute;
+  left: -10px;
+  top: -10px;
+  width: 45px;
+  height: 90px;
+  right: 0;
+  border-radius: 55px 0 0 55px;
+  position: absolute;
+  background: rgba(255, 255, 255, 0.9);
+  transition: top .3s;
+  -moz-transition: top .3s;
+  /* Firefox 4 */
+  -webkit-transition: top .3s;
+  /* Safari and Chrome */
 }
 
 /*------------------------------------*\

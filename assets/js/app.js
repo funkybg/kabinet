@@ -104,6 +104,17 @@ $(function() {
 
 });
 
+//================= ON TOUCH SCRIPTS ( FOR MAP ESCAPE ) ==================//
+$(function() {
+    var helperCSSClass = 'scroll-active';
+    $('#map-escape').on('touchstart mousedown', function(e){
+        $(e.currentTarget).addClass(helperCSSClass);
+    });
+    $('#map-escape').on('touchend mouseup', function(e){
+        $(e.currentTarget).removeClass(helperCSSClass);
+      });
+});
+
 //================= GOOGLE MAPS SCRIPTS ==================//
 
 function initialize() {

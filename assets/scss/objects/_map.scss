@@ -15,14 +15,44 @@
 #map-canvas img {
     max-width: none!important; 
 }
-
-[role="map__escape"] {
-	display: block;
-	width: 2em;
-	height: 3em;
-	background-color: $green;
-	position: fixed;
+.mapescape-scroll { 
+	background: transparent; 
+	z-index: 100; 
+	width: 40px; 
 	right: 0;
-	top: 40%;
-	z-index: 100;
+	top: 30px; 
+	position: fixed; 
+	transition:right .3s;
+	-moz-transition:right .3s; /* Firefox 4 */
+	-webkit-transition:right .3s; /* Safari and Chrome */
 }
+.mapescape-scroll-tab { 
+	width: 35px; 
+	height: 70px; 
+	right: 0; 
+	border-radius: 55px 0 0 55px; 
+	position: absolute; 
+	background: $greenTransparent url(../images/scroll-icon.png) 70% 50% no-repeat; 
+	color: #fff; background-size: 12px 25px;
+	transition:top .3s;
+	-moz-transition:top .3s; /* Firefox 4 */
+	-webkit-transition:top .3s; /* Safari and Chrome */
+}
+/* active state */
+.scroll-active .mapescape-scroll-tab:before {
+	content: ' ';
+	z-index: -1;
+	display: block;
+	position: absolute;
+	left: -10px;
+	top: -10px;
+	width: 45px; 
+	height: 90px; 
+	right: 0;
+	border-radius: 55px 0 0 55px; 
+	position: absolute; 
+	background: rgba(255,255,255,.9);
+	transition:top .3s;
+	-moz-transition:top .3s; /* Firefox 4 */
+	-webkit-transition:top .3s; /* Safari and Chrome */
+ }
