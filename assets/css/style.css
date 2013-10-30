@@ -2017,10 +2017,9 @@ html[xmlns] .slides {
 \*------------------------------------*/
 /* line 5, ../scss/objects/_map.scss */
 #map-canvas {
-  height: 100%;
+  height: 30em;
   width: 100%;
   z-index: 20;
-  padding-bottom: 30em;
 }
 
 /* line 11, ../scss/objects/_map.scss */
