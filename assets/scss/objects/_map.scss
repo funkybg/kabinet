@@ -1,7 +1,11 @@
 /*------------------------------------*\
     $MAP VARIABLES
 \*------------------------------------*/
-
+.map--nojs {position:absolute; padding:1em;}
+.map--nojs a {
+	color:$green;
+	font-weight: bold;
+}
 #map-canvas {
 	height:100%;
 	width:100%;
@@ -34,7 +38,7 @@
 	right: 0; 
 	border-radius: 55px 0 0 55px; 
 	position: absolute; 
-	background: $greenTransparent url(../images/scroll-icon.png) 70% 50% no-repeat; 
+	background: $greenTransparent url(assets/images/scroll-icon.png) 70% 50% no-repeat; 
 	color: #fff; background-size: 12px 25px;
 	transition:top .3s;
 	-moz-transition:top .3s; /* Firefox 4 */
