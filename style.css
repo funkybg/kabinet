@@ -1999,17 +1999,17 @@ html[xmlns] .slides {
 
 /* line 76, assets/scss/objects/_slider.scss */
 .slider__image--first {
-  background-image: url(../images/Zen-Bamboo-Stones-mirror-x1.jpg);
+  background-image: url(assets/images/Zen-Bamboo-Stones-mirror-x1.jpg);
 }
 
 /* line 80, assets/scss/objects/_slider.scss */
 .slider__image--second {
-  background-image: url(../images/slide5-01-x1.jpg);
+  background-image: url(assets/images/slide5-01-x1.jpg);
 }
 
 /* line 84, assets/scss/objects/_slider.scss */
 .slider__image--third {
-  background-image: url(../images/slide6-01-x1.jpg);
+  background-image: url(assets/images/slide6-01-x1.jpg);
 }
 
 /*------------------------------------*\
@@ -2169,7 +2169,7 @@ html[xmlns] .slides {
 \*------------------------------------*/
 /* line 5, assets/scss/objects/_img-header.scss */
 .header__img--small {
-  background-image: url(../images/header-small-x1-01.jpg);
+  background-image: url(assets/images/header-small-x1-01.jpg);
   height: 0;
   background-repeat: no-repeat;
   background-size: cover;
