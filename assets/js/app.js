@@ -96,7 +96,7 @@ $(function() {
                             $(items).removeClass('open').addClass('close');
                         }
 
-    $('#mmenu-toggle').click(function(){
+    $('#mmenu-toggle, .content__mask--mobile').click(function(){
         if (items.hasClass('open')) {$(close)}
         else {$(open)}
         return false;
