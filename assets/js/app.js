@@ -96,12 +96,12 @@ $(function() {
                             $(items).removeClass('open').addClass('close');
                         }
 
-    $('#mmenu-toggle').on('touchstart mousedown', function(){
+    $('#mmenu-toggle').on('touchend mousedown', function(){
         if (items.hasClass('open')) {$(close)}
         else {$(open)}
         return false;
     });
-    $('.content__mask--mobile, #map-escape').on('touchstart mousedown', function(){
+    $('.content__mask--mobile, #map-escape').on('touchend mousedown', function(){
         if (items.hasClass('open')) {$(close)}
     });
 

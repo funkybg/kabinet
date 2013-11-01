@@ -2071,7 +2071,7 @@ html[xmlns] .slides {
   height: 100%;
   width: 40px;
   right: 0;
-  top: 30px;
+  top: 3em;
   position: fixed;
   transition: right .3s;
   -moz-transition: right .3s;
