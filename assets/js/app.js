@@ -2,9 +2,8 @@
     $(window).load(function(){
 
 //================= TOGGLE VCARDS ==================//
-        $('#vcards__eli--collapse').addClass('collapsed');
-        $('#vcards__lubo--collapse').addClass('collapsed');
-        $('#back_top').addClass('collapsed');
+        var collapseItems = $('#vcards__eli--collapse, #vcards__lubo--collapse, #back_top');
+        $(collapseItems).addClass('collapsed');
 
         $('#after-grad-eli').click(function(){
             $('#vcards__eli--collapse').toggle('fast');
@@ -17,7 +16,6 @@
             $('#after-grad-lubo').toggleClass('active--map');
             return false;
         });
-
 
 //================= ASYCH FONTS SCRIPTS ==================//
 
@@ -61,24 +59,12 @@ $(window).scroll(function() {
 //================= SCROLLING SCRIPTS ==================//
 
 $(function() {
-    $('ul.nav a').bind('click',function(event){
+    var scrollItems = $('ul.nav a, .tags a, #back_top a, ul.offcanvas > li');
+
+    $(scrollItems).bind('click',function(event){
         var $anchor = $(this);
         $('html, body').stop().animate({
-            scrollTop: $($anchor.attr('href')).offset().top
-        }, 300);
-        return false;
-    });
-    $('.tags a').bind('click',function(event){
-        var $anchor = $(this);
-        $('html, body').stop().animate({
-            scrollTop: $($anchor.attr('href')).offset().top
-        }, 300);
-        return false;
-    });
-    $('#back_top a').bind('click',function(event){
-        var $anchor = $(this);
-        $('html, body').stop().animate({
-            scrollTop: $($anchor.attr('href')).offset().top
+            scrollTop: $($anchor.attr('href')).offset().top -20
         }, 300);
         return false;
     });
@@ -102,6 +88,9 @@ $(function() {
         return false;
     });
     $('.content__mask--mobile, #map-escape').on('touchstart mousedown', function(){
+        if (items.hasClass('open')) {$(close)}
+    });
+    $('ul.offcanvas > li').on('touchend mouseup', function(){
         if (items.hasClass('open')) {$(close)}
     });
 
