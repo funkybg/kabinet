@@ -96,12 +96,12 @@ $(function() {
                             $(items).removeClass('open').addClass('close');
                         }
 
-    $('#mmenu-toggle').click(function(){
+    $('#mmenu-toggle').on('touchstart mousedown', function(){
         if (items.hasClass('open')) {$(close)}
         else {$(open)}
         return false;
     });
-    $('.content__mask--mobile').click(function(){
+    $('.content__mask--mobile').on('touchstart mousedown', function(){
         if (items.hasClass('open')) {$(close)}
         return false;
     });
