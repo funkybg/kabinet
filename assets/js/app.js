@@ -96,9 +96,13 @@ $(function() {
                             $(items).removeClass('open').addClass('close');
                         }
 
-    $('#mmenu-toggle, .content__mask--mobile').click(function(){
+    $('#mmenu-toggle').click(function(){
         if (items.hasClass('open')) {$(close)}
         else {$(open)}
+        return false;
+    });
+    $('.content__mask--mobile').click(function(){
+        if (items.hasClass('open')) {$(close)}
         return false;
     });
 
