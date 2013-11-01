@@ -38,10 +38,13 @@
             directionNav: false,
             controlNav: false,
         });
-
-
     });
-
+    
+//================= ONLOAD SCROLLT TO ANCHOR SCRIPTS ==================//
+// $(document).ready(function() {
+//     var urlHash = window.location.href.split("#")[1];
+//     $('html,body').animate({ scrollTop: $('a[href="#' + urlHash + '"]').offset().top -20}, 300);
+// });
 //================= MENU SCROLL SCRIPTS ==================//
 
 $(window).scroll(function() {
@@ -59,13 +62,12 @@ $(window).scroll(function() {
 //================= SCROLLING SCRIPTS ==================//
 
 $(function() {
-    var scrollItems = $('ul.nav a, .tags a, #back_top a, ul.offcanvas > li');
+    var scrollItems = $('ul.nav a, .tags a, #back_top a');
 
     $(scrollItems).bind('click',function(event){
         var $anchor = $(this);
         $('html, body').stop().animate({
-            scrollTop: $($anchor.attr('href')).offset().top -20
-        }, 300);
+            scrollTop: $($anchor.attr('href')).offset().top -20}, 300);
         return false;
     });
 });
