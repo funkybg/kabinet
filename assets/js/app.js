@@ -42,8 +42,7 @@
 //================= ONLOAD SCROLLT TO ANCHOR SCRIPTS ==================//
         var urlHash = window.location.href.split("#")[1];
         $('html,body').animate({
-            scrollTop: $('#' + urlHash).offset().top
-        }, 500);
+            scrollTop: $('#' + urlHash).offset().top}, 500);
     });
 
 //================= MENU SCROLL SCRIPTS ==================//
