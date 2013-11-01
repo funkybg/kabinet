@@ -82,6 +82,10 @@
 	[role="side_menu"] {
 		display: none;
 	}
+	/* content becomes full width when there is no side menu */
+	.no-side-menu {
+		width: 100%;
+	}
 	.offcanvas {
 		display:block;
 		padding-left: 6%;
