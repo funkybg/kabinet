@@ -42,13 +42,3 @@
 .fixed > li {
 	width:100%;
 }
-
-/*---------------------------------------------------------------*\
-    $NAV SIDE SMALL SCREENS < 1023 is integrated in main nav
-\*---------------------------------------------------------------*/
-
-@media only screen and (max-width : 1023px) {
-	.nav__side {
-		display: none;
-	}
-}
