@@ -4,7 +4,9 @@
 
 @media (max-width: 470px) {
     .services__img {
-		margin-left: 0;
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
 		float: none;
 	}
 }

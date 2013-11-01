@@ -2232,7 +2232,9 @@ html[xmlns] .slides {
 @media (max-width: 470px) {
   /* line 6, assets/scss/objects/_img-services.scss */
   .services__img {
-    margin-left: 0;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
     float: none;
   }
 }
