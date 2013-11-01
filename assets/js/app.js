@@ -67,7 +67,7 @@ $(function() {
     $(scrollItems).bind('click',function(event){
         var $anchor = $(this);
         $('html, body').stop().animate({
-            scrollTop: $($anchor.attr('href')).offset().top -20}, 300);
+            scrollTop: $($anchor.attr('href')).offset().top -20}, 500);
         return false;
     });
 });
