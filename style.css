@@ -1079,15 +1079,20 @@ this the same font stack that Normalize.css sets for the `body`.
   border: none !important;
 }
 
+/* line 25, assets/scss/generic/_helpers.scss */
+.border__bottom--none {
+  border-bottom: none !important;
+}
+
 /*------------------------------------*\
     $FLOATS
 \*------------------------------------*/
-/* line 30, assets/scss/generic/_helpers.scss */
+/* line 33, assets/scss/generic/_helpers.scss */
 .left {
   float: left;
 }
 
-/* line 34, assets/scss/generic/_helpers.scss */
+/* line 37, assets/scss/generic/_helpers.scss */
 .right {
   float: right;
 }
@@ -1095,7 +1100,7 @@ this the same font stack that Normalize.css sets for the `body`.
 /*------------------------------------*\
     $OFFSETS
 \*------------------------------------*/
-/* line 42, assets/scss/generic/_helpers.scss */
+/* line 45, assets/scss/generic/_helpers.scss */
 .footer__map--offset {
   margin-top: -2.2em;
 }
@@ -1103,12 +1108,12 @@ this the same font stack that Normalize.css sets for the `body`.
 /*------------------------------------*\
     $MARGINS
 \*------------------------------------*/
-/* line 50, assets/scss/generic/_helpers.scss */
+/* line 53, assets/scss/generic/_helpers.scss */
 .margin__l--3xbase {
   margin-left: 3em;
 }
 
-/* line 53, assets/scss/generic/_helpers.scss */
+/* line 56, assets/scss/generic/_helpers.scss */
 .margin__b--2xbase {
   margin-bottom: 2em;
 }
@@ -1116,17 +1121,17 @@ this the same font stack that Normalize.css sets for the `body`.
 /*------------------------------------*\
     $PADDINGS
 \*------------------------------------*/
-/* line 61, assets/scss/generic/_helpers.scss */
+/* line 64, assets/scss/generic/_helpers.scss */
 .padding__t--2xbase {
   padding-top: 2em;
 }
 
-/* line 64, assets/scss/generic/_helpers.scss */
+/* line 67, assets/scss/generic/_helpers.scss */
 .padding__t--3xbase {
   padding-top: 3em;
 }
 
-/* line 67, assets/scss/generic/_helpers.scss */
+/* line 70, assets/scss/generic/_helpers.scss */
 .padding__b--1xbase {
   padding-bottom: 1em;
 }
@@ -1134,7 +1139,7 @@ this the same font stack that Normalize.css sets for the `body`.
 /*------------------------------------*\
     $CONTAINERS
 \*------------------------------------*/
-/* line 75, assets/scss/generic/_helpers.scss */
+/* line 78, assets/scss/generic/_helpers.scss */
 .container--full {
   display: block;
   position: relative;
@@ -1142,12 +1147,12 @@ this the same font stack that Normalize.css sets for the `body`.
 }
 
 @media only screen and (max-width: 1023px) {
-  /* line 82, assets/scss/generic/_helpers.scss */
+  /* line 85, assets/scss/generic/_helpers.scss */
   [role="nav__mobile--content-mask"] {
     margin-top: 3.05em;
   }
 
-  /* line 86, assets/scss/generic/_helpers.scss */
+  /* line 89, assets/scss/generic/_helpers.scss */
   .pure-g-r {
     padding: 0 0.5em;
   }
@@ -1155,19 +1160,19 @@ this the same font stack that Normalize.css sets for the `body`.
 /*------------------------------------*\
     $POSITION
 \*------------------------------------*/
-/* line 93, assets/scss/generic/_helpers.scss */
+/* line 96, assets/scss/generic/_helpers.scss */
 .center {
   max-width: 1200px;
   margin-right: auto;
   margin-left: auto;
 }
 
-/* line 98, assets/scss/generic/_helpers.scss */
+/* line 101, assets/scss/generic/_helpers.scss */
 .bottom {
   vertical-align: bottom;
 }
 
-/* line 102, assets/scss/generic/_helpers.scss */
+/* line 105, assets/scss/generic/_helpers.scss */
 .fixed {
   position: fixed !important;
 }
