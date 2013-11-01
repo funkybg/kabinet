@@ -199,8 +199,14 @@
 .active--map {
 	background-color: $purple;
 }
-
-
+/*--------------------------------------*\
+    $BUTTON AFTER GRAD IPHONE ADJUSTMENT
+\*--------------------------------------*/
+@media (max-width: 359px) {
+    .button__aftergrad__image {display:none;}
+    .button__aftergrad__link {line-height: 2em;}
+    .button__aftergrad__text {padding-right: 0.7em;}
+}
 /*------------------------------------*\
     $BUTTONS BACK TO TOP
 \*------------------------------------*/
