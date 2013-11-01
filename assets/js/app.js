@@ -38,13 +38,14 @@
             directionNav: false,
             controlNav: false,
         });
-    });
-    
+
 //================= ONLOAD SCROLLT TO ANCHOR SCRIPTS ==================//
-// $(document).ready(function() {
-//     var urlHash = window.location.href.split("#")[1];
-//     $('html,body').animate({ scrollTop: $('a[href="#' + urlHash + '"]').offset().top -20}, 300);
-// });
+        var urlHash = window.location.href.split("#")[1];
+        $('html,body').animate({
+            scrollTop: $('#' + urlHash).offset().top
+        }, 500);
+    });
+
 //================= MENU SCROLL SCRIPTS ==================//
 
 $(window).scroll(function() {
@@ -92,7 +93,7 @@ $(function() {
     $('.content__mask--mobile, #map-escape').on('touchstart mousedown', function(){
         if (items.hasClass('open')) {$(close)}
     });
-    $('ul.offcanvas > li').on('touchend mouseup', function(){
+    $('ul.offcanvas > li').click(function(){
         if (items.hasClass('open')) {$(close)}
     });
 
