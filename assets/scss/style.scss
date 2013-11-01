@@ -26,7 +26,8 @@
  * SLIDER--------------Main page slider styles
  * MAP.................Contacts page map
  * VCARDS..............TEAM page personal info styles ( module )
- * SMALL HEADER IMAGE..small hader image styles
+ * IMG-HEADER..........small hader image styles
+ * IMG-SERVICES........Responsive styles for service page images
  *
  */
 
@@ -62,3 +63,4 @@
  @import "objects/map";
  @import "objects/vcards";
  @import "objects/img-header";
+ @import "objects/img-services";

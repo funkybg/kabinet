@@ -24,7 +24,8 @@
  * SLIDER--------------Main page slider styles
  * MAP.................Contacts page map
  * VCARDS..............TEAM page personal info styles ( module )
- * SMALL HEADER IMAGE..small hader image styles
+ * IMG-HEADER..........small hader image styles
+ * IMG-SERVICES........Responsive styles for service page images
  *
  */
 /*------------------------------------*\
@@ -2200,9 +2201,9 @@ html[xmlns] .slides {
   display: none;
 }
 
-/*------------------------------------*\
-    $SMALL HEADER IMAGE DEFINITIONS
-\*------------------------------------*/
+/*----------------------------------------------*\
+    $IMG-HEADER
+\*----------------------------------------------*/
 /* line 5, assets/scss/objects/_img-header.scss */
 .header__img--small {
   background-image: url(assets/images/header-small-x1-01.jpg);
@@ -2223,5 +2224,15 @@ html[xmlns] .slides {
   /* line 20, assets/scss/objects/_img-header.scss */
   .header__img--small {
     padding-bottom: 30%;
+  }
+}
+/*----------------------------------------------*\
+    $IMG-SERVICES
+\*----------------------------------------------*/
+@media (max-width: 470px) {
+  /* line 6, assets/scss/objects/_img-services.scss */
+  .services__img {
+    margin-left: 0;
+    float: none;
   }
 }
