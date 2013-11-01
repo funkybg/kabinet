@@ -103,7 +103,6 @@ $(function() {
     });
     $('.content__mask--mobile').on('touchstart mousedown', function(){
         if (items.hasClass('open')) {$(close)}
-        return false;
     });
 
 });
