@@ -101,7 +101,7 @@ $(function() {
         else {$(open)}
         return false;
     });
-    $('.content__mask--mobile').on('touchstart mousedown', function(){
+    $('.content__mask--mobile, #map-escape').on('touchstart mousedown', function(){
         if (items.hasClass('open')) {$(close)}
     });
 
