@@ -2184,13 +2184,18 @@ html[xmlns] .slides {
 @media (min-width: 768px) and (max-width: 866px) {
   /* line 62, assets/scss/objects/_vcards.scss */
   .tags__text {
-    width: 70%;
+    width: 65%;
+  }
+
+  /* line 65, assets/scss/objects/_vcards.scss */
+  .bottom {
+    padding-top: 2em;
   }
 }
 /*------------------------------------*\
     $VCARDS - COLLAPSE
 \*------------------------------------*/
-/* line 71, assets/scss/objects/_vcards.scss */
+/* line 74, assets/scss/objects/_vcards.scss */
 .collapsed {
   display: none;
 }
