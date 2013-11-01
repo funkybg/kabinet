@@ -92,7 +92,7 @@ $(function() {
     $('.content__mask--mobile, #map-escape').on('touchstart mousedown', function(){
         if (items.hasClass('open')) {$(close)}
     });
-    $('ul.offcanvas > li').on('touchend mouseup', function(){
+    $('ul.offcanvas > li').on('mouseup', function(){
         if (items.hasClass('open')) {$(close)}
     });
 
