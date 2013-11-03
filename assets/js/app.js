@@ -1,3 +1,19 @@
+//================= ASYCH FONTS SCRIPTS but start on DOM ready ==================//
+$(document).ready(function(){
+    WebFontConfig = {
+            google: { families: [ 'Open+Sans:300italic,400:cyrillic' ] }
+          };
+    (function() {
+        var wf = document.createElement('script');
+        wf.src = ('https:' == document.location.protocol ? 'https' : 'http') +
+            '://ajax.googleapis.com/ajax/libs/webfont/1.4.7/webfont.js';
+        wf.type = 'text/javascript';
+        wf.async = 'true';
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(wf, s);
+      })();
+});
+
 //================= ONLOAD SCRIPTS ==================//
     $(window).load(function(){
 
@@ -16,22 +32,7 @@
             $('#after-grad-lubo').toggleClass('active--map');
             return false;
         });
-
-//================= ASYCH FONTS SCRIPTS ==================//
-
-        WebFontConfig = {
-        google: { families: [ 'Open+Sans:300italic,400:cyrillic' ] }
-      };
-      (function() {
-        var wf = document.createElement('script');
-        wf.src = ('https:' == document.location.protocol ? 'https' : 'http')+
-          '://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
-        wf.type = 'text/javascript';
-        wf.async = 'true';
-        var s = document.getElementsByTagName('script')[0];
-        s.parentNode.insertBefore(wf, s);
-    })();
-
+        
 //================= FLEX SLIDER INIT SCRIPTS ==================//
     
         $('.flexslider').flexslider({
@@ -193,13 +194,17 @@ function initialize() {
 
 }
 
+//================= MAP Loading function, only if container exists =================//
 function loadScript() {
-    var script = document.createElement("script");
-    script.type = "text/javascript";
-    script.src = "http://maps.googleapis.com/maps/api/js?key=AIzaSyAfTaKrimZI0ofwWp8hVRhXAUz7ddmhkgs&sensor=false&callback=initialize";
-    document.body.appendChild(script);
+    if($('#map-canvas').length) {
+        var script = document.createElement("script");
+        script.type = "text/javascript";
+        script.src = "http://maps.googleapis.com/maps/api/js?key=AIzaSyAfTaKrimZI0ofwWp8hVRhXAUz7ddmhkgs&sensor=false&callback=initialize";
+        document.body.appendChild(script);
+    }
 }
 
+//================= Call the map loading function =================//
 window.onload = loadScript;
 
 
