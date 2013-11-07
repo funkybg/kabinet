@@ -2019,21 +2019,76 @@ html[xmlns] .slides {
   padding-bottom: 27%;
 }
 
-/* line 76, assets/scss/objects/_slider.scss */
+/*------------------------------------*\
+    $SLIDER IMAGES
+\*------------------------------------*/
+/* Default images if no MQ is supported and desktop size devices */
+/* line 80, assets/scss/objects/_slider.scss */
 .slider__image--first {
   background-image: url(assets/images/Zen-Bamboo-Stones-mirror-x1.jpg);
 }
 
-/* line 80, assets/scss/objects/_slider.scss */
+/* line 81, assets/scss/objects/_slider.scss */
 .slider__image--second {
   background-image: url(assets/images/slide5-01-x1.jpg);
 }
 
-/* line 84, assets/scss/objects/_slider.scss */
+/* line 82, assets/scss/objects/_slider.scss */
 .slider__image--third {
   background-image: url(assets/images/slide6-01-x1.jpg);
 }
 
+/* Images to display on tablet size devices */
+@media (max-width: 979px) {
+  /* line 85, assets/scss/objects/_slider.scss */
+  .slider__image--first {
+    background-image: url(assets/images/Zen-Bamboo-Stones-mirror-x2Palm.jpg);
+  }
+
+  /* line 86, assets/scss/objects/_slider.scss */
+  .slider__image--second {
+    background-image: url(assets/images/slide5-01-x2Palm.jpg);
+  }
+
+  /* line 87, assets/scss/objects/_slider.scss */
+  .slider__image--third {
+    background-image: url(assets/images/slide6-01-x2Palm.jpg);
+  }
+}
+/* Images to display on tablet size devices in landscape mode and small desktops*/
+@media (min-width: 979px) and (max-width: 1533px) {
+  /* line 91, assets/scss/objects/_slider.scss */
+  .slider__image--first {
+    background-image: url(assets/images/Zen-Bamboo-Stones-mirror-x2PalmLand.jpg);
+  }
+
+  /* line 92, assets/scss/objects/_slider.scss */
+  .slider__image--second {
+    background-image: url(assets/images/slide5-01-x2PalmLand.jpg);
+  }
+
+  /* line 93, assets/scss/objects/_slider.scss */
+  .slider__image--third {
+    background-image: url(assets/images/slide6-01-x2PalmLand.jpg);
+  }
+}
+/* Very large desktop or regular retina desk */
+@media (min-width: 1920px), only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 1534), only screen and (min--moz-device-pixel-ratio: 2) and (min-width: 1534), only screen and (-o-min-device-pixel-ratio: 2 / 1) and (min-width: 1534), only screen and (min-device-pixel-ratio: 2) and (min-width: 1534), only screen and (min-resolution: 192dpi) and (min-width: 1534) {
+  /* line 102, assets/scss/objects/_slider.scss */
+  .slider__image--first {
+    background-image: url(assets/images/Zen-Bamboo-Stones-mirror-x2.jpg);
+  }
+
+  /* line 103, assets/scss/objects/_slider.scss */
+  .slider__image--second {
+    background-image: url(assets/images/slide5-01-x2.jpg);
+  }
+
+  /* line 104, assets/scss/objects/_slider.scss */
+  .slider__image--third {
+    background-image: url(assets/images/slide6-01-x2.jpg);
+  }
+}
 /*------------------------------------*\
     $MAP VARIABLES
 \*------------------------------------*/

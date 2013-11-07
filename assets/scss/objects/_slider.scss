@@ -73,14 +73,33 @@ html[xmlns] .slides {display: block;}
     background-position:center;
     padding-bottom: 27%;
 }
-.slider__image--first {
-	background-image: url(assets/images/Zen-Bamboo-Stones-mirror-x1.jpg);
+/*------------------------------------*\
+    $SLIDER IMAGES
+\*------------------------------------*/
+/* Default images if no MQ is supported and desktop size devices */
+.slider__image--first {background-image: url(assets/images/Zen-Bamboo-Stones-mirror-x1.jpg);}
+.slider__image--second {background-image: url(assets/images/slide5-01-x1.jpg);}
+.slider__image--third {background-image: url(assets/images/slide6-01-x1.jpg);}
+/* Images to display on tablet size devices */
+@media (max-width: 979px) {
+	.slider__image--first {background-image: url(assets/images/Zen-Bamboo-Stones-mirror-x2Palm.jpg);}
+	.slider__image--second {background-image: url(assets/images/slide5-01-x2Palm.jpg);}
+	.slider__image--third {background-image: url(assets/images/slide6-01-x2Palm.jpg);}
 }
-
-.slider__image--second {
-	background-image: url(assets/images/slide5-01-x1.jpg);
+/* Images to display on tablet size devices in landscape mode and small desktops*/
+@media (min-width: 979px) and (max-width: 1533px) {
+	.slider__image--first {background-image: url(assets/images/Zen-Bamboo-Stones-mirror-x2PalmLand.jpg);}
+	.slider__image--second {background-image: url(assets/images/slide5-01-x2PalmLand.jpg);}
+	.slider__image--third {background-image: url(assets/images/slide6-01-x2PalmLand.jpg);}
 }
-
-.slider__image--third {
-	background-image: url(assets/images/slide6-01-x1.jpg);
-}
+/* Very large desktop or regular retina desk */
+@media  (min-width: 1920px),
+		only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 1534),  
+        only screen and (   min--moz-device-pixel-ratio: 2) and (min-width: 1534),  
+        only screen and (     -o-min-device-pixel-ratio: 2/1) and (min-width: 1534),  
+        only screen and (        min-device-pixel-ratio: 2) and (min-width: 1534),  
+        only screen and (min-resolution: 192dpi) and (min-width: 1534) {
+			.slider__image--first {background-image: url(assets/images/Zen-Bamboo-Stones-mirror-x2.jpg);}
+			.slider__image--second {background-image: url(assets/images/slide5-01-x2.jpg);}
+			.slider__image--third {background-image: url(assets/images/slide6-01-x2.jpg);}	
+        }
