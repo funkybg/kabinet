@@ -22,6 +22,10 @@
 	display: block;
     margin-top:5em;
 	z-index: 1000;
+	text-shadow: 0 1px #666;
+}
+@media (max-width: 1200px) {
+	.caption {margin-top: 0;}
 }
 
 /*------------------------------------*\

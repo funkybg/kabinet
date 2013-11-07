@@ -1905,10 +1905,10 @@ a {
   text-shadow: 0 1px #666;
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 1200px) {
   /* line 28, assets/scss/objects/_slider.scss */
   .caption {
-    margin-top: 1em;
+    margin-top: 0;
   }
 }
 /*------------------------------------*\
