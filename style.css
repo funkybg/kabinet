@@ -1902,14 +1902,21 @@ a {
   display: block;
   margin-top: 5em;
   z-index: 1000;
+  text-shadow: 0 1px #666;
 }
 
+@media (max-width: 1000px) {
+  /* line 28, assets/scss/objects/_slider.scss */
+  .caption {
+    margin-top: 1em;
+  }
+}
 /*------------------------------------*\
     $SLIDER DEFINITIONS
 \*------------------------------------*/
 /* Browser Resets
 *********************************/
-/* line 37, assets/scss/objects/_slider.scss */
+/* line 41, assets/scss/objects/_slider.scss */
 .flex-container a:active,
 .flexslider a:active,
 .flex-container a:focus,
@@ -1917,7 +1924,7 @@ a {
   outline: none;
 }
 
-/* line 38, assets/scss/objects/_slider.scss */
+/* line 42, assets/scss/objects/_slider.scss */
 .slides {
   margin: 0;
   padding: 0;
@@ -1929,32 +1936,32 @@ a {
 /* Font-face Icons */
 /* FlexSlider Necessary Styles
 *********************************/
-/* line 47, assets/scss/objects/_slider.scss */
+/* line 51, assets/scss/objects/_slider.scss */
 .flexslider {
   margin: 0;
   padding: 0;
 }
 
-/* line 48, assets/scss/objects/_slider.scss */
+/* line 52, assets/scss/objects/_slider.scss */
 .flexslider .slides > li {
   display: none;
   -webkit-backface-visibility: hidden;
 }
 
 /* Hide the slides before the JS is loaded. Avoids image jumping */
-/* line 49, assets/scss/objects/_slider.scss */
+/* line 53, assets/scss/objects/_slider.scss */
 .flexslider .slides img {
   width: 100%;
   display: block;
 }
 
-/* line 50, assets/scss/objects/_slider.scss */
+/* line 54, assets/scss/objects/_slider.scss */
 .flex-pauseplay span {
   text-transform: capitalize;
 }
 
 /* Clearfix for the .slides element */
-/* line 53, assets/scss/objects/_slider.scss */
+/* line 57, assets/scss/objects/_slider.scss */
 .slides:after {
   content: "\0020";
   display: block;
@@ -1964,12 +1971,12 @@ a {
   height: 0;
 }
 
-/* line 54, assets/scss/objects/_slider.scss */
+/* line 58, assets/scss/objects/_slider.scss */
 html[xmlns] .slides {
   display: block;
 }
 
-/* line 55, assets/scss/objects/_slider.scss */
+/* line 59, assets/scss/objects/_slider.scss */
 * html .slides {
   height: 1%;
 }
@@ -1977,21 +1984,21 @@ html[xmlns] .slides {
 /* No JavaScript Fallback */
 /* If you are not using another script, such as Modernizr, make sure you
  * include js that eliminates this class on page load */
-/* line 60, assets/scss/objects/_slider.scss */
+/* line 64, assets/scss/objects/_slider.scss */
 .no-js .slides > li:first-child {
   display: block;
 }
 
 /* FlexSlider Default Theme
 *********************************/
-/* line 64, assets/scss/objects/_slider.scss */
+/* line 68, assets/scss/objects/_slider.scss */
 .flexslider {
   margin: 0;
   position: relative;
   zoom: 1;
 }
 
-/* line 65, assets/scss/objects/_slider.scss */
+/* line 69, assets/scss/objects/_slider.scss */
 .flex-viewport {
   max-height: 2000px;
   -webkit-transition: all 1s ease;
@@ -2000,17 +2007,17 @@ html[xmlns] .slides {
   transition: all 1s ease;
 }
 
-/* line 66, assets/scss/objects/_slider.scss */
+/* line 70, assets/scss/objects/_slider.scss */
 .loading .flex-viewport {
   max-height: 300px;
 }
 
-/* line 67, assets/scss/objects/_slider.scss */
+/* line 71, assets/scss/objects/_slider.scss */
 .flexslider .slides {
   zoom: 1;
 }
 
-/* line 69, assets/scss/objects/_slider.scss */
+/* line 73, assets/scss/objects/_slider.scss */
 .slides > li {
   height: 0;
   background-repeat: no-repeat;
@@ -2023,34 +2030,34 @@ html[xmlns] .slides {
     $SLIDER IMAGES DEFAULT
 \*------------------------------------*/
 /* Default images if no MQ is supported and desktop size devices */
-/* line 80, assets/scss/objects/_slider.scss */
+/* line 84, assets/scss/objects/_slider.scss */
 .slider__image--first {
   background-image: url(assets/images/Zen-Bamboo-Stones-mirror-x1.jpg);
 }
 
-/* line 81, assets/scss/objects/_slider.scss */
+/* line 85, assets/scss/objects/_slider.scss */
 .slider__image--second {
   background-image: url(assets/images/slide5-01-x1.jpg);
 }
 
-/* line 82, assets/scss/objects/_slider.scss */
+/* line 86, assets/scss/objects/_slider.scss */
 .slider__image--third {
   background-image: url(assets/images/slide6-01-x1.jpg);
 }
 
 /* less than 767px */
 @media (max-width: 767px) {
-  /* line 85, assets/scss/objects/_slider.scss */
+  /* line 89, assets/scss/objects/_slider.scss */
   .slider__image--first {
     background-image: none;
   }
 
-  /* line 86, assets/scss/objects/_slider.scss */
+  /* line 90, assets/scss/objects/_slider.scss */
   .slider__image--second {
     background-image: none;
   }
 
-  /* line 87, assets/scss/objects/_slider.scss */
+  /* line 91, assets/scss/objects/_slider.scss */
   .slider__image--third {
     background-image: none;
   }
@@ -2060,51 +2067,51 @@ html[xmlns] .slides {
 \*------------------------------------*/
 /* Images to display on tablet size devices */
 @media (min-width: 768px) and (max-width: 979px) {
-  /* line 96, assets/scss/objects/_slider.scss */
+  /* line 100, assets/scss/objects/_slider.scss */
   .slider__image--first {
     background-image: url(assets/images/Zen-Bamboo-Stones-mirror-x2Palm.jpg);
   }
 
-  /* line 97, assets/scss/objects/_slider.scss */
+  /* line 101, assets/scss/objects/_slider.scss */
   .slider__image--second {
     background-image: url(assets/images/slide5-01-x2Palm.jpg);
   }
 
-  /* line 98, assets/scss/objects/_slider.scss */
+  /* line 102, assets/scss/objects/_slider.scss */
   .slider__image--third {
     background-image: url(assets/images/slide6-01-x2Palm.jpg);
   }
 }
 /* Images to display on tablet size devices in landscape mode and small desktops*/
 @media (min-width: 980px) and (max-width: 1533px) {
-  /* line 102, assets/scss/objects/_slider.scss */
+  /* line 106, assets/scss/objects/_slider.scss */
   .slider__image--first {
     background-image: url(assets/images/Zen-Bamboo-Stones-mirror-x2PalmLand.jpg);
   }
 
-  /* line 103, assets/scss/objects/_slider.scss */
+  /* line 107, assets/scss/objects/_slider.scss */
   .slider__image--second {
     background-image: url(assets/images/slide5-01-x2PalmLand.jpg);
   }
 
-  /* line 104, assets/scss/objects/_slider.scss */
+  /* line 108, assets/scss/objects/_slider.scss */
   .slider__image--third {
     background-image: url(assets/images/slide6-01-x2PalmLand.jpg);
   }
 }
 /* Very large desktop */
 @media (min-width: 2000px) {
-  /* line 108, assets/scss/objects/_slider.scss */
+  /* line 112, assets/scss/objects/_slider.scss */
   .slider__image--first {
     background-image: url(assets/images/Zen-Bamboo-Stones-mirror-x2.jpg);
   }
 
-  /* line 109, assets/scss/objects/_slider.scss */
+  /* line 113, assets/scss/objects/_slider.scss */
   .slider__image--second {
     background-image: url(assets/images/slide5-01-x2.jpg);
   }
 
-  /* line 110, assets/scss/objects/_slider.scss */
+  /* line 114, assets/scss/objects/_slider.scss */
   .slider__image--third {
     background-image: url(assets/images/slide6-01-x2.jpg);
   }
@@ -2117,33 +2124,33 @@ html[xmlns] .slides {
   /* Images to display on tablet size devices in landscape mode and small desktops*/
 }
 @media (-webkit-min-device-pixel-ratio: 2) and (min-width: 768px) and (max-width: 1533px), (min--moz-device-pixel-ratio: 2) and (min-width: 768px) and (max-width: 1533px), (-o-min-device-pixel-ratio: 2 / 1) and (min-width: 768px) and (max-width: 1533px), (min-device-pixel-ratio: 2) and (min-width: 768px) and (max-width: 1533px), (min-resolution: 192dpi) and (min-width: 768px) and (max-width: 1533px) {
-  /* line 124, assets/scss/objects/_slider.scss */
+  /* line 128, assets/scss/objects/_slider.scss */
   .slider__image--first {
     background-image: url(assets/images/Zen-Bamboo-Stones-mirror-x1.jpg);
   }
 
-  /* line 125, assets/scss/objects/_slider.scss */
+  /* line 129, assets/scss/objects/_slider.scss */
   .slider__image--second {
     background-image: url(assets/images/slide5-01-x1.jpg);
   }
 
-  /* line 126, assets/scss/objects/_slider.scss */
+  /* line 130, assets/scss/objects/_slider.scss */
   .slider__image--third {
     background-image: url(assets/images/slide6-01-x1.jpg);
   }
 }
 @media (-webkit-min-device-pixel-ratio: 2) and (min-width: 1533px), (min--moz-device-pixel-ratio: 2) and (min-width: 1533px), (-o-min-device-pixel-ratio: 2 / 1) and (min-width: 1533px), (min-device-pixel-ratio: 2) and (min-width: 1533px), (min-resolution: 192dpi) and (min-width: 1533px) {
-  /* line 130, assets/scss/objects/_slider.scss */
+  /* line 134, assets/scss/objects/_slider.scss */
   .slider__image--first {
     background-image: url(assets/images/Zen-Bamboo-Stones-mirror-x2.jpg);
   }
 
-  /* line 131, assets/scss/objects/_slider.scss */
+  /* line 135, assets/scss/objects/_slider.scss */
   .slider__image--second {
     background-image: url(assets/images/slide5-01-x2.jpg);
   }
 
-  /* line 132, assets/scss/objects/_slider.scss */
+  /* line 136, assets/scss/objects/_slider.scss */
   .slider__image--third {
     background-image: url(assets/images/slide6-01-x2.jpg);
   }
