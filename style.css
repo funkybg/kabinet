@@ -2020,7 +2020,7 @@ html[xmlns] .slides {
 }
 
 /*------------------------------------*\
-    $SLIDER IMAGES
+    $SLIDER IMAGES DEFAULT
 \*------------------------------------*/
 /* Default images if no MQ is supported and desktop size devices */
 /* line 80, assets/scss/objects/_slider.scss */
@@ -2038,70 +2038,112 @@ html[xmlns] .slides {
   background-image: url(assets/images/slide6-01-x1.jpg);
 }
 
-/* Images to display on tablet size devices */
-@media (min-width: 600px) and (max-width: 979px) {
+/* less than 767px */
+@media (max-width: 767px) {
   /* line 85, assets/scss/objects/_slider.scss */
   .slider__image--first {
-    background-image: url(assets/images/Zen-Bamboo-Stones-mirror-x2Palm.jpg);
+    background-image: none;
   }
 
   /* line 86, assets/scss/objects/_slider.scss */
   .slider__image--second {
-    background-image: url(assets/images/slide5-01-x2Palm.jpg);
+    background-image: none;
   }
 
   /* line 87, assets/scss/objects/_slider.scss */
+  .slider__image--third {
+    background-image: none;
+  }
+}
+/*------------------------------------*\
+    $SLIDER IMAGES REGULAR DISPLAY
+\*------------------------------------*/
+/* Images to display on tablet size devices */
+@media (min-width: 768px) and (max-width: 979px) {
+  /* line 96, assets/scss/objects/_slider.scss */
+  .slider__image--first {
+    background-image: url(assets/images/Zen-Bamboo-Stones-mirror-x2Palm.jpg);
+  }
+
+  /* line 97, assets/scss/objects/_slider.scss */
+  .slider__image--second {
+    background-image: url(assets/images/slide5-01-x2Palm.jpg);
+  }
+
+  /* line 98, assets/scss/objects/_slider.scss */
   .slider__image--third {
     background-image: url(assets/images/slide6-01-x2Palm.jpg);
   }
 }
 /* Images to display on tablet size devices in landscape mode and small desktops*/
-@media (min-width: 980px) and (max-width: 1533px), (min-width: 600px) and (max-width: 979px) and (-webkit-min-device-pixel-ratio: 2) {
-  /* line 92, assets/scss/objects/_slider.scss */
+@media (min-width: 980px) and (max-width: 1533px) {
+  /* line 102, assets/scss/objects/_slider.scss */
   .slider__image--first {
     background-image: url(assets/images/Zen-Bamboo-Stones-mirror-x2PalmLand.jpg);
   }
 
-  /* line 93, assets/scss/objects/_slider.scss */
+  /* line 103, assets/scss/objects/_slider.scss */
   .slider__image--second {
     background-image: url(assets/images/slide5-01-x2PalmLand.jpg);
   }
 
-  /* line 94, assets/scss/objects/_slider.scss */
+  /* line 104, assets/scss/objects/_slider.scss */
   .slider__image--third {
     background-image: url(assets/images/slide6-01-x2PalmLand.jpg);
   }
 }
-/* Very large desktop or regular retina desk */
-@media (min-width: 2000px), (-webkit-min-device-pixel-ratio: 2) and (min-width: 1534), (min--moz-device-pixel-ratio: 2) and (min-width: 1534), (-o-min-device-pixel-ratio: 2 / 1) and (min-width: 1534), (min-device-pixel-ratio: 2) and (min-width: 1534), (min-resolution: 192dpi) and (min-width: 1534) {
-  /* line 103, assets/scss/objects/_slider.scss */
+/* Very large desktop */
+@media (min-width: 2000px) {
+  /* line 108, assets/scss/objects/_slider.scss */
   .slider__image--first {
     background-image: url(assets/images/Zen-Bamboo-Stones-mirror-x2.jpg);
   }
 
-  /* line 104, assets/scss/objects/_slider.scss */
+  /* line 109, assets/scss/objects/_slider.scss */
   .slider__image--second {
     background-image: url(assets/images/slide5-01-x2.jpg);
   }
 
-  /* line 105, assets/scss/objects/_slider.scss */
+  /* line 110, assets/scss/objects/_slider.scss */
   .slider__image--third {
     background-image: url(assets/images/slide6-01-x2.jpg);
   }
 }
-/* Images to display on tablet size devices in landscape mode with high DPI */
-@media (-webkit-min-device-pixel-ratio: 2) and (min-width: 979px) and (max-width: 1533px), (min--moz-device-pixel-ratio: 2) and (min-width: 979px) and (max-width: 1533px), (-o-min-device-pixel-ratio: 2 / 1) and (min-width: 979px) and (max-width: 1533px), (min-device-pixel-ratio: 2) and (min-width: 979px) and (max-width: 1533px), (min-resolution: 192dpi) and (min-width: 979px) and (max-width: 1533px) {
-  /* line 113, assets/scss/objects/_slider.scss */
+/*------------------------------------*\
+    $SLIDER IMAGES HIGH DENSITY DISPLAY
+\*------------------------------------*/
+@media (-webkit-min-device-pixel-ratio: 2), (min--moz-device-pixel-ratio: 2), (-o-min-device-pixel-ratio: 2 / 1), (min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  /* Images to display on tablet size devices */
+  /* Images to display on tablet size devices in landscape mode and small desktops*/
+}
+@media (-webkit-min-device-pixel-ratio: 2) and (min-width: 768px) and (max-width: 1533px), (min--moz-device-pixel-ratio: 2) and (min-width: 768px) and (max-width: 1533px), (-o-min-device-pixel-ratio: 2 / 1) and (min-width: 768px) and (max-width: 1533px), (min-device-pixel-ratio: 2) and (min-width: 768px) and (max-width: 1533px), (min-resolution: 192dpi) and (min-width: 768px) and (max-width: 1533px) {
+  /* line 124, assets/scss/objects/_slider.scss */
+  .slider__image--first {
+    background-image: url(assets/images/Zen-Bamboo-Stones-mirror-x1.jpg);
+  }
+
+  /* line 125, assets/scss/objects/_slider.scss */
+  .slider__image--second {
+    background-image: url(assets/images/slide5-01-x1.jpg);
+  }
+
+  /* line 126, assets/scss/objects/_slider.scss */
+  .slider__image--third {
+    background-image: url(assets/images/slide6-01-x1.jpg);
+  }
+}
+@media (-webkit-min-device-pixel-ratio: 2) and (min-width: 1533px), (min--moz-device-pixel-ratio: 2) and (min-width: 1533px), (-o-min-device-pixel-ratio: 2 / 1) and (min-width: 1533px), (min-device-pixel-ratio: 2) and (min-width: 1533px), (min-resolution: 192dpi) and (min-width: 1533px) {
+  /* line 130, assets/scss/objects/_slider.scss */
   .slider__image--first {
     background-image: url(assets/images/Zen-Bamboo-Stones-mirror-x2.jpg);
   }
 
-  /* line 114, assets/scss/objects/_slider.scss */
+  /* line 131, assets/scss/objects/_slider.scss */
   .slider__image--second {
     background-image: url(assets/images/slide5-01-x2.jpg);
   }
 
-  /* line 115, assets/scss/objects/_slider.scss */
+  /* line 132, assets/scss/objects/_slider.scss */
   .slider__image--third {
     background-image: url(assets/images/slide6-01-x2.jpg);
   }

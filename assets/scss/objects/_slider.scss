@@ -74,43 +74,61 @@ html[xmlns] .slides {display: block;}
     padding-bottom: 27%;
 }
 /*------------------------------------*\
-    $SLIDER IMAGES
+    $SLIDER IMAGES DEFAULT
 \*------------------------------------*/
 /* Default images if no MQ is supported and desktop size devices */
 .slider__image--first {background-image: url(assets/images/Zen-Bamboo-Stones-mirror-x1.jpg);}
 .slider__image--second {background-image: url(assets/images/slide5-01-x1.jpg);}
 .slider__image--third {background-image: url(assets/images/slide6-01-x1.jpg);}
+/* less than 767px */
+@media (max-width: 767px) {
+	.slider__image--first {background-image: none;}
+	.slider__image--second {background-image: none;}
+	.slider__image--third {background-image: none;}
+}
+
+/*------------------------------------*\
+    $SLIDER IMAGES REGULAR DISPLAY
+\*------------------------------------*/
+
 /* Images to display on tablet size devices */
-@media (min-width: 600px) and (max-width: 979px) {
+@media (min-width: 768px) and (max-width: 979px) {
 	.slider__image--first {background-image: url(assets/images/Zen-Bamboo-Stones-mirror-x2Palm.jpg);}
 	.slider__image--second {background-image: url(assets/images/slide5-01-x2Palm.jpg);}
 	.slider__image--third {background-image: url(assets/images/slide6-01-x2Palm.jpg);}
 }
 /* Images to display on tablet size devices in landscape mode and small desktops*/
-@media  (min-width: 980px) and (max-width: 1533px),
-		(min-width: 600px) and (max-width: 979px) and (-webkit-min-device-pixel-ratio: 2) {
+@media (min-width: 980px) and (max-width: 1533px) {
 	.slider__image--first {background-image: url(assets/images/Zen-Bamboo-Stones-mirror-x2PalmLand.jpg);}
 	.slider__image--second {background-image: url(assets/images/slide5-01-x2PalmLand.jpg);}
 	.slider__image--third {background-image: url(assets/images/slide6-01-x2PalmLand.jpg);}
 }
-/* Very large desktop or regular retina desk */
-@media  (min-width: 2000px),
-		(-webkit-min-device-pixel-ratio: 2) and (min-width: 1534),  
-        (   min--moz-device-pixel-ratio: 2) and (min-width: 1534),  
-        (     -o-min-device-pixel-ratio: 2/1) and (min-width: 1534),  
-        (        min-device-pixel-ratio: 2) and (min-width: 1534),
-        (min-resolution: 192dpi) and (min-width: 1534) {
-			.slider__image--first {background-image: url(assets/images/Zen-Bamboo-Stones-mirror-x2.jpg);}
-			.slider__image--second {background-image: url(assets/images/slide5-01-x2.jpg);}
-			.slider__image--third {background-image: url(assets/images/slide6-01-x2.jpg);}	
-        }
-/* Images to display on tablet size devices in landscape mode with high DPI */
-@media  (-webkit-min-device-pixel-ratio: 2) and (min-width: 979px) and (max-width: 1533px),  
-        (   min--moz-device-pixel-ratio: 2) and (min-width: 979px) and (max-width: 1533px),  
-        (     -o-min-device-pixel-ratio: 2/1) and (min-width: 979px) and (max-width: 1533px),  
-        (        min-device-pixel-ratio: 2) and (min-width: 979px) and (max-width: 1533px),  
-        (min-resolution: 192dpi) and (min-width: 979px) and (max-width: 1533px) {
-			.slider__image--first {background-image: url(assets/images/Zen-Bamboo-Stones-mirror-x2.jpg);}
-			.slider__image--second {background-image: url(assets/images/slide5-01-x2.jpg);}
-			.slider__image--third {background-image: url(assets/images/slide6-01-x2.jpg);}	
-        }
+/* Very large desktop */
+@media (min-width: 2000px) {
+	.slider__image--first {background-image: url(assets/images/Zen-Bamboo-Stones-mirror-x2.jpg);}
+	.slider__image--second {background-image: url(assets/images/slide5-01-x2.jpg);}
+	.slider__image--third {background-image: url(assets/images/slide6-01-x2.jpg);}	
+}
+
+/*------------------------------------*\
+    $SLIDER IMAGES HIGH DENSITY DISPLAY
+\*------------------------------------*/
+
+@media	(-webkit-min-device-pixel-ratio: 2),  
+        (   min--moz-device-pixel-ratio: 2),
+        (     -o-min-device-pixel-ratio: 2/1),
+        (        min-device-pixel-ratio: 2),
+        (min-resolution: 192dpi) {      	
+			/* Images to display on tablet size devices */
+			@media (min-width: 768px) and (max-width: 1533px) {
+				.slider__image--first {background-image: url(assets/images/Zen-Bamboo-Stones-mirror-x1.jpg);}
+				.slider__image--second {background-image: url(assets/images/slide5-01-x1.jpg);}
+				.slider__image--third {background-image: url(assets/images/slide6-01-x1.jpg);}
+			}
+			/* Images to display on tablet size devices in landscape mode and small desktops*/
+			@media (min-width: 1533px) {
+				.slider__image--first {background-image: url(assets/images/Zen-Bamboo-Stones-mirror-x2.jpg);}
+				.slider__image--second {background-image: url(assets/images/slide5-01-x2.jpg);}
+				.slider__image--third {background-image: url(assets/images/slide6-01-x2.jpg);}
+			}
+		}
