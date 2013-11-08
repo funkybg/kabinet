@@ -3,6 +3,11 @@ AddType 'text/html; charset=UTF-8' html
 DefaultLanguage bg-BG
 ## DEFINE CHARSET AND LANGUAGE ##
 
+## TURN OFF ETAGS ##
+Header unset ETag
+FileETag None
+## TURN OFF ETAGS ##
+
 ## EXPIRES CACHING ##
 <IfModule mod_expires.c>
 ExpiresActive On
