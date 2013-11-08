@@ -1,4 +1,7 @@
+## DEFINE CHARSET AND LANGUAGE ##
 AddType 'text/html; charset=UTF-8' html
+DefaultLanguage bg-BG
+## DEFINE CHARSET AND LANGUAGE ##
 
 ## EXPIRES CACHING ##
 <IfModule mod_expires.c>
@@ -21,3 +24,16 @@ ExpiresByType application/vnd.ms-fontobject "access plus 1 year"
 ExpiresDefault "access 1 month"
 </IfModule>
 ## EXPIRES CACHING ##
+
+## URL REWRITE ##
+<IfModule mod_rewrite.c>
+    Options +FollowSymlinks
+  # Options +SymLinksIfOwnerMatch
+    RewriteEngine On
+  # RewriteBase /
+	RewriteEngine On
+	RewriteCond %{REQUEST_FILENAME} !-f
+	RewriteRule ^([^/]+)/$ $1.html
+	RewriteRule ^([^/]+)/([^/]+)/$ /$1/$2.html
+</IfModule>
+## URL REWRITE ##
