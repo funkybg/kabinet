@@ -1,3 +1,4 @@
 User-agent: Googlebot
 Disallow: /assets/js
 Disallow: /assets/css
+Sitemap: http://www.kmdent.com/sitemap.xml
