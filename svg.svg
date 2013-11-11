@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="96" height="96" viewBox="-150 -150 300 300">
+    <!-- original file http://www.w3.org/Icons/SVG/svg-logo.svg -->
+    <use xlink:href="#star" stroke-width="38" stroke="#000"/>
+    <g id="star" fill="#ffb13b">
+        <path id="bar" d="m-47-70a23 23 0 1 0-23 23l117 117a23 23 0 1 0 23-23z"/>
+        <use xlink:href="#bar" transform="rotate(45)"/>
+        <use xlink:href="#bar" transform="rotate(90)"/>
+        <use xlink:href="#bar" transform="rotate(135)"/>
+    </g>
+    <text text-anchor="middle" font-size="50">SVG</text>
+</svg>
