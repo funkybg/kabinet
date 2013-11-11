@@ -2,9 +2,10 @@
     $MOBILE FIREFOR 25 SVG FIX
 \*------------------------------------*/
 
-.plus {
+.plus > svg {
 	height:29px;
 	width:31px;
 	overflow: visible;
 	z-index: 9999;
+	display:block;
 }
