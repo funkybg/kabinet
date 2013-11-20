@@ -105,6 +105,15 @@ $(function() {
       });
 });
 
+//================= ON CLICK FOR SERVICES MENU ==================//
+$(function() {
+    var activeSide = 'active active__side';
+    $('ul.nav__side > li').on('touchstart mousedown', function(){
+        $('.active__side').removeClass(activeSide);
+        $(this).addClass(activeSide);
+    });
+});
+
 //================= GOOGLE MAPS SCRIPTS ==================//
 
 function initialize() {
