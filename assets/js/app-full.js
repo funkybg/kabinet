@@ -39,14 +39,6 @@ $(document).ready(function(){
             directionNav: false,
             controlNav: false,
         });
-        $(function(){
-            var hash = window.location.hash;
-            var ahash = 'a[href*=' + hash + ']';
-            if (hash.length > 0) {
-                $('.active__side').removeClass('active active__side');
-                $(ahash).parent().addClass('active active__side');
-            };
-        });
 });
 
 //================= MENU SCROLL SCRIPTS ==================//
