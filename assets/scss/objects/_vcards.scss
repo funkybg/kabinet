@@ -63,7 +63,12 @@
         width:65%;
     }
     .bottom {
-        padding-top:2em;
+        padding-top:8em;
+    }
+}
+@media (min-width: 867px) and (max-width: 1000px) {
+    .bottom {
+        padding-top:5em;
     }
 }
 
