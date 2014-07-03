@@ -18,7 +18,8 @@ $(document).ready(function(){
     $(window).load(function(){
 
 //================= TOGGLE VCARDS ==================//
-        var collapseItems = $('#vcards__eli--collapse, #vcards__lubo--collapse, #back_top');
+        var collapseItems = $('#vcards__eli--collapse, #vcards__lubo--collapse, #back_top, #vid_btn_opr_micr, #vid_btn_brk_instr');
+        // Collapse all required items, all modules, not just vcards
         $(collapseItems).addClass('collapsed');
 
         $('#after-grad-eli').click(function(){
@@ -33,6 +34,17 @@ $(document).ready(function(){
             return false;
         });
         
+//================= TOGGLE VIDEOS ==================//
+$(function(){
+    var buttonsVid = $('#btn_opr_micr, #btn_brk_instr');
+    $(buttonsVid).click(function(){
+        var prefix = "#vid_";
+        var currentVideo = prefix + $(this).attr('id');
+        $(currentVideo).toggle('fast');
+        return false;
+    });
+});
+
 //================= FLEX SLIDER INIT SCRIPTS ==================//
     
         $('.flexslider').flexslider({
