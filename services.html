@@ -26,8 +26,86 @@
         // ga('create', 'UA-45590793-1', 'kmdent.com');
         // ga('send', 'pageview');
     </script>
+    <style type="text/css">
+.block__video {
+    position: relative;
+    overflow: hidden; 
+}
+.video__mask {
+    z-index: 5000;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top:0;
+    left:0;
+    overflow:scroll;
+    background-color: rgba(0,0,0,0.5);
+    display: none;
+}
+.video__mask--open {
+    display: block;
+}
+.lightbox {
+    width:768px;
+    border-radius: 2px 2px;
+    -webkit-border-radius:2px 2px;
+    -moz-border-radius:2px 2px;
+    box-shadow:0 0 25px #111;
+    -webkit-box-shadow:0 0 25px #111;
+    -moz-box-shadow:0 0 25px #111;
+    background-color: #fff;
+    margin:100px auto;
+    z-index: 12;
+    overflow: hidden;
+    position: relative;
+    padding-bottom: 24px;
+}
+.lightbox__content {
+    padding: 0em 2em;
+}
+.lightbox__content p {
+    text-align:left;
+    padding: 0;
+    margin-top: 0.7em;
+}
+.lightbox__content a {
+    padding-top:1.5em;
+    padding-bottom:1.5em;
+    text-align: right;
+    font-weight: bold;
+    color: #888;
+    float: right;
+}
+.lightbox__content a:hover {
+    color:#FF3366;
+}
+.overflow--hidden {
+    overflow: hidden;
+}
+.overflow--hidden::-webkit-scrollbar {
+    display: none;
+}
+</style>
 </head>
-<body id="top">
+<body id="top" class="overflow--hidden">
+
+<!-- VIDEO CONTAINER START -->
+<div class="video__mask">
+    <div class="lightbox" id="container__video">
+        <div class="lightbox__content pure-g-r">
+            <div class="pure-u-3-4">
+                <h1 class="color__text--green" id="title__vid">video title</h1>         
+            </div>
+            <div class="pure-u-1-4">
+                <a href="#">затвори</a>
+            </div>
+            <div class="pure-u-1" id="comment__video">
+                <p>video comment</p>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- VIDEO CONTAINER END -->
 
 <!--NAV TOGGLE START-->
 <div role="nav__mobile--holder" id="mmenu-toggle">
@@ -70,7 +148,6 @@
     <div class="header__img--small pure-hidden-tablet pure-hidden-phone"></div>
 </div>
 <!--SMALL HEADER IMAGE END-->
-
         
 <!--CONTENT START-->
 <div class="pure-g-r">
@@ -115,25 +192,43 @@
             <p class="color__text--gray80 block--indent">Машинно разширяване на кореновите канали - ендодонтски мотор и електронен апекслокатор Morita и NSK, никел-титанови ротационни инструменти, ултразвукови инструменти.</p>
             <p class="color__text--gray80 block--indent">Запълване с апарат за вертикална кондензация VDW BeeFill 2 in1 - с топлина се пластифицира гутаперка, като по този начин се осигурява триизмерно запълване на кореновите канали.</p>
 <!--        SERVICE VIDEO START-->
-             <div class="button__aftergrad">
-                <a href="#vid_btn_opr_micr" id="btn_opr_micr" class="button__aftergrad__link"><span class="button__aftergrad__text">Видео: Операционен микроскоп</span><div class="button__aftergrad__image__container"><svg width="31" height="29" class="button__aftergrad__image">
+
+             <!-- <div class="button__aftergrad">
+                <a href="#vid_endo" id="btn_endo" class="button__aftergrad__link"><span class="button__aftergrad__text">Видео</span><div class="button__aftergrad__image__container"><svg width="31" height="29" class="button__aftergrad__image">
                         <image xlink:href="http://www.kmdent.com/assets/images/play.svg" src="http://www.kmdent.com/assets/images/play.png" alt="икона плюс" width="31" height="29"/>
                     </svg></div>
                 </a>
-            </div>
-            <div class="block block__video" id="vid_btn_opr_micr">
-                <iframe src="http://www.youtube.com/embed/sIwUT90UbPU" frameborder="0" allowfullscreen></iframe>
-            </div>
-<!--        SERVICE VIDEO END-->
-<!--        SERVICE VIDEO START-->
-             <div class="button__aftergrad">
-                <a href="#vid_btn_brk_instr" id="btn_brk_instr" class="button__aftergrad__link"><span class="button__aftergrad__text">Видео: Изваждане на счупени инструменти</span><div class="button__aftergrad__image__container"><svg width="31" height="29" class="button__aftergrad__image">
-                        <image xlink:href="http://www.kmdent.com/assets/images/play.svg" src="http://www.kmdent.com/assets/images/play.png" alt="икона плюс" width="31" height="29"/>
-                    </svg></div>
-                </a>
-            </div>
-            <div class="block block__video" id="vid_btn_brk_instr">
-                <iframe src="http://www.youtube.com/embed/msS3iD6cvhs" frameborder="0" allowfullscreen></iframe>
+            </div> -->
+            <div id="vid_btn_endo">
+                <div class="pure-g-r">
+                    <div class="pure-u-1 l-box">
+                        <p class="color__text--green">Видео: микроскопска ендодонтия</p>
+                    </div>
+                    <div class="pure-u-1-3 l-box" id="vid_cont1">
+                        <div class="block block__video" id="vid_btn_endo_micr" data-video-source="sIwUT90UbPU" data-video-title="Title1" data-video-content="content1">
+                            <a href="http://www.youtube.com/watch?v=sIwUT90UbPU" target="_blank"><img src="https://img.youtube.com/vi/sIwUT90UbPU/hqdefault.jpg" alt="youtube video link">
+                                <p>Операционен микроскоп</p>
+                            </a>
+                            <!-- <iframe id="player1" src="http://www.youtube.com/embed/sIwUT90UbPU?rel=0&amp;showinfo=0&amp;autohide=1&amp;enablejsapi=1&amp;version=3" frameborder="0" allowfullscreen></iframe> --> 
+                        </div>
+                    </div>
+                    <div class="pure-u-1-3 l-box" id="vid_cont2">
+                        <div class="block block__video" id="vid_btn_endo_instr" data-video-source="msS3iD6cvhs" data-video-title="Title2" data-video-content="content2">
+                            <a href="http://www.youtube.com/watch?v=msS3iD6cvhs" target="_blank"><img src="https://img.youtube.com/vi/msS3iD6cvhs/hqdefault.jpg" alt="youtube video link">
+                                <p>Изваждане на счупени инструменти</p>
+                            </a>
+                            <!-- <iframe id="player2" src="http://www.youtube.com/embed/msS3iD6cvhs?rel=0&amp;showinfo=0&amp;autohide=1&amp;enablejsapi=1&amp;version=3" frameborder="0" allowfullscreen></iframe> -->
+                        </div>
+                    </div>
+                    <div class="pure-u-1-3 l-box" id="vid_cont3">
+                        <div class="block block__video" id="vid_btn_endo_root" data-video-source="684t_-Vme9M" data-video-title="Title3" data-video-content="content3">
+                            <a href="http://www.youtube.com/watch?v=684t_-Vme9M" target="_blank"><img src="https://img.youtube.com/vi/684t_-Vme9M/hqdefault.jpg" alt="youtube video link">
+                                <p>Запълване на коренови канали</p>
+                            </a>
+                            <!-- <iframe id="player3" src="http://www.youtube.com/embed/684t_-Vme9M?rel=0&amp;showinfo=0&amp;autohide=1&amp;enablejsapi=1&amp;version=3" frameborder="0" allowfullscreen></iframe> -->
+                        </div>
+                    </div>
+                </div>
             </div>
 <!--        SERVICE VIDEO END-->
         </div>

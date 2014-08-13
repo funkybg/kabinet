@@ -18,7 +18,7 @@ $(document).ready(function(){
     $(window).load(function(){
 
 //================= TOGGLE VCARDS ==================//
-        var collapseItems = $('#vcards__eli--collapse, #vcards__lubo--collapse, #back_top, #vid_btn_opr_micr, #vid_btn_brk_instr');
+        var collapseItems = $('#vcards__eli--collapse, #vcards__lubo--collapse, #back_top');
         // Collapse all required items, all modules, not just vcards
         $(collapseItems).addClass('collapsed');
 
@@ -34,13 +34,51 @@ $(document).ready(function(){
             return false;
         });
         
-//================= TOGGLE VIDEOS ==================//
+//================= TOGGLE LIGHTBOX FRAME AND INSERT VIDEO ==================//
+// $(function(){
+//     var clickedVid = $('#vid_btn_endo_root, #vid_btn_endo_instr, #vid_btn_endo_micr');
+//     $(clickedVid).click(function(){
+//         var clickedVidId = $(this).attr('id');
+//         $(clickedVidId).css('width:100%;');
+//         console.log('clicked '+clickedVidId);
+//         return false;
+//     });
+// });
+
 $(function(){
-    var buttonsVid = $('#btn_opr_micr, #btn_brk_instr');
-    $(buttonsVid).click(function(){
-        var prefix = "#vid_";
-        var currentVideo = prefix + $(this).attr('id');
-        $(currentVideo).toggle('fast');
+    
+    $('.block__video').click(function(){
+        var videoSource = $(this).data('video-source');
+        var videoTitle = $(this).data('video-title');
+        var videoContent = $(this).data('video-content');
+        var vidMask = $('.video__mask');
+        var vidCont = $('#container__video');
+        var title = $('#title__vid');
+        var comment = $('#comment__video');
+
+        // $("body").append(
+        //     '<div class="video__mask">'+
+        //         '<div class="lightbox" id="container__video">'+
+        //             '<iframe id="player3" src="http://www.youtube.com/embed/'+videoSource+'?rel=0&amp;showinfo=0&amp;autohide=1&amp;enablejsapi=1&amp;version=3" frameborder="0" allowfullscreen width="768" height="432"></iframe>'+
+        //             '<div class="lightbox__content pure-g-r">'+
+        //                 '<div class="pure-u-3-4">'+
+        //                     '<h1 class="color__text--green">'+videoTitle+'</h1>'+            
+        //                 '</div>'+
+        //                 '<div class="pure-u-1-4">'+
+        //                     '<a href="#">затвори</a>'+
+        //                 '</div>'+
+        //                 '<div class="pure-u-1" id="video">'+
+        //                     '<p>'+videoContent+'</p>'+
+        //                 '</div>'+
+        //             '</div>'+
+        //         '</div>'+
+        //     '</div>'
+        //);
+        $(vidMask).addClass('video__mask--open');
+        $(vidCont).prepend('<iframe id="player3" src="http://www.youtube.com/embed/'+videoSource+'?rel=0&amp;showinfo=0&amp;autohide=1&amp;enablejsapi=1&amp;version=3" frameborder="0" allowfullscreen width="768" height="432"></iframe>');
+        $(title).text(videoTitle);
+        $(comment).text(videoContent);
+
         return false;
     });
 });
