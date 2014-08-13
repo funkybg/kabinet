@@ -34,52 +34,84 @@ $(document).ready(function(){
             return false;
         });
         
-//================= TOGGLE LIGHTBOX FRAME AND INSERT VIDEO ==================//
-// $(function(){
-//     var clickedVid = $('#vid_btn_endo_root, #vid_btn_endo_instr, #vid_btn_endo_micr');
-//     $(clickedVid).click(function(){
-//         var clickedVidId = $(this).attr('id');
-//         $(clickedVidId).css('width:100%;');
-//         console.log('clicked '+clickedVidId);
-//         return false;
-//     });
-// });
+//================= SHOW LIGHTBOX FRAME AND INSERT VIDEO ==================//
 
 $(function(){
     
     $('.block__video').click(function(){
+        // Register all vars
         var videoSource = $(this).data('video-source');
         var videoTitle = $(this).data('video-title');
         var videoContent = $(this).data('video-content');
+        var videos = $('.videos');
         var vidMask = $('.video__mask');
-        var vidCont = $('#container__video');
         var title = $('#title__vid');
         var comment = $('#comment__video');
 
-        // $("body").append(
-        //     '<div class="video__mask">'+
-        //         '<div class="lightbox" id="container__video">'+
-        //             '<iframe id="player3" src="http://www.youtube.com/embed/'+videoSource+'?rel=0&amp;showinfo=0&amp;autohide=1&amp;enablejsapi=1&amp;version=3" frameborder="0" allowfullscreen width="768" height="432"></iframe>'+
-        //             '<div class="lightbox__content pure-g-r">'+
-        //                 '<div class="pure-u-3-4">'+
-        //                     '<h1 class="color__text--green">'+videoTitle+'</h1>'+            
-        //                 '</div>'+
-        //                 '<div class="pure-u-1-4">'+
-        //                     '<a href="#">затвори</a>'+
-        //                 '</div>'+
-        //                 '<div class="pure-u-1" id="video">'+
-        //                     '<p>'+videoContent+'</p>'+
-        //                 '</div>'+
-        //             '</div>'+
-        //         '</div>'+
-        //     '</div>'
-        //);
-        $(vidMask).addClass('video__mask--open');
-        $(vidCont).prepend('<iframe id="player3" src="http://www.youtube.com/embed/'+videoSource+'?rel=0&amp;showinfo=0&amp;autohide=1&amp;enablejsapi=1&amp;version=3" frameborder="0" allowfullscreen width="768" height="432"></iframe>');
-        $(title).text(videoTitle);
-        $(comment).text(videoContent);
+        // Check if lightbox already exists or needs to be created
+        // 1. IF the lightbox does not exist =>
+        // 1.1 Create and populate
+        // 2. IF the lightbox exists =>
+        // 2.1 Check if iframes exist =>
+        // 2.1.1 IF yes, remove them
+        // 2.2 Insert the required iframe
+        // 2.3 Update title and comments
+
+        if ((vidMask).children().length === 0) {
+            $(vidMask).append(
+            '<iframe src="http://www.youtube.com/embed/'+videoSource+'?rel=0&amp;showinfo=0&amp;autohide=1&amp;enablejsapi=1&amp;version=3" frameborder="0" allowfullscreen width="768" height="432"></iframe>'+
+            '<div id="container__video">'+
+                '<div class="lightbox__content pure-g-r">'+
+                    '<div class="pure-u-3-4">'+
+                        '<h2 class="color__text--green" id="title__vid">'+videoTitle+'</h2>'+     
+                    '</div>'+
+                    '<div class="pure-u-1-4">'+
+                        '<a href="#" id="button__video--close">затвори</a>'+
+                    '</div>'+
+                    '<div class="pure-u-1" id="comment__video">'+
+                        '<p>'+videoContent+'</p>'+
+                    '</div>'+
+                '</div>'+
+            '</div>'
+            );
+        } else {
+            if((vidMask).children('iframe').length > 0) {
+                $(vidMask).children('iframe').remove();
+            }
+            $(vidMask).prepend('<iframe src="http://www.youtube.com/embed/'+videoSource+'?rel=0&amp;showinfo=0&amp;autohide=1&amp;enablejsapi=1&amp;version=3" frameborder="0" allowfullscreen width="768" height="432"></iframe>');
+            $(title).text(videoTitle);
+            $(comment).text(videoContent);
+        }
+
+        // Display the video lightbox
+        $('body').addClass('overflow--hidden');
+        $(videos).addClass('video__mask--open');
 
         return false;
+    });
+});
+// close video lightbox
+$(function(){
+    var videos = $('.videos');
+    var vidMask = $('.video__mask');
+    var title = $('#title__vid');
+    var comment = $('#comment__video');
+    var close = function() { 
+        $(videos).removeClass('video__mask--open');
+    };
+    // delegate the click event to the close button when it is created
+    $(videos).on('click', '#button__video--close', function() {
+        if ($(videos).hasClass('video__mask--open')) {$(close)}
+        // Remove iframe to stop video when lightbox is closed
+        $(vidMask).children('iframe').remove();
+
+        return false;
+    });
+    // close by clicking outside of the lightbox
+    $('.video__mask--dismiss').click(function(){
+        if ($(videos).hasClass('video__mask--open')) {$(close)}
+        // Remove iframe to stop video when lightbox is closed
+        $(vidMask).children('iframe').remove();
     });
 });
 
