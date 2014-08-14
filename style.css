@@ -2336,19 +2336,84 @@ html[xmlns] .slides {
 /* line 4, assets/scss/objects/_vids.scss */
 .block__video {
   position: relative;
-  padding-bottom: 56.25%;
-  padding-top: 30px;
-  height: 0;
   overflow: hidden;
 }
 
-/* line 5, assets/scss/objects/_vids.scss */
-.block__video iframe {
-  position: absolute;
-  top: 0;
-  left: 0;
+/* line 8, assets/scss/objects/_vids.scss */
+.videos {
+  z-index: 2001;
   width: 100%;
   height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  overflow: scroll;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: none;
+}
+
+/* line 19, assets/scss/objects/_vids.scss */
+.video__mask--dismiss {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1002;
+}
+
+/* line 27, assets/scss/objects/_vids.scss */
+.video__mask {
+  width: 768px;
+  -webkit-border-radius: 2px 2px;
+  -moz-border-radius: 2px / 2px;
+  border-radius: 2px / 2px;
+  -webkit-box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+  background-color: #fff;
+  margin: 100px auto;
+  z-index: 1003;
+  overflow: hidden;
+  position: relative;
+  padding-bottom: 24px;
+}
+
+/* line 42, assets/scss/objects/_vids.scss */
+.video__mask--open {
+  display: block;
+}
+
+/* line 45, assets/scss/objects/_vids.scss */
+.lightbox__content {
+  padding: 0em 2em;
+}
+
+/* line 48, assets/scss/objects/_vids.scss */
+.lightbox__content p {
+  text-align: left;
+  padding: 0;
+  margin-top: 0.7em;
+}
+
+/* line 53, assets/scss/objects/_vids.scss */
+.lightbox__content a {
+  padding-top: 1.5em;
+  padding-bottom: 1.5em;
+  text-align: right;
+  font-weight: bold;
+  color: #888;
+  float: right;
+}
+
+/* line 61, assets/scss/objects/_vids.scss */
+.lightbox__content a:hover {
+  color: #FF3366;
+}
+
+/* line 64, assets/scss/objects/_vids.scss */
+.overflow--hidden {
+  overflow: hidden;
 }
 
 /*----------------------------------------------*\

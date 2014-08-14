@@ -84,7 +84,7 @@ $(function(){
         }
 
         // Display the video lightbox
-        $('body').addClass('overflow--hidden');
+        $('html').addClass('overflow--hidden');
         $(videos).addClass('video__mask--open');
 
         return false;
@@ -99,9 +99,14 @@ $(function(){
     var close = function() { 
         $(videos).removeClass('video__mask--open');
     };
+    var restoreOverflow = function() { 
+        $('html').removeClass('overflow--hidden');
+    };
     // delegate the click event to the close button when it is created
     $(videos).on('click', '#button__video--close', function() {
         if ($(videos).hasClass('video__mask--open')) {$(close)}
+        // Remove overflow--hidden class when lightbox is closed
+        if ($('html').hasClass('overflow--hidden')) {$(restoreOverflow)}
         // Remove iframe to stop video when lightbox is closed
         $(vidMask).children('iframe').remove();
 
@@ -110,6 +115,8 @@ $(function(){
     // close by clicking outside of the lightbox
     $('.video__mask--dismiss').click(function(){
         if ($(videos).hasClass('video__mask--open')) {$(close)}
+        // Remove overflow--hidden class when lightbox is closed
+        if ($('html').hasClass('overflow--hidden')) {$(restoreOverflow)}
         // Remove iframe to stop video when lightbox is closed
         $(vidMask).children('iframe').remove();
     });
